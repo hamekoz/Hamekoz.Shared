@@ -1,9 +1,17 @@
-﻿namespace Hamekoz.Negocio
-{
-	public class CentroDeCosto
-	{
-		public int IdCentroDeCosto { get; set; }
+﻿using Hamekoz.Core;
 
-		public string Descripcion { get; set; }
+namespace Hamekoz.Negocio
+{
+	public class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
+	{
+		public int Id { 
+			get;
+			set;
+		}
+
+		public string Descripcion { 
+			get; 
+			set;
+		}
 	}
 }

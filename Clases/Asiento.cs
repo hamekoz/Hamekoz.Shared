@@ -1,41 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Asiento
+	public class Asiento : IPersistible, IIdentifiable
 	{
-		public int IdAsiento { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public string Detalle { get; set; }
+		public string Detalle {
+			get;
+			set;
+		}
 
-		public DateTime Fecha { get; set; }
+		public DateTime Fecha {
+			get;
+			set;
+		}
 
-		public DateTime FechaComprobante { get; set; }
+		public string Comprobante {
+			get;
+			set;
+		}
 
-		public string Comprobante { get; set; }
+		public DateTime FechaComprobante {
+			get;
+			set;
+		}
 
-		public int IdMoneda { get; set; }
+		public Moneda Moneda {
+			get;
+			set;
+		}
 
-		public Boolean Eliminado { get; set; }
+		//UNDONE ver si tiene sentido tener aca la empresa
+		public Empresa Empresa {
+			get;
+			set;
+		}
 
-		public int IdEmpresa { get; set; }
+		public bool Eliminado { get; set; }
 
-		public List<AsientoDetalleEntity> RenglonesAsiento { get; set; }
-
-		// RELACIONES
-		public Moneda Moneda { get; set; }
-
-		public EmpresaEntity Empresa { get; set; }
+		public List<AsientoDetalle> Renglones { get; set; }
 
 		public Asiento ()
 		{
-			RenglonesAsiento = new List<AsientoDetalleEntity> ();
+			Renglones = new List<AsientoDetalle> ();
 		}
 
 		public override string ToString ()
 		{
-			return "AsientoEntity: " + IdAsiento + " - " + Detalle + " - Comprobante: " + Comprobante;
+			return "AsientoEntity: " + Id + " - " + Detalle + " - Comprobante: " + Comprobante;
 		}
 
 	}

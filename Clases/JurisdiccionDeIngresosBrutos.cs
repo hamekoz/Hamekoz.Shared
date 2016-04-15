@@ -2,15 +2,16 @@
 
 namespace Hamekoz.Negocio
 {
-	public class JurisdiccionDeIngresosBrutos : IDescriptible
+	public class JurisdiccionDeIngresosBrutos : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public int Id { 
+			get; 
+			set;
+		}
 
-		public string Descripcion { get; set; }
-
-		public override string ToString ()
-		{
-			return "JurisdiccionIngresosBrutos: " + Id + " - descripcion" + Descripcion;
+		public string Descripcion { 
+			get; 
+			set; 
 		}
 	}
 }

@@ -6,7 +6,7 @@
     <SharedGUID>{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Hamekoz</Import_RootNamespace>
+    <Import_RootNamespace>Hamekoz.Negocio</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Enums\" />
@@ -25,7 +25,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Cliente.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Cobranza.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDePago.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaContable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Deposito.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\FacturaCliente.cs" />
@@ -49,5 +48,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorDetalle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboDetalle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemitoDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Empresa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Cotizacion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Domicilio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Localidad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Estados.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Telefono.cs" />
   </ItemGroup>
 </Project>

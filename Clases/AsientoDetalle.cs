@@ -1,39 +1,45 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Core;
+
+namespace Hamekoz.Negocio
 {
-	public class AsientoDetalle
+	public class AsientoDetalle : IPersistible, IIdentifiable
 	{
-		public int IdAsientoDetalle { get; set; }
-
-		public int IdAsiento { get; set; }
-
-		public int IdCuentaContable { get; set; }
-
-		public int IdCentroDeCosto { get; set; }
-
-		public double Debe { get; set; }
-
-		public double Haber { get; set; }
-
-		public double DebePesos { get; set; }
-
-		public double HaberPesos { get; set; }
-
-		public int IdComprobante { get; set; }
-
-		//RELACIONES
-		public CuentaContable CuentaContable { get; set; }
-
-		public CentroDeCosto CentroDeCosto { get; set; }
-
-		public AsientoDetalle ()
-		{
-			CuentaContable = new CuentaContable ();
-			CentroDeCosto = new CentroDeCosto ();
+		public int Id {
+			get;
+			set;
 		}
 
-		public override string ToString ()
-		{
-			return "AsientoDetalleEntity: " + this.IdAsientoDetalle + " - Detalle ";
+		public Asiento Asiento {
+			get;
+			set;
 		}
+
+		public CuentaContable CuentaContable {
+			get;
+			set;
+		}
+
+		public Cotizacion Cotizacion {
+			get;
+			set;
+		}
+
+		public decimal Debe {
+			get;
+			set;
+		}
+
+		public decimal Haber {
+			get;
+			set;
+		}
+
+		public CentroDeCosto CentroDeCosto {
+			get;
+			set;
+		}
+
+		//UNDONE aca el comprobante debe ser una clase base de todos los comprobantes
+		public int ComprobanteId { get; set; }
 	}
 }

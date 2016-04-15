@@ -1,18 +1,27 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Core;
+
+namespace Hamekoz.Negocio
 {
-	public class Moneda
+	public class Moneda : IPersistible, IIdentifiable
 	{
-		public int IdMoneda { get; set; }
+		public int Id { 
+			get; 
+			set; 
+		}
 
-		public string Descripcion { get; set; }
+		public string Nombre {
+			get;
+			set;
+		}
 
-		public double Cotizacion { get; set; }
+		public string Codigo {
+			get;
+			set;
+		}
 
-		public double CotizacionPesos { get; set; }
-
-		public override string ToString ()
-		{
-			return "MonedaEntity: " + IdMoneda + " - Descripcion: " + Descripcion;
+		public string Simbolo {
+			get;
+			set;
 		}
 	}
 }

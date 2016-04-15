@@ -1,27 +1,47 @@
 ﻿using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Banco
+	public class Banco : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public string Descripcion { get; set; }
+		public string Nombre {
+			get;
+			set;
+		}
 
-		public int Clearing{ get; set; }
+		public string CUIT {
+			get;
+			set;
+		}
 
-		public string CUIT { get; set; }
+		public int Clearing {
+			get;
+			set;
+		}
 
-		public Boolean Eliminado { get; set; }
+		public bool Eliminado {
+			get;
+			set;
+		}
 
-		//RELACIONES
+		//HACK la cuenta contable deberia estar en una relacion entre el banco y la cuenta
 		//El id dela cuenta contable no esta en la tabla banco sino que en cuentacontable se encuentra el id del banco
 		//pongo la relacion aqui por comodidad, es cargada en el negocio de banco
-		public CuentaContable CuentaContable { get; set; }
+		public CuentaContable CuentaContable {
+			get;
+			set;
+		}
 
-		public override string ToString ()
-		{
-			return "BancoEntity: " + Id + " - descripcion" + Descripcion;
+		string IDescriptible.Descripcion {
+			get {
+				return Nombre;
+			}
 		}
 	}
 }

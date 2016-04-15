@@ -1,12 +1,22 @@
-﻿namespace Hamekoz.Negocio
+﻿//UNDONE CondicionDeIngresosBrutos
+namespace Hamekoz.Negocio
 {
 	public class CondicionDeIngresosBrutos
 	{
-		public TipoDeContribuyenteDeIngresosBrutos TipoContribuyente { get; set; }
+		public TipoDeContribuyenteDeIngresosBrutos TipoContribuyente { 
+			get; 
+			set;
+		}
 
-		public JurisdiccionDeIngresosBrutos Jurisdiccion { get; set; }
+		public JurisdiccionDeIngresosBrutos Jurisdiccion { 
+			get; 
+			set;
+		}
 
-		public string NumeroInscripcion { get; set; }
+		public string NumeroInscripcion { 
+			get; 
+			set;
+		}
 
 		public CondicionDeIngresosBrutos ()
 		{

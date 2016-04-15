@@ -1,11 +1,29 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Core;
+
+namespace Hamekoz.Negocio
 {
-	public class DepositoEntity
+	public class Deposito : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public enum Tipos
+		{
+			Almacenaje,
+			Productivo,
+			Expeditivo,
+		}
 
-		public string Descripcion { get; set; }
+		public int Id {
+			get; 
+			set;
+		}
 
-		public bool EsInterno { get; set; }
+		public string Descripcion { 
+			get; 
+			set; 
+		}
+
+		public Tipos Tipo {
+			get;
+			set;
+		}
 	}
 }

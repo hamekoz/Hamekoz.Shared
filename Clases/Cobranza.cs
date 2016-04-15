@@ -1,19 +1,40 @@
 ﻿using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Cobranza
+	public class Cobranza : IPersistible, IIdentifiable
 	{
-		public int Id { get; set; }
+		public int Id { 
+			get;
+			set;
+		}
 
-		public long IdComprobante { get; set; }
+		//UNDONE revisar que siempre sea contra una factura de cliente
+		public FacturaCliente Comprobante { 
+			get; 
+			set;
+		}
 
-		public long IdRecibo { get; set; }
+		public Recibo Recibo { 
+			get;
+			set;
+		}
 
-		public double MontoImputado { get; set; }
+		//UNDONE revisar el nombre de esta propeuidad
+		public decimal MontoImputado { 
+			get;
+			set;
+		}
 
-		public DateTime Fecha { get; set; }
+		public DateTime Fecha { 
+			get;
+			set;
+		}
 
-		public Boolean Eliminado { get; set; }
+		public bool Eliminado { 
+			get;
+			set;
+		}
 	}
 }

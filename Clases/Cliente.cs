@@ -1,66 +1,95 @@
 ﻿using System;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
+using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class Cliente : IDescriptible, IResponsable
+	public class Cliente : IPersistible, IIdentifiable, IDescriptible, IResponsable
 	{
-		public enum Estados
-		{
-			Activo = 1,
-			Gestion = 2,
-			Baja = 3,
+		public int Id {
+			get;
+			set;
 		}
 
-		public int Id { get; set; }
+		public string CUIT {
+			get;
+			set;
+		}
 
-		public string CUIT { get; set; }
+		public string IIBB {
+			get;
+			set;
+		}
 
-		public string IIBB { get; set; }
+		public string DNI {
+			get;
+			set;
+		}
 
-		public string DNI { get; set; }
+		public string RazonSocial {
+			get;
+			set;
+		}
 
-		public string RazonSocial { get; set; }
+		public Domicilio Domicilio {
+			get;
+			set;
+		}
 
-		public string Domicilio { get; set; }
+		public CondicionDePago CondicionDePago {
+			get;
+			set;
+		}
 
-		public string Localidad { get; set; }
+		public Estados EstadoCliente {
+			get;
+			set;
+		}
 
-		public string CP { get; set; }
+		public SituacionIVA CondicionDeIVA {
+			get;
+			set;
+		}
 
-		public CondicionDePago CondicionDePago { get; set; }
+		public CondicionDeIngresosBrutos CondicionIngresosBrutos {
+			get;
+			set;
+		}
 
-		public Estados EstadoCliente { get; set; }
+		public IList<Telefono> Telefonos {
+			get;
+			set;
+		}
 
-		public SituacionIVA CondicionDeIVA { get; set; }
+		//UNDONE aca podria ser una lista de correos electronicos
+		public string Email {
+			get;
+			set;
+		}
 
-		public CondicionDeIngresosBrutos CondicionIngresosBrutos { get; set; }
+		public long TarjetaFidelizacion {
+			get;
+			set;
+		}
 
-		public string Telefono1 { get; set; }
+		public ListaDePrecios ListaDePrecios {
+			get;
+			set;
+		}
 
-		public string Telefono2 { get; set; }
-
-		public string Telefono3 { get; set; }
-
-		public string Email { get; set; }
-
-		public long IdTarjetaFidelizacion { get; set; }
-
-		public ListaDePrecios ListaDePrecios { get; set; }
-
-		public DateTime FechaDeNacimiento { get; set; }
+		//Esto deberia tener algun otro nombre para contemplar a las personas juridicas
+		public DateTime FechaDeNacimiento {
+			get;
+			set;
+		}
 
 		public Cliente ()
 		{
 			CUIT = string.Empty;
 			RazonSocial = string.Empty;
 			CondicionDeIVA = SituacionIVA.CONSUMIDOR_FINAL;
-			CondicionDePago = new CondicionDePago ();
 			EstadoCliente = Estados.Gestion;
-			CondicionIngresosBrutos = new CondicionDeIngresosBrutos ();
-			ListaDePrecios = new ListaDePrecios ();
-
 		}
 
 		public override string ToString ()
@@ -68,7 +97,7 @@ namespace Hamekoz.Negocio
 			return RazonSocial;
 		}
 
-		public string Descripcion {
+		string IDescriptible.Descripcion {
 			get {
 				return RazonSocial;
 			}

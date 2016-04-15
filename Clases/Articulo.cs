@@ -1,63 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Articulo : IDescriptible
+	public class Articulo : IPersistible, IIdentifiable, IDescriptible
 	{
-		public enum Estados
-		{
-			Activo = 1,
-			Baja = 2,
-			Gestion = 3,
+		public int Id {
+			get;
+			set;
 		}
 
-		public int Id { get; set; }
-
-		public string Codigo { get; set; }
-
-		public string Descripcion { get; set; }
-
-		public string DescripcionCorta { get; set; }
-
-		public double Precio { get; set; }
-
-		public double TasaIVA { get; set; }
-
-		public double IVA {
-			get { return Math.Round (Precio - Precio / (1 + TasaIVA / 100), 2); }
+		public string Nombre { 
+			get; 
+			set; 
 		}
 
-		public double ImpuestosInternos { get; set; }
-
-		public double Neto {
-			get { return Math.Round (Precio - IVA - ImpuestosInternos, 2); }
+		public string Codigo { 
+			get;
+			set;
 		}
 
-		public Medidas Medida { get; set; }
+		public string NombreCorto {
+			get;
+			set;
+		}
 
-		public Rubro Rubro { get; set; }
+		public decimal Precio {
+			get;
+			set;
+		}
 
-		public double PuntoDePedido { get; set; }
+		public double TasaIVA {
+			get;
+			set;
+		}
 
-		public double UxB { get; set; }
+		public decimal IVA {
+			get {
+				return Math.Round (Precio - Precio / (1 + TasaIVA / 100), 2);
+			}
+		}
 
-		public Estados Estado { get; set; }
+		public decimal ImpuestosInternos {
+			get;
+			set;
+		}
+
+		public decimal Neto {
+			get {
+				return Math.Round (Precio - IVA - ImpuestosInternos, 2);
+			}
+		}
+
+		public Medidas Medida {
+			get;
+			set;
+		}
+
+		public Rubro Rubro {
+			get;
+			set;
+		}
+
+		public Estados Estado {
+			get;
+			set;
+		}
 
 		public Articulo ()
 		{
-			//FIX aca nunca deberia inicializarse los objectos asociados con instancias nuevas
-			Estado = Estados.Gestion;
-			Rubro = new Rubro ();
-			Medida = Medidas.Unidad;
-			UxB = 1;
 			TasaIVA = 21;
 		}
 
-		public override string ToString ()
-		{
-			return Descripcion;
+		string IDescriptible.Descripcion {
+			get {
+				return Nombre;
+			}
 		}
 	}
 }
