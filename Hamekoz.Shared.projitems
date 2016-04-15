@@ -48,6 +48,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteDetalle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorDetalle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRenglonRemito.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemitoDetalle.cs" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoClienteDetalle : IRenglonRemito, IItem
+	public class RemitoClienteDetalle : IRemitoDetalle, IItem
 	{
 		//UNDONE Los valores deben calcularse solo si no esta grabado el remito, en caso contrario son lectura directa
 		double porcentaje;

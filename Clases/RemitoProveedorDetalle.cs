@@ -2,7 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoProveedorDetalle : IRenglonRemito
+	public class RemitoProveedorDetalle : IRemitoDetalle
 	{
 		public long IdRemito { get; set; }
 
