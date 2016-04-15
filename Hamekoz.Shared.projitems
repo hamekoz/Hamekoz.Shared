@@ -8,4 +8,45 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Hamekoz.Shared</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Negocio\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ArticuloEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\AsientoDetalleEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\AsientoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\BancoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CentroDeCostoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ClienteEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CobranzaEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CondicionDePagoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CondicionIngresosBrutosEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CuentaBaseEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CuentaContableEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\DepositoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\FacturaClienteEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\FacturaProveedorEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\IRenglonRemito.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\JurisdiccionIngresosBrutosEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ListaDePreciosEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\MonedaEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\MovimientoArticulosEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ProveedorEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ReciboEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoClienteEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoProveedorEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RenglonReciboEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RenglonRemitoClienteEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RenglonRemitoProveedorEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RubroEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Stock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoComprobanteEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoContribuyenteIngresosBrutosEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoCuentaContableEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoMovimientoEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ZetaEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\TipoControladorFiscal.cs" />
+  </ItemGroup>
 </Project>

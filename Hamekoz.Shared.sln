@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hamekoz.Negocio", "Hamekoz.Negocio.shproj", "{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hamekoz.Shared", "Hamekoz.Shared.shproj", "{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamekoz.Lib", "Hamekoz.Lib.csproj", "{DC182E1F-A5D5-4D58-BB0D-DD3AE87C2BFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC182E1F-A5D5-4D58-BB0D-DD3AE87C2BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC182E1F-A5D5-4D58-BB0D-DD3AE87C2BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC182E1F-A5D5-4D58-BB0D-DD3AE87C2BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC182E1F-A5D5-4D58-BB0D-DD3AE87C2BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
