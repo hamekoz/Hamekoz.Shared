@@ -1,6 +1,6 @@
 ﻿namespace Hamekoz.Negocio
 {
-	public class CentroDeCostoEntity
+	public class CentroDeCosto
 	{
 		public int IdCentroDeCosto { get; set; }
 

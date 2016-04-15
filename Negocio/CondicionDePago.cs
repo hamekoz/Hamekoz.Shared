@@ -3,7 +3,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class CondicionDePagoEntity : IDescriptible
+	public class CondicionDePago : IDescriptible
 	{
 		public int Id { get; set; }
 

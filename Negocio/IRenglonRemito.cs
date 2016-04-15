@@ -2,7 +2,7 @@
 {
     interface IRenglonRemito
     {
-        ArticuloEntity Articulo { get; set; }
+        Articulo Articulo { get; set; }
 
         double Cantidad { get; set; }
 

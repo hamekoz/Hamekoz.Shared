@@ -4,7 +4,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class ArticuloEntity : IDescriptible
+	public class Articulo : IDescriptible
 	{
 		public enum Estados
 		{
@@ -21,38 +21,37 @@ namespace Hamekoz.Negocio
 
 		public string DescripcionCorta { get; set; }
 
-		public double PrecioVentaPublico { get; set; }
+		public double Precio { get; set; }
 
 		public double TasaIVA { get; set; }
 
 		public double IVA {
-			get { return Math.Round (PrecioVentaPublico - PrecioVentaPublico / (1 + TasaIVA / 100), 2); }
+			get { return Math.Round (Precio - Precio / (1 + TasaIVA / 100), 2); }
 		}
 
 		public double ImpuestosInternos { get; set; }
 
-		public double PrecioNeto {
-			get { return Math.Round (PrecioVentaPublico - IVA - ImpuestosInternos, 2); }
+		public double Neto {
+			get { return Math.Round (Precio - IVA - ImpuestosInternos, 2); }
 		}
 
-		public Medidas UxM { get; set; }
+		public Medidas Medida { get; set; }
 
-		public RubroEntity Rubro { get; set; }
+		public Rubro Rubro { get; set; }
 
 		public double PuntoDePedido { get; set; }
 
-		public double Uxb { get; set; }
+		public double UxB { get; set; }
 
 		public Estados Estado { get; set; }
 
-
-		public ArticuloEntity ()
+		public Articulo ()
 		{
 			//FIX aca nunca deberia inicializarse los objectos asociados con instancias nuevas
 			Estado = Estados.Gestion;
-			Rubro = new RubroEntity ();
-			UxM = Medidas.Unidad;
-			Uxb = 1;
+			Rubro = new Rubro ();
+			Medida = Medidas.Unidad;
+			UxB = 1;
 			TasaIVA = 21;
 		}
 

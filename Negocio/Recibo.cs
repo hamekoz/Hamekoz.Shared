@@ -5,25 +5,19 @@ using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class FacturaProveedorEntity : IComprobante
+	public class Recibo : IComprobante
 	{
 		public long Id { get; set; }
 
-		public AsientoEntity Asiento { get; set; }
+		public Asiento Asiento { get; set; }
 
-		public ProveedorEntity Proveedor { get; set; }
+		public Cliente Cliente { get; set; }
 
 		public string Numero { get; set; }
 
-		public TipoComprobanteEntity TipoComprobante { get; set; }
+		public TipoDeComprobante TipoComprobante { get; set; }
 
 		public DateTime FechaDeEmision { get; set; }
-
-		public DateTime FechaVencimiento { get; set; }
-
-		public RemitoProveedorEntity Remito { get; set; }
-
-		public CondicionDePagoEntity CondicionDePago { get; set; }
 
 		double total;
 
@@ -49,37 +43,33 @@ namespace Hamekoz.Negocio
 		public double NOGravado { get; set; }
 
 		public double ImporteRestante { get; set; }
-		//   public MonedaEntity Moneda { get; set; }
-		public string Observaciones { get; set; }
+
+		public List<ReciboDetalle> Renglones { get; set; }
 
 		public string CAE { get; set; }
 
 		public string VencimientoCAE { get; set; }
 
-		public string NumeroFacturaAFIP { get; set; }
+		public string NumeroComprobanteAFIP { get; set; }
 
 		public string ComentariosAFIP { get; set; }
 
 		public Boolean Eliminado { get; set; }
 
-		public FacturaProveedorEntity ()
+		public Recibo ()
 		{
-			//FIX aca no debria inicializase los objetos
-			Proveedor = new ProveedorEntity ();
-			TipoComprobante = new TipoComprobanteEntity ();
-			Remito = new RemitoProveedorEntity ();
-			CondicionDePago = new CondicionDePagoEntity ();
-			Asiento = new AsientoEntity ();
-			Observaciones = string.Empty;
+			//FIX aca no se deben iniciar los objetos
+			Cliente = new Cliente ();
+			TipoComprobante = new TipoDeComprobante ();
+			Renglones = new List<ReciboDetalle> ();
+			Asiento = new Asiento ();
 		}
-
-		public double Percepciones { get; set; }
 
 		#region IComprobante
 
 		IResponsable IComprobante.Responsable {
 			get {
-				return Proveedor;
+				return Cliente;
 			}
 		}
 
@@ -91,7 +81,19 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Remito.Renglones.Cast<IItem> ().ToList ();
+				return Renglones.Cast<IItem> ().ToList ();
+			}
+		}
+
+		double IComprobante.Percepciones {
+			get {
+				return 0;
+			}
+		}
+
+		string IComprobante.Observaciones {
+			get {
+				return string.Empty;
 			}
 		}
 

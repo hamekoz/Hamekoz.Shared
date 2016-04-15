@@ -1,6 +1,6 @@
 ﻿namespace Hamekoz.Negocio
 {
-	public class AsientoDetalleEntity
+	public class AsientoDetalle
 	{
 		public int IdAsientoDetalle { get; set; }
 
@@ -21,14 +21,14 @@
 		public int IdComprobante { get; set; }
 
 		//RELACIONES
-		public CuentaContableEntity CuentaContable { get; set; }
+		public CuentaContable CuentaContable { get; set; }
 
-		public CentroDeCostoEntity CentroDeCosto { get; set; }
+		public CentroDeCosto CentroDeCosto { get; set; }
 
-		public AsientoDetalleEntity ()
+		public AsientoDetalle ()
 		{
-			CuentaContable = new CuentaContableEntity ();
-			CentroDeCosto = new CentroDeCostoEntity ();
+			CuentaContable = new CuentaContable ();
+			CentroDeCosto = new CentroDeCosto ();
 		}
 
 		public override string ToString ()

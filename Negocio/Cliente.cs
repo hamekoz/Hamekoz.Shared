@@ -4,9 +4,9 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class ClienteEntity : IDescriptible, IResponsable
+	public class Cliente : IDescriptible, IResponsable
 	{
-		public enum Estado
+		public enum Estados
 		{
 			Activo = 1,
 			Gestion = 2,
@@ -29,13 +29,13 @@ namespace Hamekoz.Negocio
 
 		public string CP { get; set; }
 
-		public CondicionDePagoEntity CondicionDePago { get; set; }
+		public CondicionDePago CondicionDePago { get; set; }
 
-		public Estado EstadoCliente { get; set; }
+		public Estados EstadoCliente { get; set; }
 
 		public SituacionIVA CondicionDeIVA { get; set; }
 
-		public CondicionIngresosBrutosEntity CondicionIngresosBrutos { get; set; }
+		public CondicionDeIngresosBrutos CondicionIngresosBrutos { get; set; }
 
 		public string Telefono1 { get; set; }
 
@@ -47,19 +47,19 @@ namespace Hamekoz.Negocio
 
 		public long IdTarjetaFidelizacion { get; set; }
 
-		public ListaDePreciosEntity ListaDePrecios { get; set; }
+		public ListaDePrecios ListaDePrecios { get; set; }
 
 		public DateTime FechaDeNacimiento { get; set; }
 
-		public ClienteEntity ()
+		public Cliente ()
 		{
 			CUIT = string.Empty;
 			RazonSocial = string.Empty;
 			CondicionDeIVA = SituacionIVA.CONSUMIDOR_FINAL;
-			CondicionDePago = new CondicionDePagoEntity ();
-			EstadoCliente = Estado.Gestion;
-			CondicionIngresosBrutos = new CondicionIngresosBrutosEntity ();
-			ListaDePrecios = new ListaDePreciosEntity ();
+			CondicionDePago = new CondicionDePago ();
+			EstadoCliente = Estados.Gestion;
+			CondicionIngresosBrutos = new CondicionDeIngresosBrutos ();
+			ListaDePrecios = new ListaDePrecios ();
 
 		}
 

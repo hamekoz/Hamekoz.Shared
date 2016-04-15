@@ -1,6 +1,6 @@
 ﻿namespace Hamekoz.Negocio
 {
-	public enum TipoControladorFiscal
+	public enum TiposDeControladorFiscal
 	{
 		SinDato = 0,
 		ImpresoraFiscal = 1,

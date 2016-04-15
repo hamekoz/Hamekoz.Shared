@@ -2,7 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class BancoEntity
+	public class Banco
 	{
 		public int Id { get; set; }
 
@@ -17,7 +17,7 @@ namespace Hamekoz.Negocio
 		//RELACIONES
 		//El id dela cuenta contable no esta en la tabla banco sino que en cuentacontable se encuentra el id del banco
 		//pongo la relacion aqui por comodidad, es cargada en el negocio de banco
-		public CuentaContableEntity CuentaContable { get; set; }
+		public CuentaContable CuentaContable { get; set; }
 
 		public override string ToString ()
 		{

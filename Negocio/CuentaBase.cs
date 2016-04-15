@@ -2,7 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class CuentaBaseEntity
+	public class CuentaBase
 	{
 		public int CuentaContableId { get; set; }
 

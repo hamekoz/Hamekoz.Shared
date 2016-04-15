@@ -4,7 +4,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//TODO: Falta agregar CuentasBase
-	public class CuentaContableEntity : IDescriptible
+	public class CuentaContable : IDescriptible
 	{
 		public int Id { get; set; }
 
@@ -20,13 +20,13 @@ namespace Hamekoz.Negocio
 
 		public double SaldoDiferido { get; set; }
 
-		public MonedaEntity Moneda { get; set; }
+		public Moneda Moneda { get; set; }
 
-		public TipoCuentaContableEntity TipoCuenta { get; set; }
+		public TipoDeCuentaContable TipoCuenta { get; set; }
 		// SIN DATO / EFECTIVO / CHEQUE
 		public Boolean Modificable { get; set; }
 
-		public BancoEntity Banco { get; set; }
+		public Banco Banco { get; set; }
 
 		public int CodigoCuentaContable{ get; set; }
 
@@ -34,12 +34,12 @@ namespace Hamekoz.Negocio
 
 		public Boolean Eliminado { get; set; }
 
-		public CuentaContableEntity ()
+		public CuentaContable ()
 		{
 			//FIX aca no debria inicializarse objetos
-			Moneda = new MonedaEntity ();
-			TipoCuenta = new TipoCuentaContableEntity ();
-			Banco = new BancoEntity ();
+			Moneda = new Moneda ();
+			TipoCuenta = new TipoDeCuentaContable ();
+			Banco = new Banco ();
 		}
 
 		public override string ToString ()

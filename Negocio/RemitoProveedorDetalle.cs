@@ -2,13 +2,13 @@
 
 namespace Hamekoz.Negocio
 {
-	public class RenglonRemitoProveedorEntity : IRenglonRemito
+	public class RemitoProveedorDetalle : IRenglonRemito
 	{
 		public long IdRemito { get; set; }
 
 		public int NumeroRenglon { get; set; }
 
-		public ArticuloEntity Articulo { get; set; }
+		public Articulo Articulo { get; set; }
 
 		public double Cantidad { get; set; }
 
@@ -34,7 +34,7 @@ namespace Hamekoz.Negocio
 
 		public double IVA {
 			get {
-				return Articulo.PrecioVentaPublico - Articulo.PrecioNeto;
+				return Articulo.Precio - Articulo.Neto;
 			}
 		}
 
@@ -42,9 +42,9 @@ namespace Hamekoz.Negocio
 		//TODO: Pasar a objeto
 		public double Costo { get; set; }
 
-		public RenglonRemitoProveedorEntity ()
+		public RemitoProveedorDetalle ()
 		{
-			Articulo = new ArticuloEntity ();
+			Articulo = new Articulo ();
 			Cantidad = 1;
 		}
 	}

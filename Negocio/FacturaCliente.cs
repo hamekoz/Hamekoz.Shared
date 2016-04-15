@@ -5,25 +5,25 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class FacturaClienteEntity : IComprobante
+	public class FacturaCliente : IComprobante
 	{
 		public long Id { get; set; }
 
-		public AsientoEntity Asiento { get; set; }
+		public Asiento Asiento { get; set; }
 
-		public ClienteEntity Cliente { get; set; }
+		public Cliente Cliente { get; set; }
 
 		public string Numero { get; set; }
 
-		public TipoComprobanteEntity TipoComprobante { get; set; }
+		public TipoDeComprobante TipoComprobante { get; set; }
 
 		public DateTime FechaDeEmision { get; set; }
 
 		public DateTime FechaVencimiento { get; set; }
 
-		public RemitoClienteEntity Remito { get; set; }
+		public RemitoCliente Remito { get; set; }
 
-		public CondicionDePagoEntity CondicionDePago { get; set; }
+		public CondicionDePago CondicionDePago { get; set; }
 
 		public double Total { get; set; }
 
@@ -47,19 +47,19 @@ namespace Hamekoz.Negocio
 
 		public string ComentariosAFIP { get; set; }
 
-		public ZetaEntity Zeta { get; set; }
+		public Zeta Zeta { get; set; }
 
 		public Boolean Eliminado { get; set; }
 
-		public FacturaClienteEntity ()
+		public FacturaCliente ()
 		{
 			//HACK aca no deberia inicializarse los atributos complejos
-			Cliente = new ClienteEntity ();
-			TipoComprobante = new TipoComprobanteEntity ();
-			Remito = new RemitoClienteEntity ();
-			CondicionDePago = new CondicionDePagoEntity ();
-			Asiento = new AsientoEntity ();
-			Zeta = new ZetaEntity ();
+			Cliente = new Cliente ();
+			TipoComprobante = new TipoDeComprobante ();
+			Remito = new RemitoCliente ();
+			CondicionDePago = new CondicionDePago ();
+			Asiento = new Asiento ();
+			Zeta = new Zeta ();
 		}
 
 		#region IComprobante

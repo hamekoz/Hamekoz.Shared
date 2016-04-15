@@ -10,13 +10,13 @@
             }
         }
 
-        public ArticuloEntity Articulo { get; set; }
+        public Articulo Articulo { get; set; }
 
         public string Medida
         {
             get
             {
-                return Articulo.UxM.ToString();
+                return Articulo.Medida.ToString();
             }
         }
 

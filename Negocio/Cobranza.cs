@@ -2,7 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class CobranzaEntity
+	public class Cobranza
 	{
 		public int Id { get; set; }
 

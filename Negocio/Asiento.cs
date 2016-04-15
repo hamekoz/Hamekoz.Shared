@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class AsientoEntity
+	public class Asiento
 	{
 		public int IdAsiento { get; set; }
 
@@ -24,11 +24,11 @@ namespace Hamekoz.Negocio
 		public List<AsientoDetalleEntity> RenglonesAsiento { get; set; }
 
 		// RELACIONES
-		public MonedaEntity Moneda { get; set; }
+		public Moneda Moneda { get; set; }
 
 		public EmpresaEntity Empresa { get; set; }
 
-		public AsientoEntity ()
+		public Asiento ()
 		{
 			RenglonesAsiento = new List<AsientoDetalleEntity> ();
 		}
