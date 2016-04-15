@@ -6,6 +6,6 @@
     <SharedGUID>{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Hamekoz.Negocio</Import_RootNamespace>
+    <Import_RootNamespace>Hamekoz.Shared</Import_RootNamespace>
   </PropertyGroup>
 </Project>
