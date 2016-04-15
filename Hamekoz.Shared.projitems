@@ -6,47 +6,48 @@
     <SharedGUID>{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Hamekoz.Shared</Import_RootNamespace>
+    <Import_RootNamespace>Hamekoz</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Negocio\" />
     <Folder Include="$(MSBuildThisFileDirectory)Enums\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Clases\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\IRenglonRemito.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Stock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Articulo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\AsientoDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Asiento.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Banco.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CentroDeCosto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Cliente.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Cobranza.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CondicionDePago.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CuentaBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CuentaContable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Deposito.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\FacturaCliente.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\FacturaProveedor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ListaDePrecios.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Moneda.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\MovimientoDeArticulos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Proveedor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Recibo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoCliente.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoProveedor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Rubro.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoDeMovimiento.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\Zeta.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoDeCuentaContable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoDeContribuyenteDeIngresosBrutos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\TipoDeComprobante.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\JurisdiccionDeIngresosBrutos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\CondicionDeIngresosBrutos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoClienteDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\RemitoProveedorDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Negocio\ReciboDetalle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TiposDeControladorFiscal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Stock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Articulo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\AsientoDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Asiento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Banco.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CentroDeCosto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Cliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Cobranza.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDePago.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaContable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Deposito.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\FacturaCliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\FacturaProveedor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ListaDePrecios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Moneda.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Proveedor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Recibo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoCliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Rubro.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeMovimiento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Zeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeCuentaContable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeContribuyenteDeIngresosBrutos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeComprobante.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\JurisdiccionDeIngresosBrutos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDeIngresosBrutos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRenglonRemito.cs" />
   </ItemGroup>
 </Project>
