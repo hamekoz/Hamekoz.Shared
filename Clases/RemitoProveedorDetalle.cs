@@ -1,51 +1,67 @@
-﻿using Hamekoz.Negocio;
+﻿using Hamekoz.Core;
+using Hamekoz.Negocio;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoProveedorDetalle : IRemitoDetalle
+	public class RemitoProveedorDetalle : IPersistible, IRemitoDetalle
 	{
-		public long IdRemito { get; set; }
+		public IRemito Remito {
+			get;
+			set;
+		}
 
-		public int NumeroRenglon { get; set; }
+		public int Renglon {
+			get;
+			set;
+		}
 
-		public Articulo Articulo { get; set; }
+		public Articulo Articulo {
+			get;
+			set;
+		}
 
-		public double Cantidad { get; set; }
+		public decimal Cantidad {
+			get;
+			set;
+		}
 
-		public double PrecioUnitario { get; set; }
+		public decimal Precio {
+			get;
+			set;
+		}
 
-		public double PrecioTotal {
+		public decimal Total {
 			get {
-				return PrecioUnitario * Cantidad;
+				return Precio * Cantidad;
 			}
 		}
 
-		public double Neto {
+		public decimal Neto {
 			get {
-				return PrecioTotal - (Articulo.ImpuestosInternos * Cantidad) - IVA;
+				return Total - (Articulo.ImpuestosInternos * Cantidad) - IVA;
 			}
 		}
 
-		public double TotalImpuestos {
+		public decimal TotalImpuestos {
 			get {
 				return Articulo.ImpuestosInternos * Cantidad;
 			}
 		}
 
-		public double IVA {
+		public decimal IVA {
 			get {
 				return Articulo.Precio - Articulo.Neto;
 			}
 		}
 
-		public long IdLote { get; set; }
-		//TODO: Pasar a objeto
-		public double Costo { get; set; }
+		public Lote Lote {
+			get;
+			set;
+		}
 
-		public RemitoProveedorDetalle ()
-		{
-			Articulo = new Articulo ();
-			Cantidad = 1;
+		public decimal Costo {
+			get;
+			set;
 		}
 	}
 }

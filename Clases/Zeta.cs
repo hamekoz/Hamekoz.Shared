@@ -2,6 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
+	//UNDONE refactorizar
 	public class Zeta : IZeta
 	{
 		public int NumeroReporte { get; set; }

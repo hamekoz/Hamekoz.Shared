@@ -1,33 +1,54 @@
 ﻿using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class MovimientoDeArticulos
+	//FIX renombrar en singular
+	public class MovimientoDeArticulos : IPersistible, IIdentifiable
 	{
-		public int Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public TipoDeMovimiento TipoMovimiento { get; set; }
+		public TipoDeMovimiento Tipo {
+			get;
+			set;
+		}
 
-		public DateTime Fecha { get; set; }
+		public DateTime Fecha {
+			get;
+			set;
+		}
 
-		public Articulo Articulo { get; set; }
+		public Articulo Articulo {
+			get;
+			set;
+		}
 
-		public long IdLote { get; set; }
-		//pasar a objeto
-		public double Cantidad { get; set; }
+		public Lote Lote {
+			get;
+			set;
+		}
 
-		public string Comentarios { get; set; }
+		public double Cantidad {
+			get;
+			set;
+		}
 
-		public int IdDepositoOrigen { get; set; }
-		//pasar a objeto
-		public int IdDepositoDestino { get; set; }
-		//pasar a objeto
+		public Deposito Origen {
+			get;
+			set;
+		}
 
-		public MovimientoDeArticulos ()
-		{
-			//FIX aca no se deben inicializar objetos
-			TipoMovimiento = new TipoDeMovimiento ();
-			Articulo = new Articulo ();
+		public Deposito Destino {
+			get;
+			set;
+		}
+
+		public string Comentarios {
+			get;
+			set;
 		}
 	}
 }

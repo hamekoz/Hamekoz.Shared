@@ -74,7 +74,7 @@ namespace Hamekoz.Negocio
 			return Codigo + " " + Cuenta;
 		}
 
-		public string IDescriptible.Descripcion {
+		string IDescriptible.Descripcion {
 			get {
 				return ToString ();
 			}

@@ -1,5 +1,5 @@
-//
-//  Domicilio.cs
+﻿//
+//  IRemito.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -18,15 +18,16 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
-using Hamekoz.Core;
+using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE completar clase Localidad
-	public class Localidad
+	//UNDONE terminar de definir la interfaz
+	public interface IRemito
 	{
-	}
+		int Id { get; }
 
+		IList<IRemitoDetalle> Renglones { get; }
+	}
 }
 

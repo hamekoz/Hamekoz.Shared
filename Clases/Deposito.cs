@@ -12,13 +12,13 @@ namespace Hamekoz.Negocio
 		}
 
 		public int Id {
-			get; 
+			get;
 			set;
 		}
 
-		public string Descripcion { 
-			get; 
-			set; 
+		public string Descripcion {
+			get;
+			set;
 		}
 
 		public Tipos Tipo {

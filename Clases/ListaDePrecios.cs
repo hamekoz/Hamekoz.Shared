@@ -4,18 +4,18 @@ namespace Hamekoz.Negocio
 {
 	public class ListaDePrecios : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { 
-			get; 
-			set; 
+		public int Id {
+			get;
+			set;
 		}
 
-		public string Descripcion { 
-			get; 
-			set; 
+		public string Descripcion {
+			get;
+			set;
 		}
 
-		public double Porcentaje { 
-			get; 
+		public double Porcentaje {
+			get;
 			set;
 		}
 	}

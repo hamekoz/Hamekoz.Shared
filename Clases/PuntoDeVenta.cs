@@ -1,5 +1,5 @@
-//
-//  Domicilio.cs
+﻿//
+//  PuntoDeVenta.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -23,10 +23,33 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE completar clase Localidad
-	public class Localidad
+	//UNDONE terminar de completar la clase
+	public class PuntoDeVenta : IPersistible
 	{
-	}
+		public Sucursal Sucursal {
+			get;
+			set;
+		}
 
+		public TiposDeControladorFiscal Tipo {
+			get;
+			set;
+		}
+
+		public int Pre {
+			get;
+			set;
+		}
+
+		public int Revision {
+			get;
+			set;
+		}
+
+		public string UltimoNumero {
+			get;
+			set;
+		}
+	}
 }
 

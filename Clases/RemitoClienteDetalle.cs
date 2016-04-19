@@ -1,9 +1,10 @@
 ﻿using System;
+using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoClienteDetalle : IRemitoDetalle, IItem
+	public class RemitoClienteDetalle : IPersistible, IItem, IRemitoDetalle
 	{
 		//UNDONE Los valores deben calcularse solo si no esta grabado el remito, en caso contrario son lectura directa
 		double porcentaje;
@@ -13,86 +14,82 @@ namespace Hamekoz.Negocio
 			this.porcentaje = porcentaje;
 		}
 
-		public long IdRemito { get; set; }
+		public IRemito Remito {
+			get;
+			set;
+		}
 
-		public int NumeroRenglon { get; set; }
+		public int Renglon {
+			get;
+			set;
+		}
 
-		public Articulo Articulo { get; set; }
+		public Articulo Articulo {
+			get;
+			set;
+		}
 
-		public double Cantidad { get; set; }
+		public decimal Cantidad {
+			get;
+			set;
+		}
 
-		public double PrecioUnitario { get; set; }
+		public decimal Precio {
+			get;
+			set;
+		}
 
-		public double PrecioTotal {
+		public decimal Total {
 			get {
-				return Math.Round (PrecioUnitario * Cantidad, 2);
+				return Math.Round (Precio * Cantidad, 2);
 			}
 		}
 
-		public double Neto {
+		public decimal Neto {
 			get {
-				return Math.Round (Articulo.Neto * Cantidad * (1 + porcentaje / 100), 2);
+				return Math.Round (Articulo.Neto * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 			}
 		}
 
-		public double TotalImpuestos {
+		public decimal Impuestos {
 			get {
-				return Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + porcentaje / 100), 2);
+				return Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 			}
 		}
 
-		public double IVA {
+		public decimal IVA {
 			get {
-				return Math.Round (Articulo.IVA * Cantidad * (1 + porcentaje / 100), 2);
+				return Math.Round (Articulo.IVA * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 			}
 		}
 
-		public double TasaIVA {
+		public decimal TasaIVA {
 			get {
 				return Articulo.TasaIVA;
 			}
 		}
 
-		public long IdLote { get; set; }
-		//TODO: Pasar a objeto
-		public double Costo { get; set; }
+		public Lote Lote {
+			get;
+			set;
+		}
 
-		public RemitoClienteDetalle ()
-		{
-			//HACK no se deberia inicializar aca la propiedad Articulo
-			Articulo = new Articulo ();
-			Cantidad = 1;
+		public decimal Costo {
+			get;
+			set;
 		}
 
 		#region IItem
 
 		string IItem.Descripcion {
 			get {
-				return Articulo.Descripcion;
+				return Articulo.Nombre;
 			}
 		}
 
 		string IItem.DescripcionCorta {
 			get {
-				return Articulo.DescripcionCorta;
-			}
-		}
-
-		double IItem.Precio {
-			get {
-				return PrecioUnitario;
-			}
-		}
-
-		double IItem.Impuestos {
-			get {
-				return TotalImpuestos;
-			}
-		}
-
-		double IItem.Total {
-			get {
-				return PrecioTotal;
+				return Articulo.NombreCorto;
 			}
 		}
 

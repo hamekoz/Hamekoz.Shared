@@ -4,13 +4,13 @@ namespace Hamekoz.Negocio
 {
 	public class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { 
+		public int Id {
 			get;
 			set;
 		}
 
-		public string Descripcion { 
-			get; 
+		public string Descripcion {
+			get;
 			set;
 		}
 	}

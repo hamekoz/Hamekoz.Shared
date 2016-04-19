@@ -1,48 +1,77 @@
-﻿using Hamekoz.Fiscal;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hamekoz.Core;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoCliente : IComprobante
+	public class RemitoCliente : IPersistible, IIdentifiable, IComprobante
 	{
-		public long Id { get; set; }
-
-		public Cliente Cliente { get; set; }
-
-		public string Numero { get; set; }
-
-		public TipoDeComprobante TipoComprobante { get; set; }
-
-		public DateTime FechaDeEmision { get; set; }
-
-		public int IdFlete { get; set; }
-		//pasar a objeto (todavia no se usa)
-		public int IdPedido { get; set; }
-		//pasar a objeto (todavia no se usa)
-		public int CantidadBultos { get; set; }
-
-		public double ValorAsegurado { get; set; }
-
-		public string DomicilioDeEntrega { get; set; }
-		//pasar a objeto DomicilioDeEntrega
-		public string Observaciones { get; set; }
-
-		public List<RemitoClienteDetalle> Renglones { get; set; }
-
-
-		public RemitoCliente ()
-		{
-			//FIX aca no se deben iniciar los objetos
-			Cliente = new Cliente ();
-			TipoComprobante = new TipoDeComprobante ();
-			Renglones = new List<RemitoClienteDetalle> ();
+		public int Id {
+			get;
+			set;
 		}
 
-		public double Total {
+		public Cliente Cliente {
+			get;
+			set;
+		}
+
+		public string Numero {
+			get;
+			set;
+		}
+
+		public TipoDeComprobante TipoDeComprobante {
+			get;
+			set;
+		}
+
+		public DateTime FechaDeEmision {
+			get;
+			set;
+		}
+
+		public int IdFlete {
+			get;
+			set;
+		}
+		//FIX ver si realmente debe estar aca esta propiedad
+		public Pedido Pedido {
+			get;
+			set;
+		}
+
+		//pasar a objeto (todavia no se usa)
+		public int Bultos {
+			get;
+			set;
+		}
+
+		public decimal ValorAsegurado {
+			get;
+			set;
+		}
+
+		public Domicilio DomicilioDeEntrega {
+			get;
+			set;
+		}
+
+		public string Observaciones {
+			get;
+			set;
+		}
+
+		public List<RemitoClienteDetalle> Renglones {
+			get;
+			set;
+		}
+
+		public decimal Total {
 			get {
-				return Renglones.Sum (r => r.PrecioTotal);
+				return Renglones.Sum (r => r.Total);
 			}
 		}
 
@@ -56,7 +85,7 @@ namespace Hamekoz.Negocio
 
 		string IComprobante.PuntoDeVenta {
 			get {
-				return TipoComprobante.Pre;
+				return TipoDeComprobante.Pre;
 			}
 		}
 
@@ -66,25 +95,25 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		double IComprobante.SubTotal {
+		decimal IComprobante.SubTotal {
 			get {
 				throw new NotImplementedException ();
 			}
 		}
 
-		double IComprobante.IVA {
+		decimal IComprobante.IVA {
 			get {
 				throw new NotImplementedException ();
 			}
 		}
 
-		double IComprobante.NOGravado {
+		decimal IComprobante.NoGravado {
 			get {
 				throw new NotImplementedException ();
 			}
 		}
 
-		double IComprobante.Percepciones {
+		decimal IComprobante.Percepciones {
 			get {
 				throw new NotImplementedException ();
 			}

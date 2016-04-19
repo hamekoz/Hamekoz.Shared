@@ -1,27 +1,39 @@
-﻿using Hamekoz.Fiscal;
+﻿using Hamekoz.Core;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class ReciboDetalle : IItem
+	public class ReciboDetalle : IPersistible, IItem
 	{
-		public long IdRecibo { get; set; }
+		public Recibo Recibo {
+			get;
+			set;
+		}
 
-		public int NumeroRenglon { get; set; }
+		public int Renglon {
+			get;
+			set;
+		}
 
-		public CuentaContable CuentaContable { get; set; }
+		public CuentaContable CuentaContable {
+			get;
+			set;
+		}
 
-		public double ImporteTotal { get; set; }
+		public decimal ImporteTotal {
+			get;
+			set;
+		}
 
-		public int IdCheque { get; set; }
-		//no implementado / pasar a objeto
-		public int IdRetencion { get; set; }
-		//no implementado / pasar a objeto
-
-
-		public ReciboDetalle ()
-		{
-			//Aca no se deben iniciar objetos
-			CuentaContable = new CuentaContable ();
+		//FIX el cheque no deberia ser un atributo del detalle del recibo.
+		public Cheque Cheque {
+			get;
+			set;
+		}
+		//UNDONE no implementado / pasar a objeto
+		public int IdRetencion {
+			get;
+			set;
 		}
 
 		#region IItem implementation
@@ -38,37 +50,37 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		double IItem.Cantidad {
+		decimal IItem.Cantidad {
 			get {
 				return 1;
 			}
 		}
 
-		double IItem.Precio {
+		decimal IItem.Precio {
 			get {
 				return ImporteTotal;
 			}
 		}
 
-		double IItem.IVA {
+		decimal IItem.IVA {
 			get {
 				return 0;
 			}
 		}
 
-		double IItem.TasaIVA {
+		decimal IItem.TasaIVA {
 			get {
 				return 21;
 			}
 		}
 
-		double IItem.Impuestos {
+		decimal IItem.Impuestos {
 			get {
 				return 0;
 			}
 		}
 
-		double IItem.Total {
+		decimal IItem.Total {
 			get {
 				return ImporteTotal;
 			}

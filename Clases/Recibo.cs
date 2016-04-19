@@ -1,68 +1,103 @@
-﻿using Hamekoz.Fiscal;
-using System;
-using System.Linq;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Hamekoz.Core;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class Recibo : IComprobante
+	//UNDONE unificar logica comun en clase abstracta Comprobante
+	public class Recibo : IPersistible, IIdentifiable, IComprobante
 	{
-		public long Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public Asiento Asiento { get; set; }
+		public Asiento Asiento {
+			get;
+			set;
+		}
 
-		public Cliente Cliente { get; set; }
+		public Cliente Cliente {
+			get;
+			set;
+		}
 
-		public string Numero { get; set; }
+		public string Numero {
+			get;
+			set;
+		}
 
-		public TipoDeComprobante TipoComprobante { get; set; }
+		public TipoDeComprobante TipoComprobante {
+			get;
+			set;
+		}
 
-		public DateTime FechaDeEmision { get; set; }
+		public DateTime FechaDeEmision {
+			get;
+			set;
+		}
 
-		double total;
+		decimal total;
 
-		public double Total {
+		public decimal Total {
 			get { return Math.Round (total, 2); }
 			set { total = value; }
 		}
 
-		double subTotal;
+		decimal subTotal;
 
-		public double SubTotal {
+		public decimal SubTotal {
 			get { return Math.Round (subTotal, 2); }
 			set { subTotal = value; }
 		}
 
-		double ivaInscripto;
+		decimal ivaInscripto;
 
-		public double IVA {
+		public decimal IVA {
 			get { return Math.Round (ivaInscripto, 2); }
 			set { ivaInscripto = value; }
 		}
 
-		public double NOGravado { get; set; }
+		public decimal NoGravado {
+			get;
+			set;
+		}
 
-		public double ImporteRestante { get; set; }
+		public decimal ImporteRestante {
+			get;
+			set;
+		}
 
-		public List<ReciboDetalle> Renglones { get; set; }
+		public List<ReciboDetalle> Renglones {
+			get;
+			set;
+		}
 
-		public string CAE { get; set; }
+		public string CAE {
+			get;
+			set;
+		}
 
-		public string VencimientoCAE { get; set; }
+		public string VencimientoCAE {
+			get;
+			set;
+		}
 
-		public string NumeroComprobanteAFIP { get; set; }
+		public string NumeroComprobanteAFIP {
+			get;
+			set;
+		}
 
-		public string ComentariosAFIP { get; set; }
+		public string ComentariosAFIP {
+			get;
+			set;
+		}
 
-		public Boolean Eliminado { get; set; }
-
-		public Recibo ()
-		{
-			//FIX aca no se deben iniciar los objetos
-			Cliente = new Cliente ();
-			TipoComprobante = new TipoDeComprobante ();
-			Renglones = new List<ReciboDetalle> ();
-			Asiento = new Asiento ();
+		public bool Eliminado {
+			get;
+			set;
 		}
 
 		#region IComprobante
@@ -85,7 +120,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		double IComprobante.Percepciones {
+		decimal IComprobante.Percepciones {
 			get {
 				return 0;
 			}

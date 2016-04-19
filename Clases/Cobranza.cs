@@ -5,34 +5,34 @@ namespace Hamekoz.Negocio
 {
 	public class Cobranza : IPersistible, IIdentifiable
 	{
-		public int Id { 
+		public int Id {
 			get;
 			set;
 		}
 
 		//UNDONE revisar que siempre sea contra una factura de cliente
-		public FacturaCliente Comprobante { 
-			get; 
+		public FacturaCliente Comprobante {
+			get;
 			set;
 		}
 
-		public Recibo Recibo { 
+		public Recibo Recibo {
 			get;
 			set;
 		}
 
 		//UNDONE revisar el nombre de esta propeuidad
-		public decimal MontoImputado { 
+		public decimal MontoImputado {
 			get;
 			set;
 		}
 
-		public DateTime Fecha { 
+		public DateTime Fecha {
 			get;
 			set;
 		}
 
-		public bool Eliminado { 
+		public bool Eliminado {
 			get;
 			set;
 		}

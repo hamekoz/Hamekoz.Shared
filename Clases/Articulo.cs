@@ -10,12 +10,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public string Nombre { 
-			get; 
-			set; 
+		public string Nombre {
+			get;
+			set;
 		}
 
-		public string Codigo { 
+		public string Codigo {
 			get;
 			set;
 		}
@@ -30,7 +30,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public double TasaIVA {
+		public decimal TasaIVA {
 			get;
 			set;
 		}

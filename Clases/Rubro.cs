@@ -2,15 +2,16 @@
 
 namespace Hamekoz.Negocio
 {
-	public class Rubro : IDescriptible
+	public class Rubro : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public string Descripcion { get; set; }
-
-		public override string ToString ()
-		{
-			return "Rubro: " + Descripcion;
+		public string Descripcion {
+			get;
+			set;
 		}
 	}
 }

@@ -1,19 +1,21 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Fiscal;
+
+namespace Hamekoz.Negocio
 {
-	interface IRemitoDetalle
+	public interface IRemitoDetalle
 	{
-		long RemitoId { get; set; }
+		IRemito Remito { get; set; }
 
 		int Renglon { get; set; }
 
 		Articulo Articulo { get; set; }
 
-		long LoteId { get; set; }
+		Lote Lote { get; set; }
 
-		double Cantidad { get; set; }
+		decimal Cantidad { get; set; }
 
-		double Precio { get; set; }
+		decimal Precio { get; set; }
 
-		double Total { get; }
+		decimal Total { get; }
 	}
 }

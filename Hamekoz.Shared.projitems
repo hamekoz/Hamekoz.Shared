@@ -54,5 +54,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Localidad.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Estados.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Telefono.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Lote.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Cheque.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Pedido.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemito.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Sucursal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\PuntoDeVenta.cs" />
   </ItemGroup>
 </Project>

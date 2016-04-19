@@ -102,5 +102,11 @@ namespace Hamekoz.Negocio
 				return RazonSocial;
 			}
 		}
+
+		string IResponsable.Domicilio {
+			get {
+				return Domicilio.ToString ();
+			}
+		}
 	}
 }

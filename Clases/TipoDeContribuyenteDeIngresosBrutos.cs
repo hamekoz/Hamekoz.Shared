@@ -1,14 +1,17 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Core;
+
+namespace Hamekoz.Negocio
 {
-	public class TipoDeContribuyenteDeIngresosBrutos
+	public class TipoDeContribuyenteDeIngresosBrutos: IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public string Descripcion { get; set; }
-
-		public override string ToString ()
-		{
-			return "TipoContribuyenteIngresosBrutos: " + Id + " - descripcion" + Descripcion;
+		public string Descripcion {
+			get;
+			set;
 		}
 	}
 }

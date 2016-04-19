@@ -1,79 +1,125 @@
-﻿using Hamekoz.Fiscal;
-using System;
-using System.Linq;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
+	//UNDONE unificar logica comun en clase abstracta Comprobante
+	//UNDONE separar datos de implementacion de comprobante electronico
 	public class FacturaProveedor : IComprobante
 	{
-		public long Id { get; set; }
+		public long Id {
+			get;
+			set;
+		}
 
-		public Asiento Asiento { get; set; }
+		public TipoDeComprobante TipoDeComprobante {
+			get;
+			set;
+		}
 
-		public Proveedor Proveedor { get; set; }
+		public string Numero {
+			get;
+			set;
+		}
 
-		public string Numero { get; set; }
+		public Asiento Asiento {
+			get;
+			set;
+		}
 
-		public TipoDeComprobante TipoComprobante { get; set; }
+		public Proveedor Proveedor {
+			get;
+			set;
+		}
 
-		public DateTime FechaDeEmision { get; set; }
+		public DateTime FechaDeEmision {
+			get;
+			set;
+		}
 
-		public DateTime FechaVencimiento { get; set; }
+		public DateTime Vencimiento {
+			get;
+			set;
+		}
 
-		public RemitoProveedor Remito { get; set; }
+		public RemitoProveedor Remito {
+			get;
+			set;
+		}
 
-		public CondicionDePago CondicionDePago { get; set; }
+		public CondicionDePago CondicionDePago {
+			get;
+			set;
+		}
 
-		double total;
+		decimal total;
 
-		public double Total {
+		public decimal Total {
 			get { return Math.Round (total, 2); }
 			set { total = value; }
 		}
 
-		double subTotal;
+		decimal subTotal;
 
-		public double SubTotal {
+		public decimal SubTotal {
 			get { return Math.Round (subTotal, 2); }
 			set { subTotal = value; }
 		}
 
-		double ivaInscripto;
+		decimal iva;
 
-		public double IVA {
-			get { return Math.Round (ivaInscripto, 2); }
-			set { ivaInscripto = value; }
+		public decimal IVA {
+			get { return Math.Round (iva, 2); }
+			set { iva = value; }
 		}
 
-		public double NOGravado { get; set; }
+		public decimal NoGravado {
+			get;
+			set;
+		}
 
-		public double ImporteRestante { get; set; }
+		public decimal ImporteRestante {
+			get;
+			set;
+		}
 		//   public MonedaEntity Moneda { get; set; }
-		public string Observaciones { get; set; }
 
-		public string CAE { get; set; }
-
-		public string VencimientoCAE { get; set; }
-
-		public string NumeroFacturaAFIP { get; set; }
-
-		public string ComentariosAFIP { get; set; }
-
-		public Boolean Eliminado { get; set; }
-
-		public FacturaProveedor ()
-		{
-			//FIX aca no debria inicializase los objetos
-			Proveedor = new Proveedor ();
-			TipoComprobante = new TipoDeComprobante ();
-			Remito = new RemitoProveedor ();
-			CondicionDePago = new CondicionDePago ();
-			Asiento = new Asiento ();
-			Observaciones = string.Empty;
+		public string Observaciones {
+			get;
+			set;
 		}
 
-		public double Percepciones { get; set; }
+		public string CAE {
+			get;
+			set;
+		}
+
+		public string VencimientoCAE {
+			get;
+			set;
+		}
+
+		public string NumeroFacturaAFIP {
+			get;
+			set;
+		}
+
+		public string ComentariosAFIP {
+			get;
+			set;
+		}
+
+		public bool Eliminado {
+			get;
+			set;
+		}
+
+		public decimal Percepciones {
+			get;
+			set;
+		}
 
 		#region IComprobante
 
@@ -85,7 +131,7 @@ namespace Hamekoz.Negocio
 
 		string IComprobante.PuntoDeVenta {
 			get {
-				return TipoComprobante.Pre;
+				return TipoDeComprobante.Pre;
 			}
 		}
 

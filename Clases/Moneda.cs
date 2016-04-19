@@ -4,9 +4,9 @@ namespace Hamekoz.Negocio
 {
 	public class Moneda : IPersistible, IIdentifiable
 	{
-		public int Id { 
-			get; 
-			set; 
+		public int Id {
+			get;
+			set;
 		}
 
 		public string Nombre {

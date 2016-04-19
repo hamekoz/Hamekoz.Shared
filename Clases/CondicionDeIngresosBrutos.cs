@@ -3,18 +3,18 @@ namespace Hamekoz.Negocio
 {
 	public class CondicionDeIngresosBrutos
 	{
-		public TipoDeContribuyenteDeIngresosBrutos TipoContribuyente { 
-			get; 
+		public TipoDeContribuyenteDeIngresosBrutos TipoContribuyente {
+			get;
 			set;
 		}
 
-		public JurisdiccionDeIngresosBrutos Jurisdiccion { 
-			get; 
+		public JurisdiccionDeIngresosBrutos Jurisdiccion {
+			get;
 			set;
 		}
 
-		public string NumeroInscripcion { 
-			get; 
+		public string NumeroInscripcion {
+			get;
 			set;
 		}
 

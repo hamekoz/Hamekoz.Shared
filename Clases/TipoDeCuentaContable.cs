@@ -1,14 +1,18 @@
-﻿namespace Hamekoz.Negocio
+﻿using Hamekoz.Core;
+
+namespace Hamekoz.Negocio
 {
-	public class TipoDeCuentaContable
+	//FIX revisar el sentido de esta clase
+	public class TipoDeCuentaContable : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id { get; set; }
+		public int Id {
+			get;
+			set;
+		}
 
-		public string Descripcion { get; set; }
-
-		public override string ToString ()
-		{
-			return "TipoCuentaContableEntity: " + Id + " - descripcion" + Descripcion;
+		public string Descripcion {
+			get;
+			set;
 		}
 	}
 }
