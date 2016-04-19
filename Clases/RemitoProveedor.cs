@@ -65,16 +65,16 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public List<RemitoProveedorDetalle> Renglones {
+		public List<RemitoProveedorItem> Renglones {
 			get;
 			set;
 		}
 
 		#region IRemito
 
-		IList<IRemitoDetalle> IRemito.Renglones {
+		IList<IRemitoItem> IRemito.Renglones {
 			get {
-				return Renglones.Cast<IRemitoDetalle> ().ToList ();
+				return Renglones.Cast<IRemitoItem> ().ToList ();
 			}
 		}
 

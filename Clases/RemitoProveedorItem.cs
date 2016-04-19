@@ -3,7 +3,7 @@ using Hamekoz.Negocio;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoProveedorDetalle : IPersistible, IRemitoDetalle
+	public class RemitoProveedorItem : IPersistible, IRemitoItem
 	{
 		public IRemito Remito {
 			get;

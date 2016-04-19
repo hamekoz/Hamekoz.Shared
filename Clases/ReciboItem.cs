@@ -3,7 +3,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class ReciboDetalle : IPersistible, IItem
+	public class ReciboItem : IPersistible, IItem
 	{
 		public Recibo Recibo {
 			get;

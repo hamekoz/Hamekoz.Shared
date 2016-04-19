@@ -64,7 +64,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public List<RemitoClienteDetalle> Renglones {
+		public List<RemitoClienteItem> Renglones {
 			get;
 			set;
 		}

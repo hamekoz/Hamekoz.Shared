@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -44,10 +44,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\JurisdiccionDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDeIngresosBrutos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboDetalle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemitoDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemitoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Empresa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Cotizacion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Domicilio.cs" />

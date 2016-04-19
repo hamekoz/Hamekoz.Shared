@@ -70,7 +70,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public List<ReciboDetalle> Renglones {
+		public List<ReciboItem> Renglones {
 			get;
 			set;
 		}

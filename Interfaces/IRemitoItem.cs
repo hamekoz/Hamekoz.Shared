@@ -2,7 +2,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public interface IRemitoDetalle
+	public interface IRemitoItem
 	{
 		IRemito Remito { get; set; }
 
