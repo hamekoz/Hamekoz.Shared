@@ -30,14 +30,14 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal TasaIVA {
+		public decimal TasaDeIVA {
 			get;
 			set;
 		}
 
 		public decimal IVA {
 			get {
-				return Math.Round (Precio - Precio / (1 + TasaIVA / 100), 2);
+				return Math.Round (Precio - Precio / (1 + TasaDeIVA / 100), 2);
 			}
 		}
 
@@ -69,7 +69,7 @@ namespace Hamekoz.Negocio
 
 		public Articulo ()
 		{
-			TasaIVA = 21;
+			TasaDeIVA = 21;
 		}
 
 		string IDescriptible.Descripcion {

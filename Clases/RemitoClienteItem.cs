@@ -65,7 +65,7 @@ namespace Hamekoz.Negocio
 
 		public decimal TasaIVA {
 			get {
-				return Articulo.TasaIVA;
+				return Articulo.TasaDeIVA;
 			}
 		}
 
