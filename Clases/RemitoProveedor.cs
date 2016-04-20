@@ -24,12 +24,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public TipoDeComprobante TipoDeComprobante {
+		public TipoDeComprobante Tipo {
 			get;
 			set;
 		}
 
-		public DateTime FechaDeEmision {
+		public DateTime Emision {
 			get;
 			set;
 		}
@@ -91,7 +91,7 @@ namespace Hamekoz.Negocio
 
 		string IComprobante.PuntoDeVenta {
 			get {
-				return TipoDeComprobante.Pre;
+				return Tipo.Pre;
 			}
 		}
 

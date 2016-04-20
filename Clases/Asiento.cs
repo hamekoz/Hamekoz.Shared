@@ -50,11 +50,5 @@ namespace Hamekoz.Negocio
 		{
 			Renglones = new List<AsientoDetalle> ();
 		}
-
-		public override string ToString ()
-		{
-			return "AsientoEntity: " + Id + " - " + Detalle + " - Comprobante: " + Comprobante;
-		}
-
 	}
 }

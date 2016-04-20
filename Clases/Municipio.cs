@@ -1,5 +1,5 @@
-//
-//  Localidad.cs
+﻿//
+//  Municipio.cs
 //
 //  Author:
 //       Emiliano Gabriel Canedo <emilianocanedo@gmail.com>
@@ -19,13 +19,12 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE completar clase Localidad
-	public class Localidad : IPersistible, IIdentifiable, IDescriptible
+	public class Municipio : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;
@@ -37,7 +36,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Municipio Municipio {
+		public Provincia Provincia {
+			get;
+			set;
+		}
+
+		public IList<Localidad> Localidades {
 			get;
 			set;
 		}

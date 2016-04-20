@@ -1,8 +1,7 @@
 //
-//  Localidad.cs
+//  Pais.cs
 //
 //  Author:
-//       Emiliano Gabriel Canedo <emilianocanedo@gmail.com>
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
 //  Copyright (c) 2014 Hamekoz - www.hamekoz.com.ar
@@ -19,13 +18,12 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using Hamekoz.Core;
+using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE completar clase Localidad
-	public class Localidad : IPersistible, IIdentifiable, IDescriptible
+	public class Pais : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;
@@ -37,7 +35,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Municipio Municipio {
+		public IList<Provincia> Provincias {
 			get;
 			set;
 		}

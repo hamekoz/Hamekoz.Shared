@@ -6,5 +6,4 @@ namespace Hamekoz.Negocio
 	public class Sucursal
 	{
 	}
-
 }

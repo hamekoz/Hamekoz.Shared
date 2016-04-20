@@ -34,7 +34,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public DateTime FechaDeEmision {
+		public DateTime Emision {
 			get;
 			set;
 		}
@@ -65,7 +65,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal ImporteRestante {
+		public decimal Restante {
 			get;
 			set;
 		}

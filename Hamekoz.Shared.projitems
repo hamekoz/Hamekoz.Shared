@@ -60,5 +60,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemito.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Sucursal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\PuntoDeVenta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Provincia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Pais.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Municipio.cs" />
   </ItemGroup>
 </Project>
