@@ -3,8 +3,9 @@
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
+//       Juan Angel Dinamarca <juan.angel.dinamarca@gmail.com>
 //
-//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -65,6 +66,7 @@ namespace Hamekoz.Negocio
 
 		public bool Eliminado { get; set; }
 
+		//TODO evaluar si usar el nombre renglones o el nombre Items
 		public List<AsientoItem> Renglones { get; set; }
 
 		public Asiento ()
