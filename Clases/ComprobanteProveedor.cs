@@ -1,9 +1,9 @@
 ﻿//
-//  FacturaCliente.cs
+//  ComprobanteProveedor.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
-//       Ezequiel Taranto <ezequiel89@gmail.com>
+//       Juan Angel Dinamarca <juan.angel.dinamarca@gmail.com>
 //
 //  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
 //
@@ -29,11 +29,9 @@ namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
 	//UNDONE separar datos de implementacion de comprobante electronico
-	//UNDONE separar datos de implementacion de comprobante por controlador fiscal
-	//UNDONE renombrar como ComprobanteCliente
-	public class FacturaCliente : IComprobante
+	public class ComprobanteProveedor : IComprobante
 	{
-		public int Id {
+		public long Id {
 			get;
 			set;
 		}
@@ -53,7 +51,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Cliente Cliente {
+		public Proveedor Proveedor {
 			get;
 			set;
 		}
@@ -68,7 +66,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public RemitoCliente Remito {
+		public RemitoProveedor Remito {
 			get;
 			set;
 		}
@@ -78,19 +76,25 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal total;
+
 		public decimal Total {
-			get;
-			set;
+			get { return Math.Round (total, 2); }
+			set { total = value; }
 		}
+
+		decimal subTotal;
 
 		public decimal SubTotal {
-			get;
-			set;
+			get { return Math.Round (subTotal, 2); }
+			set { subTotal = value; }
 		}
 
+		decimal iva;
+
 		public decimal IVA {
-			get;
-			set;
+			get { return Math.Round (iva, 2); }
+			set { iva = value; }
 		}
 
 		public decimal NoGravado {
@@ -102,11 +106,7 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
-
-		public decimal Percepciones {
-			get;
-			set;
-		}
+		//   public MonedaEntity Moneda { get; set; }
 
 		public string Observaciones {
 			get;
@@ -133,12 +133,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Zeta Zeta {
+		public bool Eliminado {
 			get;
 			set;
 		}
 
-		public bool Eliminado {
+		public decimal Percepciones {
 			get;
 			set;
 		}
@@ -147,7 +147,7 @@ namespace Hamekoz.Negocio
 
 		IResponsable IComprobante.Responsable {
 			get {
-				return Cliente;
+				return Proveedor;
 			}
 		}
 

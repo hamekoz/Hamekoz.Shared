@@ -1,5 +1,5 @@
 ﻿//
-//  AsientoDetalle.cs
+//  AsientoItem.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class AsientoDetalle : IPersistible, IIdentifiable
+	public class AsientoItem : IPersistible, IIdentifiable
 	{
 		public int Id {
 			get;

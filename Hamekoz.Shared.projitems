@@ -18,7 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TiposDeControladorFiscal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Stock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Articulo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\AsientoDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\AsientoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Asiento.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Banco.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CentroDeCosto.cs" />
@@ -27,8 +27,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDePago.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaContable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Deposito.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\FacturaCliente.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\FacturaProveedor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ComprobanteCliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ComprobanteProveedor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ListaDePrecios.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Moneda.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulos.cs" />

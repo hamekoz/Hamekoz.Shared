@@ -65,11 +65,11 @@ namespace Hamekoz.Negocio
 
 		public bool Eliminado { get; set; }
 
-		public List<AsientoDetalle> Renglones { get; set; }
+		public List<AsientoItem> Renglones { get; set; }
 
 		public Asiento ()
 		{
-			Renglones = new List<AsientoDetalle> ();
+			Renglones = new List<AsientoItem> ();
 		}
 	}
 }

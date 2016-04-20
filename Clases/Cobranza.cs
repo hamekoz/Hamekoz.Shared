@@ -32,7 +32,7 @@ namespace Hamekoz.Negocio
 		}
 
 		//UNDONE revisar que siempre sea contra una factura de cliente
-		public FacturaCliente Comprobante {
+		public ComprobanteCliente Comprobante {
 			get;
 			set;
 		}
