@@ -35,7 +35,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public double Porcentaje {
+		public decimal Porcentaje {
 			get;
 			set;
 		}

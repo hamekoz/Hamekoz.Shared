@@ -19,12 +19,12 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-//UNDONE CondicionDeIngresosBrutos
 namespace Hamekoz.Negocio
 {
+	//TODO renombrar a SituacionDeIngresosBrutos
 	public class CondicionDeIngresosBrutos
 	{
-		public TipoDeContribuyenteDeIngresosBrutos TipoContribuyente {
+		public TipoDeContribuyenteDeIngresosBrutos Tipo {
 			get;
 			set;
 		}
@@ -34,7 +34,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public string NumeroInscripcion {
+		public string Numero {
 			get;
 			set;
 		}
@@ -42,13 +42,13 @@ namespace Hamekoz.Negocio
 		public CondicionDeIngresosBrutos ()
 		{
 			//FIX aca no deberia inicializarse objetos
-			TipoContribuyente = new TipoDeContribuyenteDeIngresosBrutos ();
+			Tipo = new TipoDeContribuyenteDeIngresosBrutos ();
 			Jurisdiccion = new JurisdiccionDeIngresosBrutos ();
 		}
 
 		public override string ToString ()
 		{
-			return "CondicionIngresosBrutos: " + TipoContribuyente.Descripcion;
+			return "CondicionIngresosBrutos: " + Tipo.Descripcion;
 		}
 	}
 }

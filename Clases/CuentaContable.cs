@@ -56,7 +56,7 @@ namespace Hamekoz.Negocio
 
 		public bool Modificable {
 			get;
-			private set;
+			set;
 		}
 
 		public Tipos Tipo {

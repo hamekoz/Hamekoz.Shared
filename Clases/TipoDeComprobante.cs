@@ -20,6 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using Hamekoz.Core;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
@@ -67,7 +68,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public TiposDeControladorFiscal Tipo {
+		public TipoDeControladorFiscal Tipo {
 			get;
 			set;
 		}

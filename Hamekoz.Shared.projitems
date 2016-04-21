@@ -15,7 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Enums\TiposDeControladorFiscal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Stock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Articulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\AsientoItem.cs" />

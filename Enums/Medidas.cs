@@ -21,6 +21,7 @@
 
 namespace Hamekoz.Negocio
 {
+	//TODO cambiar valor 6 por 1 y 7 por 6 en base de datos existente
 	public enum Medidas
 	{
 		Unidad,

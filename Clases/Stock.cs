@@ -38,7 +38,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public double Cantidad { get; set; }
+		public decimal Cantidad { get; set; }
 
 		public override string ToString ()
 		{

@@ -20,10 +20,12 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using Hamekoz.Core;
+using System;
 
 namespace Hamekoz.Negocio
 {
 	//FIX revisar el sentido de esta clase
+	[Obsolete ("Usar enumerado CuentaContable.Tipos")]
 	public class TipoDeCuentaContable : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
