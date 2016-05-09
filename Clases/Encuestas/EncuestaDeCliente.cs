@@ -1,12 +1,10 @@
 ﻿//
-//  Domicilio.cs
+//  EncuestaDeCliente.cs
 //
 //  Author:
-//       Ezequiel Taranto <ezequiel89@gmail.com>
-//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
-//       Mariano Adrian Ripa <ripamariano@gmail.com>
+//       Mariano Ripa <ripamariano@gmail.com>
 //
-//  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2016 Hamekoz
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -24,40 +22,21 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Domicilio : IPersistible, IIdentifiable
+	public class EncuestaDeCliente: Encuesta,IPersistible
 	{
-		public int Id {
-			get;
-			set;
+		#region IPersistible implementation
+
+		public int Id { get; set; }
+
+		#endregion
+
+		public string Descripcion {
+			get {
+				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
+			}
 		}
 
-		public Localidad Localidad {
-			get;
-			set;
-		}
-
-		public string CodigoPostal {
-			get;
-			set;
-		}
-
-
-		public string Calle {
-			get;
-			set;
-		}
-
-		public string Numero {
-			get;
-			set;
-		}
-
-		public string Departarmento {
-			get;
-			set;
-		}
-
-
+		//TODO falta terminar de definir la clase
 	}
 }
 

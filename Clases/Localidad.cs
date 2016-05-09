@@ -37,6 +37,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+
 		public Municipio Municipio {
 			get;
 			set;

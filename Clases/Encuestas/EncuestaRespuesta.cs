@@ -1,12 +1,10 @@
 ﻿//
-//  Domicilio.cs
+//  EncuestaRespuesta.cs
 //
 //  Author:
-//       Ezequiel Taranto <ezequiel89@gmail.com>
-//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
-//       Mariano Adrian Ripa <ripamariano@gmail.com>
+//       Mariano Ripa <ripamariano@gmail.com>
 //
-//  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2016 Hamekoz
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -20,42 +18,26 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Domicilio : IPersistible, IIdentifiable
+	public class EncuestaRespuesta: IPersistible
 	{
-		public int Id {
-			get;
-			set;
-		}
+		#region IPersistible implementation
 
-		public Localidad Localidad {
-			get;
-			set;
-		}
+		public int Id { get; set; }
 
-		public string CodigoPostal {
-			get;
-			set;
-		}
+		#endregion
+
+		public string Descripcion { get; set; }
 
 
-		public string Calle {
-			get;
-			set;
-		}
+		//Respuesta de tipo Abierta o Seleccionable
+		public string Comentario { get; set; }
 
-		public string Numero {
-			get;
-			set;
-		}
-
-		public string Departarmento {
-			get;
-			set;
-		}
+		public bool Seleccionda { get; set; }
 
 
 	}
