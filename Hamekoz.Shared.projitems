@@ -6,12 +6,13 @@
     <SharedGUID>{5BF8AF42-F3DB-4842-ADC0-CE95561138B5}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Hamekoz.Negocio</Import_RootNamespace>
+    <Import_RootNamespace>Hamekoz</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Enums\" />
     <Folder Include="$(MSBuildThisFileDirectory)Clases\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
@@ -62,5 +63,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Provincia.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Pais.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Municipio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IAutorizable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IDescriptible.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IIdentifiable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\IPersistible.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ISearchable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ISupervisor.cs" />
   </ItemGroup>
 </Project>
