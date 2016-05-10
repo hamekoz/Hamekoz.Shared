@@ -85,5 +85,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ValidationDataException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Numalet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\Encuesta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeCliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeEmpleado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaPregunta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaRespuesta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaSeccion.cs" />
   </ItemGroup>
 </Project>
