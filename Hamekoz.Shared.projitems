@@ -13,6 +13,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Clases\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Fiscal\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
@@ -70,5 +72,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\IPersistible.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ISearchable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ISupervisor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IComprobante.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IComprobanteElectronico.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IResponsable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IZeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\SituacionIVA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\TipoControladorFiscal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\NumericExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ValidationDataException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Numalet.cs" />
   </ItemGroup>
 </Project>
