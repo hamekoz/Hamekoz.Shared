@@ -80,10 +80,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Fiscal\SituacionIVA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fiscal\TipoControladorFiscal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\NumericExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtension.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\ValidationDataException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Numalet.cs" />
   </ItemGroup>
 </Project>
