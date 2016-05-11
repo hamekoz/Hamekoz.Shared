@@ -1,10 +1,10 @@
 ﻿//
-//  Encuesta.cs
+//  Empleado.cs
 //
 //  Author:
-//       Mariano Ripa <ripamariano@gmail.com>
+//       Ezequiel Taranto <ezequiel89@gmail.com>
 //
-//  Copyright (c) 2016 Hamekoz
+//  Copyright (c) 2016 
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -19,37 +19,21 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using Hamekoz.Core;
 
-namespace Hamekoz.Negocio
+namespace Hamekoz
 {
-	public abstract class Encuesta
+	public class Empleado: IPersistible
 	{
+		#region IPersistible implementation
 
-		public string Nombre { get; set; }
+		public int Id { get; set; }
 
-	
+		#endregion
 
-		public DateTime Fecha { get; set; }
+		public string NombresApellidos { get; set; }
 
-		public int TotalPreguntas {
-			get {
-				return Secciones!=null?Secciones.Sum (i => i.NroPreguntas):0;
-			}
-		
-		}
-
-
-		public int NroSecciones {
-			get {
-				return Secciones!=null? Secciones.Count : 0;
-			}
-
-		}
-
-		public IList<EncuestaSeccion> Secciones { get; set; }
-
+		public string Dni { get; set; }
 
 	}
 }
