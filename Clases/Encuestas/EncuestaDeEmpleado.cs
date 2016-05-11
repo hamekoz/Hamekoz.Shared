@@ -19,7 +19,6 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using Balcarce.Core;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -43,8 +42,8 @@ namespace Hamekoz.Negocio
 		public bool EsAnonima { get; set; }
 
 		public Empleado Empleado { get; set; }
-
-		public Area Sector { get; set; }
+		//TODO hacer clase area en hamekoz
+		//public Area Sector { get; set; }
 
 		//TODO falta terminar de definir la clase
 	}

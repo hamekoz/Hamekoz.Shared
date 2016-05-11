@@ -92,5 +92,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaPregunta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaRespuesta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaSeccion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Empleado.cs" />
   </ItemGroup>
 </Project>
