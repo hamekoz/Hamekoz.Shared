@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaDeControl:Encuesta,IPersistible
+	public class EncuestaControlDeSucursal:Encuesta,IPersistible
 	{
 
 

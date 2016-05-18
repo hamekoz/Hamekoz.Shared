@@ -82,11 +82,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\Encuesta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeCliente.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeEmpleado.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaPregunta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaRespuesta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaSeccion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Empleado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeProveedor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaControlDeSucursal.cs" />
   </ItemGroup>
 </Project>

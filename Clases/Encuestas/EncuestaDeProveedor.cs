@@ -1,5 +1,5 @@
 ﻿//
-//  EncuestaRespuesta.cs
+//  EncuestaDeProveedor.cs
 //
 //  Author:
 //       Mariano Ripa <ripamariano@gmail.com>
@@ -19,27 +19,27 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using Hamekoz.Negocio;
 using Hamekoz.Core;
 
-namespace Hamekoz.Negocio
+namespace Hamekoz
 {
-	public class EncuestaRespuesta: IPersistible
+	public class EncuestaDeProveedor: Encuesta,IPersistible
 	{
+
 		#region IPersistible implementation
 
 		public int Id { get; set; }
 
 		#endregion
 
-		public string Descripcion { get; set; }
+		public string Descripcion {
+			get {
+				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
+			}
+		}
 
-
-		//Respuesta de tipo Abierta o Seleccionable
-		public string Comentario { get; set; }
-
-		public bool Seleccionda { get; set; }
-
-		public short Valor { get; set; }
+		public string RazonSocial { get; set; }
 
 
 	}

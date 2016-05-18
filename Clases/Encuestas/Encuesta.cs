@@ -29,13 +29,13 @@ namespace Hamekoz.Negocio
 
 		public string Nombre { get; set; }
 
-	
+		public short Puntaje { get; set; }
 
 		public DateTime Fecha { get; set; }
 
 		public int TotalPreguntas {
 			get {
-				return Secciones!=null?Secciones.Sum (i => i.NroPreguntas):0;
+				return Secciones != null ? Secciones.Sum (i => i.NroPreguntas) : 0;
 			}
 		
 		}
@@ -43,7 +43,7 @@ namespace Hamekoz.Negocio
 
 		public int NroSecciones {
 			get {
-				return Secciones!=null? Secciones.Count : 0;
+				return Secciones != null ? Secciones.Count : 0;
 			}
 
 		}
