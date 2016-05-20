@@ -29,7 +29,8 @@ namespace Hamekoz.Negocio
 		{
 			Almacenaje,
 			Productivo,
-			Expeditivo,
+			Mecanico,
+			Edilicio
 		}
 
 		public int Id {
