@@ -46,6 +46,8 @@ namespace Hamekoz.Negocio
 
 		public Empleado Encuestador { get; set; }
 
+		public short Puntaje { get; set; }
+
 		public DateTime Fecha { get; set; }
 
 		public Tipos Tipo { get; set; }

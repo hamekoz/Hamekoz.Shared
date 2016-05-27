@@ -1,10 +1,10 @@
 ﻿//
-//  Deposito.cs
+//  EncuestaDeControl.cs
 //
 //  Author:
-//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
+//       Mariano Ripa <ripamariano@gmail.com>
 //
-//  Copyright (c) 2014 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2016 Hamekoz
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,34 +18,32 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Deposito : IPersistible, IIdentifiable, IDescriptible
+	public class EncuestaControlDeSucursal:Encuesta,IPersistible
 	{
-		//TODO Revisar porque un deposito puede llegar a tener mas de un Rol
-		public enum Tipos
-		{
-			Almacenaje,
-			Productivo,
-			Mecanico,
-			Edilicio
-		}
+		public Sucursal Sucursal { get; set; }
 
-		public int Id {
-			get;
-			set;
-		}
+		public Empleado Encuestador { get; set; }
+
+		public Tipos Tipo { get; set; }
 
 		public string Descripcion {
-			get;
-			set;
+			get {
+				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
+			}
 		}
 
-		public Tipos Tipo {
-			get;
-			set;
+		public override int ObjetivoId {
+			get {
+				return Sucursal.Id;
+			}
 		}
+
+
 	}
 }
+

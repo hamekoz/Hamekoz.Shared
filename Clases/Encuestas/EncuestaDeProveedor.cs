@@ -1,5 +1,5 @@
 ﻿//
-//  EncuestaDeControl.cs
+//  EncuestaDeProveedor.cs
 //
 //  Author:
 //       Mariano Ripa <ripamariano@gmail.com>
@@ -19,17 +19,19 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using Hamekoz.Negocio;
 using Hamekoz.Core;
 
-namespace Hamekoz.Negocio
+namespace Hamekoz
 {
-	public class EncuestaDeControl:Encuesta
+	public class EncuestaDeProveedor: Encuesta,IPersistible
 	{
-		public Sucursal Sucursal { get; set; }
 
-		public Empleado Encuestador { get; set; }
+		#region IPersistible implementation
 
-		public Tipos Tipo { get; set; }
+		public int Id { get; set; }
+
+		#endregion
 
 		public string Descripcion {
 			get {
@@ -37,11 +39,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public override int ObjetivoId {
-			get {
-				return Sucursal.Id;
-			}
-		}
+		public string RazonSocial { get; set; }
 
 
 	}

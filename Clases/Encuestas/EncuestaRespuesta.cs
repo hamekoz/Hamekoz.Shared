@@ -39,6 +39,8 @@ namespace Hamekoz.Negocio
 
 		public bool Seleccionda { get; set; }
 
+		public short Valor { get; set; }
+
 
 	}
 }
