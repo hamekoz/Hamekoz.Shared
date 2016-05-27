@@ -1,8 +1,8 @@
 ﻿//
-//  EncuestaDeEmpleado.cs
+//  Area.cs
 //
 //  Author:
-//       Mariano Ripa <ripamariano@gmail.com>
+//       Ezequiel Taranto <ezequiel89@gmail.com>
 //
 //  Copyright (c) 2016 Hamekoz
 //
@@ -19,28 +19,14 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaDeEmpleado: Encuesta
+	public class Area
 	{
-		public string Descripcion {
-			get {
-				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
-			}
+		public Area ()
+		{
 		}
-
-		public Tipos Tipo { get; set; }
-
-		/// Si es Anonima solo identifico por Area sino Empleado-Area
-		public bool EsAnonima { get; set; }
-
-		public Empleado Empleado { get; set; }
-
-		public Area Sector { get; set; }
-
-		//TODO falta terminar de definir la clase
 	}
 }
 

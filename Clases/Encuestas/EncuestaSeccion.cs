@@ -24,7 +24,7 @@ using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaSeccion
+	public class EncuestaSeccion: IPersistible
 	{
 
 		#region IPersistible implementation
@@ -33,7 +33,7 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
-		public string Nombre { get; set;}
+		public string Nombre { get; set; }
 
 		public int Numero { get; set; }
 
@@ -45,13 +45,13 @@ namespace Hamekoz.Negocio
 
 		public int NroPreguntas {
 			get {
-				return Preguntas!=null? Preguntas.Count : 0;
+				return Preguntas != null ? Preguntas.Count : 0;
 			}
 			set {
 				NroPreguntas = value;
 			}
 		}
-		 
+
 		public IList<EncuestaPregunta> Preguntas { get; set; }
 		
 	}

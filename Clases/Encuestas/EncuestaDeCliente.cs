@@ -22,19 +22,15 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaDeCliente: Encuesta,IPersistible
+	public class EncuestaDeCliente: Encuesta
 	{
-		#region IPersistible implementation
-
-		public int Id { get; set; }
-
-		#endregion
-
 		public string Descripcion {
 			get {
 				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
 			}
 		}
+
+		public Tipos Tipo { get; set; }
 
 		//TODO falta terminar de definir la clase
 	}

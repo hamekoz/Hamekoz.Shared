@@ -35,7 +35,7 @@ namespace Hamekoz.Negocio
 		public int Numero { get; set; }
 
 		public string Pregunta { get; set; }
-	
+
 		public IList<EncuestaRespuesta> Respuestas { get; set; }
 		
 	}
