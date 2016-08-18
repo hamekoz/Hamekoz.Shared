@@ -39,6 +39,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string CBU {
+			get;
+			set;
+		}
+
 		public int Clearing {
 			get;
 			set;

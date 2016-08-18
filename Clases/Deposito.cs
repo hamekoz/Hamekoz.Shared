@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using Hamekoz.Core;
+using System;
 
 namespace Hamekoz.Negocio
 {
@@ -29,8 +30,7 @@ namespace Hamekoz.Negocio
 		{
 			Almacenaje,
 			Productivo,
-			Mecanico,
-			Edilicio
+			Expeditivo
 		}
 
 		public int Id {
@@ -38,6 +38,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		[Obsolete ("Usar el campo Nombre")]
 		public string Descripcion {
 			get;
 			set;
