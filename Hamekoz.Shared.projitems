@@ -15,6 +15,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />
     <Folder Include="$(MSBuildThisFileDirectory)Fiscal\" />
     <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Medidas.cs" />
@@ -90,5 +91,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Area.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaDeProveedor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaControlDeSucursal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IReportTo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IReportInfo.cs" />
   </ItemGroup>
 </Project>
