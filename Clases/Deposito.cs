@@ -28,9 +28,10 @@ namespace Hamekoz.Negocio
 		//TODO Revisar porque un deposito puede llegar a tener mas de un Rol
 		public enum Tipos
 		{
-			Almacenaje,
-			Productivo,
-			Expeditivo
+			Almacenaje = 1,
+			Productivo = 2,
+			Expeditivo = 3,
+			Especial = 4
 		}
 
 		public int Id {
