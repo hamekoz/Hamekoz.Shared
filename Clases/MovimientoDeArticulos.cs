@@ -52,7 +52,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public double Cantidad {
+		public decimal Cantidad {
 			get;
 			set;
 		}
