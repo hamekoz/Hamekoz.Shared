@@ -36,7 +36,7 @@ namespace Hamekoz.Argentina
 				return false;
 			if (!cuit.All (char.IsDigit))
 				return false;
-		
+
 			int calculado = CalcularDigitoVerificador (cuit);
 			int digito = int.Parse (cuit.Substring (10));
 			return calculado == digito;
