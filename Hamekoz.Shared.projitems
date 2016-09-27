@@ -93,5 +93,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Encuestas\EncuestaControlDeSucursal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Reportes\IReportTo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Reportes\IReportInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\CUIT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\CBU.cs" />
   </ItemGroup>
 </Project>
