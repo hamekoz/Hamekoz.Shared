@@ -25,10 +25,14 @@ namespace Hamekoz.Negocio
 {
 	public class CondicionDePago : IPersistible, IIdentifiable, IDescriptible
 	{
+		#region IIdentifiable implementation
+
 		public int Id {
 			get;
 			set;
 		}
+
+		#endregion
 
 		public string Descripcion {
 			get;
@@ -36,6 +40,11 @@ namespace Hamekoz.Negocio
 		}
 
 		public int Dias {
+			get;
+			set;
+		}
+
+		public bool Inactiva {
 			get;
 			set;
 		}

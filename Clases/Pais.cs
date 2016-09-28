@@ -40,6 +40,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool Inactivo {
+			get;
+			set;
+		}
+
 		string IDescriptible.Descripcion {
 			get {
 				return Nombre;
