@@ -48,5 +48,10 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		public override string ToString()
+		{
+			return Descripcion;
+		}
 	}
 }
