@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -66,7 +67,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public override string ToString()
+		public override string ToString ()
 		{
 			return Descripcion;
 		}
