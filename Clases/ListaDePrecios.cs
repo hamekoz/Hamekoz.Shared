@@ -18,7 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -35,7 +35,33 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool Inactiva {
+			get;
+			set;
+		}
+
+		public bool EsPrecioFinal {
+			get;
+			set;
+		}
+
+		//TODO revisar esto no deberia ser publico
+		public int ListaBaseId {
+			get;
+			set;
+		}
+
+		public ListaDePrecios ListaBase {
+			get;
+			set;
+		}
+
 		public decimal Porcentaje {
+			get;
+			set;
+		}
+
+		public IList<Precio> Precios {
 			get;
 			set;
 		}
