@@ -3,8 +3,9 @@
 //
 //  Author:
 //       Mariano Ripa <ripamariano@gmail.com>
+//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2016 Hamekoz
+//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -56,14 +57,12 @@ namespace Hamekoz.Negocio
 			get {
 				return Secciones != null ? Secciones.Sum (i => i.NroPreguntas) : 0;
 			}
-		
 		}
 
 		public int NroSecciones {
 			get {
 				return Secciones != null ? Secciones.Count : 0;
 			}
-
 		}
 
 		public IList<EncuestaSeccion> Secciones { get; set; }

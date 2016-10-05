@@ -3,8 +3,9 @@
 //
 //  Author:
 //       Mariano Ripa <ripamariano@gmail.com>
+//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2016 Hamekoz
+//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,21 +19,12 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using Hamekoz.Negocio;
-using Hamekoz.Core;
 
 namespace Hamekoz
 {
-	public class EncuestaDeProveedor: Encuesta,IPersistible
+	public class EncuestaDeProveedor: Encuesta
 	{
-
-		#region IPersistible implementation
-
-		public int Id { get; set; }
-
-		#endregion
-
 		public string Descripcion {
 			get {
 				return string.Format ("Nro. Encuesta {0} - Nombre {1}", Id, Nombre);
@@ -40,8 +32,6 @@ namespace Hamekoz
 		}
 
 		public string RazonSocial { get; set; }
-
-
 	}
 }
 
