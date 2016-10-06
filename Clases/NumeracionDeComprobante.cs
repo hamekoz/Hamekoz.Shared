@@ -1,5 +1,5 @@
-﻿//
-//  TipoDeComprobante.cs
+//
+//  NumeracionDeComprobante.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -21,13 +21,11 @@
 
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
-using System;
 
 namespace Hamekoz.Negocio
 {
 	//UNDONE refactorizar para separar el tipo del comprobante de los puntos de venta
-
-	public class TipoDeComprobante : IPersistible, IIdentifiable, IDescriptible
+	public class NumeracionDeComprobante : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;
@@ -44,45 +42,38 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public string Letra {
 			get;
 			set;
 		}
 
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public int UltimoNumero {
 			get;
 			set;
 		}
 
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public string Pre {
 			get;
 			set;
 		}
 
 		//UNDONE reivar si tiene sentido almacenar la sucursal en el tipo de comprobante
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public Sucursal Sucursal {
 			get;
 			set;
 		}
 
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public int IdEmpresa {
 			get;
 			set;
 		}
 
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public TipoDeControladorFiscal Tipo {
 			get;
 			set;
 		}
 
 		//FIX esto deberia ser una funcion en lugar de una propiedad
-		[Obsolete ("Usar clase NumeracionDeComprobante")]
 		public string UltimoNumeroConFormato {
 			get {
 				if (Pre != null)

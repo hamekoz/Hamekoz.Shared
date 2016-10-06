@@ -50,7 +50,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public TipoDeComprobante TipoComprobante {
+		public NumeracionDeComprobante TipoComprobante {
 			get;
 			set;
 		}

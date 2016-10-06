@@ -1,10 +1,10 @@
 ﻿//
-//  IComprobante.cs
+//  TiposDeComprobante.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2015 Hamekoz
+//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,45 +18,20 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
-using System.Collections.Generic;
 
-namespace Hamekoz.Fiscal
+namespace Hamekoz
 {
-	public interface IComprobanteBase
+	//UNDONE revisar logica entre Enum y Class
+	public enum TiposDeComprobante
 	{
-		string Comprobante { get; }
+		Factura,
+		NotaDeCredito,
+		NotaDeDebito,
+		Recibo,
+		OrdenDePago,
+		Interno,
 
-		DateTime Emision { get; }
-
-		IResponsable Responsable { get; }
-
-		decimal Total { get; }
-	}
-
-	public interface IComprobante
-	{
-		IResponsable Responsable { get; }
-
-		string Numero { get; set; }
-
-		string PuntoDeVenta { get; }
-
-		DateTime Emision { get; }
-
-		IList<IItem> Items { get; }
-
-		decimal Total { get; }
-
-		decimal SubTotal { get; }
-
-		decimal IVA { get; }
-
-		decimal NoGravado { get; }
-
-		decimal Percepciones { get; }
-
-		string Observaciones { get; }
 	}
 }
+
