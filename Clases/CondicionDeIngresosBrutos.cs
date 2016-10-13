@@ -39,16 +39,16 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public CondicionDeIngresosBrutos ()
+		public CondicionDeIngresosBrutos()
 		{
 			//FIX aca no deberia inicializarse objetos
-			Tipo = new TipoDeContribuyenteDeIngresosBrutos ();
-			Jurisdiccion = new JurisdiccionDeIngresosBrutos ();
+			Tipo = new TipoDeContribuyenteDeIngresosBrutos();
+			Jurisdiccion = new JurisdiccionDeIngresosBrutos();
 		}
 
-		public override string ToString ()
+		public override string ToString()
 		{
-			return "CondicionIngresosBrutos: " + Tipo.Descripcion;
+			return Tipo.Descripcion;
 		}
 	}
 }
