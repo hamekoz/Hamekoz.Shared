@@ -20,9 +20,9 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections.Generic;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
-using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
@@ -33,12 +33,8 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO CUIT y DNI se podrian unificar en una unica propiedad
 		public string CUIT {
-			get;
-			set;
-		}
-
-		public string IIBB {
 			get;
 			set;
 		}
@@ -53,17 +49,8 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Domicilio Domicilio {
-			get;
-			set;
-		}
 
-		public CondicionDePago CondicionDePago {
-			get;
-			set;
-		}
-
-		public Estados EstadoCliente {
+		public Estados Estado {
 			get;
 			set;
 		}
@@ -73,11 +60,27 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public CondicionDeIngresosBrutos CondicionIngresosBrutos {
+		public CondicionDePago CondicionDePago {
 			get;
 			set;
 		}
 
+		public Domicilio Domicilio {
+			get;
+			set;
+		}
+
+		public CondicionDeIngresosBrutos CondicionDeIngresosBrutos {
+			get;
+			set;
+		}
+
+		public string IIBB {
+			get;
+			set;
+		}
+
+		//TODO deberia ser un unico telefono y tener una lista de contactos
 		public IList<Telefono> Telefonos {
 			get;
 			set;
@@ -89,31 +92,30 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public long TarjetaFidelizacion {
-			get;
-			set;
-		}
-
 		public ListaDePrecios ListaDePrecios {
 			get;
 			set;
 		}
 
-		//Esto deberia tener algun otro nombre para contemplar a las personas juridicas
-		public DateTime FechaDeNacimiento {
+		public int TarjetaDeFidelizacion {
 			get;
 			set;
 		}
 
-		public Cliente ()
+		public DateTime Aniversario {
+			get;
+			set;
+		}
+
+		public Cliente()
 		{
 			CUIT = string.Empty;
 			RazonSocial = string.Empty;
 			CondicionDeIVA = SituacionIVA.CONSUMIDOR_FINAL;
-			EstadoCliente = Estados.Gestion;
+			Estado = Estados.Gestion;
 		}
 
-		public override string ToString ()
+		public override string ToString()
 		{
 			return RazonSocial;
 		}
@@ -126,7 +128,7 @@ namespace Hamekoz.Negocio
 
 		string IResponsable.Domicilio {
 			get {
-				return Domicilio.ToString ();
+				return Domicilio.ToString();
 			}
 		}
 	}

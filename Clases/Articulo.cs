@@ -30,49 +30,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public string Nombre {
-			get;
-			set;
-		}
-
 		public string Codigo {
 			get;
 			set;
 		}
 
+		public string Nombre {
+			get;
+			set;
+		}
+
 		public string NombreCorto {
-			get;
-			set;
-		}
-
-		public decimal Precio {
-			get;
-			set;
-		}
-
-		public decimal TasaDeIVA {
-			get;
-			set;
-		}
-
-		public decimal IVA {
-			get {
-				return Math.Round (Precio - Precio / (1 + TasaDeIVA / 100), 2);
-			}
-		}
-
-		public decimal ImpuestosInternos {
-			get;
-			set;
-		}
-
-		public decimal Neto {
-			get {
-				return Math.Round (Precio - IVA - ImpuestosInternos, 2);
-			}
-		}
-
-		public Medidas Medida {
 			get;
 			set;
 		}
@@ -87,15 +55,65 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Articulo ()
+		public Medidas Medida {
+			get;
+			set;
+		}
+
+		public decimal StockMinimo {
+			get;
+			set;
+		}
+
+		public decimal Precio {
+			get;
+			set;
+		}
+
+		public decimal TasaDeIVA {
+			get;
+			set;
+		}
+
+		public decimal Neto {
+			get {
+				return Math.Round(Precio - IVA - ImpuestosInternos, 2);
+			}
+		}
+
+		public decimal IVA {
+			get {
+				return Math.Round(Precio - Precio / (1 + TasaDeIVA / 100), 2);
+			}
+		}
+
+		public decimal ImpuestosInternos {
+			get;
+			set;
+		}
+
+
+
+		public Articulo()
 		{
+			Estado = Estados.Gestion;
+			Medida = Medidas.Unidad;
 			TasaDeIVA = 21;
 		}
+
+		#region IDescriptible
 
 		string IDescriptible.Descripcion {
 			get {
 				return Nombre;
 			}
+		}
+
+		#endregion
+
+		public override string ToString()
+		{
+			return Nombre;
 		}
 	}
 }
