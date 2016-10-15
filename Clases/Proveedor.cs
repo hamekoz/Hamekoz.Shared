@@ -32,6 +32,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string RazonSocial {
+			get;
+			set;
+		}
+
 		public string CUIT {
 			get;
 			set;
@@ -43,11 +48,6 @@ namespace Hamekoz.Negocio
 		}
 
 		public string DNI {
-			get;
-			set;
-		}
-
-		public string RazonSocial {
 			get;
 			set;
 		}
@@ -82,7 +82,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public override string ToString ()
+		public override string ToString()
 		{
 			return RazonSocial;
 		}
@@ -95,7 +95,7 @@ namespace Hamekoz.Negocio
 
 		string IResponsable.Domicilio {
 			get {
-				return Domicilio.ToString ();
+				return Domicilio.ToString();
 			}
 		}
 	}
