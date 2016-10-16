@@ -92,51 +92,39 @@ namespace Hamekoz.Negocio
 
 		public decimal Total {
 			get {
-				return Renglones.Sum (r => r.Total);
+				return Renglones.Sum(r => r.Total);
 			}
 		}
 
 		#region IComprobante
 
-		IResponsable IComprobante.Responsable {
-			get {
-				return Cliente;
-			}
-		}
+		public IResponsable Responsable => Cliente;
 
-		string IComprobante.PuntoDeVenta {
-			get {
-				return Tipo.Pre;
-			}
-		}
+		public string PuntoDeVenta => Tipo.Pre;
 
-		IList<IItem> IComprobante.Items {
-			get {
-				return Renglones.Cast<IItem> ().ToList ();
-			}
-		}
+		public IList<IItem> Items => Renglones.Cast<IItem>().ToList();
 
 		decimal IComprobante.SubTotal {
 			get {
-				throw new NotImplementedException ();
+				throw new NotImplementedException();
 			}
 		}
 
 		decimal IComprobante.IVA {
 			get {
-				throw new NotImplementedException ();
+				throw new NotImplementedException();
 			}
 		}
 
 		decimal IComprobante.NoGravado {
 			get {
-				throw new NotImplementedException ();
+				throw new NotImplementedException();
 			}
 		}
 
 		decimal IComprobante.Percepciones {
 			get {
-				throw new NotImplementedException ();
+				throw new NotImplementedException();
 			}
 		}
 

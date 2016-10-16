@@ -30,6 +30,8 @@ namespace Hamekoz.Fiscal
 		//HACK ver si la interfaz IResponsable deberia usar la clase Domicilio
 		string Domicilio { get; }
 
+		string Email { get; }
+
 		SituacionIVA CondicionDeIVA { get; }
 	}
 }
