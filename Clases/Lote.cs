@@ -25,8 +25,8 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase lote
-	public class Lote
+	public class Lote : IPersistible, IIdentifiable
 	{
+		public int Id { get; set; }
 	}
-
 }

@@ -27,7 +27,7 @@ namespace Hamekoz.Negocio
 	{
 		int Id { get; }
 
-		IList<IRemitoItem> Renglones { get; }
+		IList<IRemitoItem> Items { get; }
 	}
 }
 

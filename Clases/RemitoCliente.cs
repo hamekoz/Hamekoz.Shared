@@ -27,7 +27,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoCliente : IPersistible, IIdentifiable, IComprobante
+	public class RemitoCliente : IPersistible, IIdentifiable, IComprobante, IRemito
 	{
 		public int Id {
 			get;
@@ -54,6 +54,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//FIX esto deberia ser una clase y no un atributo
 		public int IdFlete {
 			get;
 			set;
@@ -125,6 +126,16 @@ namespace Hamekoz.Negocio
 		decimal IComprobante.Percepciones {
 			get {
 				throw new NotImplementedException();
+			}
+		}
+
+		#endregion
+
+		#region IRemito
+
+		IList<IRemitoItem> IRemito.Items {
+			get {
+				return Renglones.Cast<IRemitoItem>().ToList();
 			}
 		}
 
