@@ -57,7 +57,47 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string ToDomicilio ()
+		{
+			var build = new System.Text.StringBuilder ();
+			build.Append (Calle);
+			if (Numero != string.Empty) {
+				build.Append (" ");
+				build.Append (Numero);
+			}
+			if (Departarmento != string.Empty) {
+				build.Append (" ");
+				build.Append (Departarmento);
+			}
+			return build.ToString ();
+		}
 
+		public override string ToString ()
+		{
+			var build = new System.Text.StringBuilder ();
+			build.Append (ToDomicilio ());
+//			if (Localidad?.Nombre != string.Empty) {
+//				build.Append (" - ");
+//				build.Append (Localidad.Nombre);
+//			}
+//			if (Localidad?.Municipio?.Nombre != string.Empty) {
+//				build.Append (" - ");
+//				build.Append (Localidad?.Municipio?.Nombre);
+//			}
+//			if (Localidad?.Municipio?.Nombre != string.Empty) {
+//				build.Append (" - ");
+//				build.Append (Localidad?.Municipio?.Nombre);
+//			}
+//			if (Localidad?.Municipio?.Provincia?.Nombre != string.Empty) {
+//				build.Append (" - ");
+//				build.Append (Localidad?.Municipio?.Provincia?.Nombre);
+//			}
+//			if (Localidad?.Municipio?.Provincia?.Pais?.Nombre != string.Empty) {
+//				build.Append (" - ");
+//				build.Append (Localidad?.Municipio?.Provincia?.Pais?.Nombre);
+//			}
+			return build.ToString ();
+		}
 	}
 }
 
