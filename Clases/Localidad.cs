@@ -37,6 +37,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//HACK el IsoManagement las localidad depende directamente de la provincia
+		public Provincia Provincia {
+			get;
+			set;
+		}
 
 		public Municipio Municipio {
 			get;

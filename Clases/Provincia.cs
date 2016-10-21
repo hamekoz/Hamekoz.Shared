@@ -46,6 +46,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//HACK el IsoManagement las localidad depende directamente de la provincia
+		public IList<Localidad> Localidades {
+			get;
+			set;
+		}
+
 		string IDescriptible.Descripcion {
 			get {
 				return Nombre;
