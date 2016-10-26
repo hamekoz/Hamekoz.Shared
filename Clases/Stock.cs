@@ -18,11 +18,12 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
 	//UNDONE revisar el sentido de esta clase
-	public class Stock
+	public class Stock : ISearchable
 	{
 		public string Rubro {
 			get {
@@ -44,5 +45,14 @@ namespace Hamekoz.Negocio
 		{
 			return string.Format ("Codigo: {0}, Articulo: {1}, Rubro: {2}, Medida: {3}", Articulo.Codigo, Articulo.Nombre, Rubro, Medida);
 		}
+
+		#region ISearchable implementation
+
+		public string ToSearchString ()
+		{
+			return string.Format ("[Stock: Rubro={0}, Articulo={1}, Medida={2}, Cantidad={3}]", Rubro, Articulo, Medida, Cantidad);
+		}
+
+		#endregion
 	}
 }
