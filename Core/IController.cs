@@ -33,6 +33,8 @@ namespace Hamekoz.Core
 		void Remove (T instance);
 
 		IList<T> List { get; }
+
+		bool Reload { get; set; }
 	}
 }
 
