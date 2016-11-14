@@ -35,7 +35,7 @@ namespace Hamekoz.Reportes
 		void ToPdf (string filename);
 	}
 
-	public interface IReportToXls
+	public interface IReportToXls : IReportToXlsx
 	{
 		/// <summary>
 		/// Xls this instance.
@@ -47,6 +47,20 @@ namespace Hamekoz.Reportes
 		/// </summary>
 		/// <param name="filename">Filename.</param>
 		void ToXls (string filename);
+	}
+
+	public interface IReportToXlsx
+	{
+		/// <summary>
+		/// Xlsx this instance.
+		/// </summary>
+		void ToXlsx ();
+
+		/// <summary>
+		/// Xlsx the specified filename.
+		/// </summary>
+		/// <param name="filename">Filename.</param>
+		void ToXlsx (string filename);
 	}
 
 	public interface IReportToTxt
