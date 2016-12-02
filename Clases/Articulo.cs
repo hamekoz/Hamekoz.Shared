@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -77,13 +78,13 @@ namespace Hamekoz.Negocio
 
 		public decimal Neto {
 			get {
-				return Math.Round(Precio - IVA - ImpuestosInternos, 2);
+				return Math.Round (Precio - IVA - ImpuestosInternos, 2);
 			}
 		}
 
 		public decimal IVA {
 			get {
-				return Math.Round(Precio - Precio / (1 + TasaDeIVA / 100), 2);
+				return Math.Round (Precio - Precio / (1 + TasaDeIVA / 100), 2);
 			}
 		}
 
@@ -92,9 +93,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public IList<string> EANs {
+			get;
+			set;
+		}
 
-
-		public Articulo()
+		public Articulo ()
 		{
 			Estado = Estados.Gestion;
 			Medida = Medidas.Unidad;
@@ -111,7 +115,7 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
-		public override string ToString()
+		public override string ToString ()
 		{
 			return Nombre;
 		}
