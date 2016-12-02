@@ -31,6 +31,17 @@ namespace Hamekoz.Negocio
 	//UNDONE separar datos de implementacion de comprobante electronico
 	public class ComprobanteProveedor : IComprobante
 	{
+		public ComprobanteProveedor ()
+		{
+			//HACK aca no debria inicializase los objetos
+			Proveedor = new Proveedor ();
+			Tipo = new NumeracionDeComprobante ();
+			Remito = new RemitoProveedor ();
+			CondicionDePago = new CondicionDePago ();
+			Asiento = new Asiento ();
+			Observaciones = string.Empty;
+		}
+
 		public long Id {
 			get;
 			set;
