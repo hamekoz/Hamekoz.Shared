@@ -26,6 +26,7 @@ namespace Hamekoz.Negocio
 {
 	public class ReciboItem : IPersistible, IItem
 	{
+		internal int ReciboId;
 		public Recibo Recibo {
 			get;
 			set;
@@ -46,6 +47,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		internal int ChequeId;
 		//FIX el cheque no deberia ser un atributo del detalle del recibo.
 		public Cheque Cheque {
 			get;
@@ -67,7 +69,7 @@ namespace Hamekoz.Negocio
 
 		string IItem.DescripcionCorta {
 			get {
-				return CuentaContable.Cuenta.Substring (0, 40);
+				return CuentaContable.Cuenta.Substring(0, 40);
 			}
 		}
 
