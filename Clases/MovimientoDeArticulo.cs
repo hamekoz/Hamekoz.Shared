@@ -18,15 +18,21 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
 	//FIX renombrar en singular
-	public class MovimientoDeArticulos : IPersistible, IIdentifiable
+	public class MovimientoDeArticulo : IPersistible, IIdentifiable
 	{
+		public MovimientoDeArticulo ()
+		{
+			//HACK aca no se deben inicializar objetos
+			Tipo = new TipoDeMovimiento ();
+			Articulo = new Articulo ();
+		}
+
 		public int Id {
 			get;
 			set;
