@@ -98,5 +98,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\NumeracionDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TiposDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorArticulo.cs" />
   </ItemGroup>
 </Project>

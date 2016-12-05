@@ -66,6 +66,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public int CantidadPorBulto {
+			get;
+			set;
+		}
+
 		public decimal Precio {
 			get;
 			set;
@@ -98,11 +103,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public IList<ProveedorArticulo> Proveedores {
+			get;
+			set;
+		}
+
 		public Articulo ()
 		{
 			Estado = Estados.Gestion;
 			Medida = Medidas.Unidad;
 			TasaDeIVA = 21;
+			Proveedores = new List<ProveedorArticulo> ();
 		}
 
 		#region IDescriptible
