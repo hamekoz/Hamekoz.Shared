@@ -18,14 +18,61 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
+	//UNDONE ver si esto es necesario persistilo
+	public enum CuentaBase
+	{
+		Activo = 1,
+		Pasivo,
+		Ingreso,
+		Egreso,
+	}
+
+	public static class CuentaBaseExtension
+	{
+		public static int Inicio (this CuentaBase cuenta)
+		{
+			switch (cuenta) {
+			case CuentaBase.Activo:
+				return 10000;
+			case CuentaBase.Pasivo:
+				return 32900;
+			case CuentaBase.Ingreso:
+				return 55000;
+			case CuentaBase.Egreso:
+				return 77500;
+			default:
+				return 0;
+			}
+		}
+
+		public static int Fin (this CuentaBase cuenta)
+		{
+			switch (cuenta) {
+			case CuentaBase.Activo:
+				return 32890;
+			case CuentaBase.Pasivo:
+				return 54990;
+			case CuentaBase.Ingreso:
+				return 77490;
+			case CuentaBase.Egreso:
+				return 100000;
+			default:
+				return 0;
+			}
+		}
+	}
+
 	public class CuentaContable : IPersistible, IIdentifiable, IDescriptible
 	{
+		#region Enums
+
 		//UNDONE Confirmar los tipos de cuentas contables que puede haber
 		public enum Tipos
 		{
@@ -33,6 +80,19 @@ namespace Hamekoz.Negocio
 			Efectivo,
 			Cheque,
 		}
+
+		//TODO deberia utilizarse la clase Moneda
+		public enum Monedas
+		{
+			[DescriptionAttribute ("SIN MONEDA")]
+			SINMONEDA,
+			PESOS,
+			DOLARES,
+			BONOS,
+			LECOP,
+		}
+
+		#endregion
 
 		public int Id {
 			get;
@@ -49,7 +109,20 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public CuentaBase Base {
+			get;
+			set;
+		}
+
+		//HACK revisar atributos de acceso
+		public int cuentaSumaId;
+
 		public CuentaContable Suma {
+			get;
+			set;
+		}
+
+		public IList<CuentaContable> Cuentas {
 			get;
 			set;
 		}
@@ -64,7 +137,16 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Moneda Moneda {
+		//TODO deberia utilizarse la clase Moneda
+		public Monedas Moneda {
+			get;
+			set;
+		}
+
+		//HACK revisar atributos de acceso
+		public int bancoId;
+
+		public Banco Banco {
 			get;
 			set;
 		}
@@ -74,30 +156,58 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public double Saldo {
+		#region Propiedades calculadas
+
+		public decimal Saldo {
 			get;
 			set;
 		}
 
-		public double SaldoDiferido {
+		public decimal SaldoDiferido {
 			get;
 			set;
 		}
 
-		//UNDONE verificar si tiene sentido que sea una propiedad
+		public decimal SaldoInforme {
+			get;
+			set;
+		}
+
+		public decimal SaldoDiferidoInforme {
+			get;
+			set;
+		}
+
+		#endregion
+
+		public int Tabulacion {
+			get;
+			set;
+		}
+
+		[Obsolete ("Usar propiedad Inactiva")]
 		public bool Eliminado {
+			get {
+				return Inactiva;
+			}
+			set {
+				Inactiva = value;
+			}
+		}
+
+		public bool Inactiva {
 			get;
 			set;
 		}
 
 		public override string ToString ()
 		{
-			return Codigo + " " + Cuenta;
+			return Descripcion;
 		}
 
-		string IDescriptible.Descripcion {
+		public string Descripcion {
 			get {
-				return ToString ();
+				return string.Format ("{0} {1}", Codigo, Cuenta);
 			}
 		}
 	}

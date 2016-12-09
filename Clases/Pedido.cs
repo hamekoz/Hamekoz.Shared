@@ -18,12 +18,21 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase pedido
-	public class Pedido
+	public class Pedido : IPersistible, IIdentifiable
 	{
+		#region IIdentifiable implementation
+
+		public int Id {
+			get;
+			set;
+		}
+
+		#endregion
 	}
 
 }

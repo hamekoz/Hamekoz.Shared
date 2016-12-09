@@ -19,7 +19,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +31,17 @@ namespace Hamekoz.Negocio
 	//UNDONE separar datos de implementacion de comprobante por controlador fiscal
 	public class ComprobanteCliente : IComprobante
 	{
+		public ComprobanteCliente ()
+		{
+			//HACK aca no deberia inicializarse los atributos complejos
+			Cliente = new Cliente ();
+			Tipo = new NumeracionDeComprobante ();
+			Remito = new RemitoCliente ();
+			CondicionDePago = new CondicionDePago ();
+			Asiento = new Asiento ();
+			Zeta = new Zeta ();
+		}
+
 		public int Id {
 			get;
 			set;

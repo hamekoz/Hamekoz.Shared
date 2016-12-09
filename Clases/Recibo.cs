@@ -30,6 +30,15 @@ namespace Hamekoz.Negocio
 	//UNDONE unificar logica comun en clase abstracta Comprobante
 	public class Recibo : IPersistible, IIdentifiable, IComprobante
 	{
+		public Recibo()
+		{
+			//FIX aca no se deben iniciar los objetos
+			Cliente = new Cliente();
+			TipoComprobante = new NumeracionDeComprobante();
+			Renglones = new List<ReciboItem>();
+			Asiento = new Asiento();
+		}
+
 		public int Id {
 			get;
 			set;
@@ -63,21 +72,21 @@ namespace Hamekoz.Negocio
 		decimal total;
 
 		public decimal Total {
-			get { return Math.Round (total, 2); }
+			get { return Math.Round(total, 2); }
 			set { total = value; }
 		}
 
 		decimal subTotal;
 
 		public decimal SubTotal {
-			get { return Math.Round (subTotal, 2); }
+			get { return Math.Round(subTotal, 2); }
 			set { subTotal = value; }
 		}
 
 		decimal ivaInscripto;
 
 		public decimal IVA {
-			get { return Math.Round (ivaInscripto, 2); }
+			get { return Math.Round(ivaInscripto, 2); }
 			set { ivaInscripto = value; }
 		}
 
@@ -137,7 +146,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Renglones.Cast<IItem> ().ToList ();
+				return Renglones.Cast<IItem>().ToList();
 			}
 		}
 

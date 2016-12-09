@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -65,6 +66,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public int CantidadPorBulto {
+			get;
+			set;
+		}
+
 		public decimal Precio {
 			get;
 			set;
@@ -92,13 +98,22 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public IList<string> EANs {
+			get;
+			set;
+		}
 
+		public IList<ProveedorArticulo> Proveedores {
+			get;
+			set;
+		}
 
 		public Articulo ()
 		{
 			Estado = Estados.Gestion;
 			Medida = Medidas.Unidad;
 			TasaDeIVA = 21;
+			Proveedores = new List<ProveedorArticulo> ();
 		}
 
 		#region IDescriptible

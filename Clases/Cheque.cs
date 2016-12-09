@@ -20,13 +20,13 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using Hamekoz.Core;
-using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar la clase cheque
-	public class Cheque
+	public class Cheque : IPersistible, IIdentifiable
 	{
+		public int Id { get; set; }
 	}
-
 }
+

@@ -25,13 +25,18 @@ namespace Hamekoz.Argentina
 {
 	public static class CUIT
 	{
+		public static string LimpiarCUIT (this string cuit)
+		{
+			return cuit.Replace ("-", string.Empty);
+		}
+
 		public static bool ValidarCUIT (this string cuit)
 		{
 			if (cuit == null)
 				return false;
 			if (cuit == string.Empty)
 				return false;
-			cuit = cuit.Replace ("-", string.Empty);
+			cuit = cuit.LimpiarCUIT ();
 			if (cuit.Length != 11)
 				return false;
 			if (!cuit.All (char.IsDigit))

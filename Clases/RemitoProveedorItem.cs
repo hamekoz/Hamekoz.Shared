@@ -26,6 +26,13 @@ namespace Hamekoz.Negocio
 {
 	public class RemitoProveedorItem : IPersistible, IRemitoItem
 	{
+		//HACK no deberia tener constructor aca
+		public RemitoProveedorItem ()
+		{
+			Articulo = new Articulo ();
+			Cantidad = 1;
+		}
+
 		public IRemito Remito {
 			get;
 			set;
