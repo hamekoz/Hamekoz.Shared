@@ -34,7 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ComprobanteProveedor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ListaDePrecios.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Moneda.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Proveedor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Recibo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoCliente.cs" />
