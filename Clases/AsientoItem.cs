@@ -26,12 +26,14 @@ namespace Hamekoz.Negocio
 {
 	public class AsientoItem : IPersistible, IIdentifiable
 	{
-		public int Id {
-			get;
-			set;
+		//HACK no deberia tener constructor
+		public AsientoItem ()
+		{
+			CuentaContable = new CuentaContable ();
+			CentroDeCosto = new CentroDeCosto ();
 		}
 
-		public Asiento Asiento {
+		public int Id {
 			get;
 			set;
 		}
@@ -41,7 +43,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Cotizacion Cotizacion {
+		internal Cotizacion Cotizacion {
 			get;
 			set;
 		}
@@ -62,6 +64,7 @@ namespace Hamekoz.Negocio
 		}
 
 		//UNDONE aca el comprobante debe ser una clase base de todos los comprobantes
-		public int ComprobanteId { get; set; }
+		public int comprobanteId;
+		public decimal cotizacionDelPeso = 1;
 	}
 }

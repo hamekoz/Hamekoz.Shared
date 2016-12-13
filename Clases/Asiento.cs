@@ -19,14 +19,14 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Asiento : IPersistible, IIdentifiable
+	public class Asiento : IPersistible, IIdentifiable, ISearchable
 	{
 		public int Id {
 			get;
@@ -48,7 +48,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public DateTime FechaComprobante {
+		public DateTime FechaContable {
 			get;
 			set;
 		}
@@ -64,14 +64,48 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public bool Eliminado { get; set; }
+		public List<AsientoItem> Items { get; set; }
 
-		//TODO evaluar si usar el nombre renglones o el nombre Items
-		public List<AsientoItem> Renglones { get; set; }
+		public IList<AsientoItem> ItemsSumarizados {
+			get {
+				var lista = from i in Items
+				            group i by new { Cuenta = i.CuentaContable } into asiento
+				            select new AsientoItem {
+					CuentaContable = asiento.Key.Cuenta,
+					Debe = asiento.Sum (a => a.Debe),
+					Haber = asiento.Sum (a => a.Haber)
+				};
+				return lista.ToList ();
+			}
+		}
+
+		public decimal Debe {
+			get { return Items.Sum (i => i.Debe); }
+		}
+
+		public decimal Haber {
+			get { return Items.Sum (i => i.Haber); }
+		}
+
+		public bool Anulado { get; set; }
 
 		public Asiento ()
 		{
-			Renglones = new List<AsientoItem> ();
+			Items = new List<AsientoItem> ();
 		}
+
+		public override string ToString ()
+		{
+			return Id.ToString ();
+		}
+
+		#region ISearchable implementation
+
+		public string ToSearchString ()
+		{
+			throw new NotImplementedException ();
+		}
+
+		#endregion
 	}
 }
