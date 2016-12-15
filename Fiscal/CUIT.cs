@@ -25,18 +25,36 @@ namespace Hamekoz.Argentina
 {
 	public static class CUIT
 	{
-		public static string LimpiarCUIT (this string cuit)
+		/// <summary>
+		/// Devuelvo la candena 
+		/// </summary>
+		/// <param name="cuit">Cuit.</param>
+		public static string Formato (this string cuit)
+		{
+			return cuit.Validar () ? cuit.Limpiar ().Insert (2, "-").Insert (11, "-") : "{cuit} no es un CUIT no válido";
+		}
+
+		/// <summary>
+		/// Limpia un CUIT dejando solo los caracteres numericos
+		/// </summary>
+		/// <param name="cuit">Cuit</param>
+		public static string Limpiar (this string cuit)
 		{
 			return cuit.Replace ("-", string.Empty);
 		}
 
-		public static bool ValidarCUIT (this string cuit)
+		/// <summary>
+		/// Validar un cuit aplicando el algortimo del calculo del digito verificador.
+		/// </summary>
+		/// <param name="cuit">Cuit</param>
+		/// <remarks>Sigue siendo necesario consultar el cuit en el padron de afip para garantizar la validez</remarks>
+		public static bool Validar (this string cuit)
 		{
 			if (cuit == null)
 				return false;
 			if (cuit == string.Empty)
 				return false;
-			cuit = cuit.LimpiarCUIT ();
+			cuit = cuit.Limpiar ();
 			if (cuit.Length != 11)
 				return false;
 			if (!cuit.All (char.IsDigit))
