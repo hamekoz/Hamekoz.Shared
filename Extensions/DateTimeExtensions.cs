@@ -55,7 +55,8 @@ namespace Hamekoz.Extensions
 		/// <param name="date">Date.</param>
 		public static DateTime AllDay (this DateTime date)
 		{
-			return date.Date.AddDays (1).AddMilliseconds (-1);
+			//HACK deberia utilizar AddMilliseconds pero Windows lo redondea. Por eso utilizo AddSeconds
+			return date.Date.AddDays (1).AddSeconds (-1);
 		}
 
 		/// <summary>
@@ -83,7 +84,7 @@ namespace Hamekoz.Extensions
 
 		public static DateTime FirstDateOfWeekISO8601 (int year, int weekOfYear)
 		{
-			DateTime jan1 = new DateTime (year, 1, 1);
+			var jan1 = new DateTime (year, 1, 1);
 			int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
 
 			DateTime firstThursday = jan1.AddDays (daysOffset);
@@ -91,9 +92,8 @@ namespace Hamekoz.Extensions
 			int firstWeek = cal.GetWeekOfYear (firstThursday, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
 
 			var weekNum = weekOfYear;
-			if (firstWeek <= 1) {
+			if (firstWeek <= 1)
 				weekNum -= 1;
-			}
 			var result = firstThursday.AddDays (weekNum * 7);
 			return result.AddDays (-3);
 		}
