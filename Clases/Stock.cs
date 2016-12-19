@@ -43,7 +43,12 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
-			return string.Format ("Codigo: {0}, Articulo: {1}, Rubro: {2}, Medida: {3}", Articulo.Codigo, Articulo.Nombre, Rubro, Medida);
+			return string.Format ("Id = {0}, Codigo: {1}, Articulo: {2}, Rubro: {3}, Medida: {4}"
+				, Articulo.Id
+				, Articulo.Codigo
+				, Articulo.Nombre
+				, Rubro, Medida
+			);
 		}
 
 		#region ISearchable implementation
