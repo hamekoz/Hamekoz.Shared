@@ -25,20 +25,11 @@ namespace Hamekoz.Negocio
 {
 	public class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
 	{
-		public int Id {
-			get;
-			set;
-		}
+		public int Id { get; set; }
 
-		public string Descripcion {
-			get;
-			set;
-		}
+		public string Descripcion { get; set; } = string.Empty;
 
-		public bool Inactivo {
-			get;
-			set;
-		}
+		public bool Inactivo { get; set; }
 
 		public override string ToString ()
 		{
