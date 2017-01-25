@@ -20,6 +20,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -31,7 +32,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Localidad Localidad {
+		public string Direccion {
 			get;
 			set;
 		}
@@ -41,41 +42,38 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-
-		public string Calle {
+		public Localidad Localidad {
 			get;
 			set;
 		}
 
-		public string Numero {
+		//TODO Referenciar desde Localidad.Municipio
+		public Municipio Municipio {
 			get;
 			set;
 		}
 
-		public string Departarmento {
+		//TODO Referenciar desde Localidad.Municipio.Provincia
+		public Provincia Provincia {
 			get;
 			set;
 		}
 
-		public string ToDomicilio ()
-		{
-			var build = new System.Text.StringBuilder ();
-			build.Append (Calle);
-			if (Numero != string.Empty) {
-				build.Append (" ");
-				build.Append (Numero);
-			}
-			if (Departarmento != string.Empty) {
-				build.Append (" ");
-				build.Append (Departarmento);
-			}
-			return build.ToString ();
+		//TODO Referenciar desde Localidad.Municipio.Provincia.Pais
+		public Pais Pais {
+			get;
+			set;
+		}
+
+		public bool Eliminado { 
+			get; 
+			set;
 		}
 
 		public override string ToString ()
 		{
 			var build = new System.Text.StringBuilder ();
-			build.Append (ToDomicilio ());
+			build.Append (Direccion);
 //			if (Localidad?.Nombre != string.Empty) {
 //				build.Append (" - ");
 //				build.Append (Localidad.Nombre);
