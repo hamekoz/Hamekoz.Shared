@@ -100,5 +100,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorArticulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IInforme.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IComprobanteVencimiento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICuentaCorrienteController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaCorriente.cs" />
   </ItemGroup>
 </Project>
