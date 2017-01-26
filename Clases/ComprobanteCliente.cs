@@ -22,6 +22,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
@@ -29,7 +30,7 @@ namespace Hamekoz.Negocio
 	//UNDONE unificar logica comun en clase abstracta Comprobante
 	//UNDONE separar datos de implementacion de comprobante electronico
 	//UNDONE separar datos de implementacion de comprobante por controlador fiscal
-	public class ComprobanteCliente : IComprobante
+	public class ComprobanteCliente : IComprobante, IIdentifiable
 	{
 		public ComprobanteCliente ()
 		{
