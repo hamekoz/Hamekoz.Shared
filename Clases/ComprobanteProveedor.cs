@@ -42,7 +42,7 @@ namespace Hamekoz.Negocio
 			Observaciones = string.Empty;
 		}
 
-		public long Id {
+		public int Id {
 			get;
 			set;
 		}
