@@ -1,10 +1,10 @@
-﻿//
-//  IItem.cs
+//
+//  Comprobante.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2015 Hamekoz
+//  Copyright (c) 2017 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,25 +18,39 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
+using Hamekoz.Fiscal;
+using Hamekoz.Negocio;
+using System.Collections.Generic;
 
-namespace Hamekoz.Fiscal
+namespace Hamekoz.Negocio
 {
-	public interface IItem
+	public class ImpuestoItem
 	{
-		string Descripcion { get; }
+		public Impuesto Impuesto {
+			get;
+			set;
+		}
 
-		string DescripcionCorta { get; }
+		/// <summary>
+		/// Gets or sets the base imponible.
+		/// </summary>
+		/// <value>The base imponible.</value>
+		public decimal Base {
+			get;
+			set;
+		}
 
-		decimal Cantidad { get; }
+		public decimal Alicuota {
+			get;
+			set;
+		}
 
-		decimal Precio { get; }
-
-		decimal TasaIVA { get; }
-
-		decimal IVA { get; }
-
-		decimal Impuestos { get; }
-
-		decimal Total { get; }
+		public decimal Importe {
+			get;
+			set;
+		}
 	}
+
 }
+

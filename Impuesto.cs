@@ -1,10 +1,10 @@
-﻿//
-//  IItem.cs
+//
+//  Impuesto.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2015 Hamekoz
+//  Copyright (c) 2017 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,25 +18,36 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using Hamekoz.Core;
+using Hamekoz.Negocio;
 
-namespace Hamekoz.Fiscal
+namespace Hamekoz.Negocio
 {
-	public interface IItem
+	public class Impuesto : IPersistible, IIdentifiable, IDescriptible
 	{
-		string Descripcion { get; }
+		#region IDescriptible implementation
 
-		string DescripcionCorta { get; }
+		public int Id {
+			get;
+			set;
+		}
 
-		decimal Cantidad { get; }
+		public string Descripcion {
+			get;
+			set;
+		}
 
-		decimal Precio { get; }
+		public CuentaContable CuentaContable {
+			get;
+			set;
+		}
 
-		decimal TasaIVA { get; }
+		public bool Inactivo {
+			get;
+			set;
+		}
 
-		decimal IVA { get; }
-
-		decimal Impuestos { get; }
-
-		decimal Total { get; }
+		#endregion
 	}
 }
+

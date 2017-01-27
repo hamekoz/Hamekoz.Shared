@@ -103,5 +103,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IComprobanteVencimiento.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICuentaCorrienteController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaCorriente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Comprobante.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpuestoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impuesto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imputacion.cs" />
   </ItemGroup>
 </Project>
