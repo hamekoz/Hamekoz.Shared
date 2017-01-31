@@ -39,10 +39,19 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar el campo Nombre")]
-		public string Descripcion {
+		public string Nombre {
 			get;
 			set;
+		}
+
+		[Obsolete ("Usar el campo Nombre")]
+		public string Descripcion {
+			get {
+				return Nombre;
+			}
+			set {
+				Nombre = value;
+			}
 		}
 
 		public Tipos Tipo {
