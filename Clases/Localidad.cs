@@ -48,6 +48,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public override string ToString ()
+		{
+			return Nombre;
+		}
+
 		string IDescriptible.Descripcion {
 			get {
 				return Nombre;
