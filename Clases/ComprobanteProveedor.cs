@@ -29,7 +29,7 @@ namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
 	//UNDONE separar datos de implementacion de comprobante electronico
-	public class ComprobanteProveedor : IComprobante
+	public class ComprobanteProveedor : Comprobante, IComprobante
 	{
 		public ComprobanteProveedor ()
 		{
