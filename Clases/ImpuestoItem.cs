@@ -18,10 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
-using Hamekoz.Fiscal;
 using Hamekoz.Negocio;
-using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
@@ -36,7 +33,7 @@ namespace Hamekoz.Negocio
 		/// Gets or sets the base imponible.
 		/// </summary>
 		/// <value>The base imponible.</value>
-		public decimal Base {
+		public decimal BaseImponible {
 			get;
 			set;
 		}
