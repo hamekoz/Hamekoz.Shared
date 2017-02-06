@@ -29,6 +29,7 @@ namespace Hamekoz.Negocio
 		//HACK no deberia tener constructor
 		public AsientoItem ()
 		{
+			Asiento = new Asiento();
 			CuentaContable = new CuentaContable ();
 			CentroDeCosto = new CentroDeCosto ();
 		}
@@ -66,5 +67,11 @@ namespace Hamekoz.Negocio
 		//UNDONE aca el comprobante debe ser una clase base de todos los comprobantes
 		public int comprobanteId;
 		public decimal cotizacionDelPeso = 1;
+
+		//HACK
+		public Asiento Asiento {
+			get;
+			set;
+		}
 	}
 }
