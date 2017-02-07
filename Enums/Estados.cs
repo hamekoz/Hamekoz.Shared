@@ -26,6 +26,7 @@ namespace Hamekoz.Negocio
 		Gestion,
 		Activo,
 		Inactivo,
+		Eliminado
 	}
 }
 
