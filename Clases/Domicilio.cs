@@ -65,7 +65,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public bool Eliminado { 
+		public bool Inactivo { 
 			get; 
 			set;
 		}
