@@ -98,7 +98,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\NumeracionDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TiposDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\MovimientoDeArticulo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorArticulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IInforme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IComprobanteVencimiento.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICuentaCorrienteController.cs" />
@@ -107,5 +106,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Impuesto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ImpuestoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Imputacion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorDeArticulo.cs" />
   </ItemGroup>
 </Project>

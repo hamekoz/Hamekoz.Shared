@@ -3,9 +3,15 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class ProveedorArticulo : IPersistible, IIdentifiable
+	[Obsolete ("Usar clase ProveedorDeArticulo")]
+	public class ProveedorArticulo : ProveedorDeArticulo
 	{
-		public ProveedorArticulo ()
+
+	}
+
+	public class ProveedorDeArticulo : IPersistible, IIdentifiable
+	{
+		public ProveedorDeArticulo ()
 		{
 			//HACK no deberia inicializarse el objeto en el constructor
 			Proveedor = new Proveedor ();
@@ -48,7 +54,7 @@ namespace Hamekoz.Negocio
 		public DateTime UltimaCompra {
 			get;
 			set;
-		}
+		} = DateTime.Now.Date;
 
 		public Articulo Articulo {
 			get;

@@ -103,7 +103,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public IList<ProveedorArticulo> Proveedores {
+		public IList<ProveedorDeArticulo> Proveedores {
 			get;
 			set;
 		}
@@ -113,7 +113,7 @@ namespace Hamekoz.Negocio
 			Estado = Estados.Gestion;
 			Medida = Medidas.Unidad;
 			TasaDeIVA = 21;
-			Proveedores = new List<ProveedorArticulo> ();
+			Proveedores = new List<ProveedorDeArticulo> ();
 		}
 
 		#region IDescriptible
