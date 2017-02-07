@@ -61,12 +61,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal StockMinimo {
+		public double StockMinimo {
 			get;
 			set;
 		}
 
-		public int CantidadPorBulto {
+		public double StockMaximo {
+			get;
+			set;
+		}
+
+		public double CantidadPorBulto {
 			get;
 			set;
 		}
