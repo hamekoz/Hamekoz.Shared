@@ -9,39 +9,21 @@ namespace Hamekoz.Negocio
 
 	}
 
-	public class ProveedorDeArticulo : IPersistible, IIdentifiable
+	public class ProveedorDeArticulo : IPersistible
 	{
 		public ProveedorDeArticulo ()
 		{
 			//HACK no deberia inicializarse el objeto en el constructor
 			Proveedor = new Proveedor ();
 			Articulo = new Articulo ();
-			Nombre = string.Empty;
 		}
 
-		#region IIdentifiable implementation
-
-		public int Id {
+		public Articulo Articulo {
 			get;
 			set;
 		}
 
-		#endregion
-
-		/// <summary>
-		/// Gets or sets the codigo.
-		/// </summary>
-		/// <value>Codigo segun el proveedor.</value>
-		public string Codigo {
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Gets or sets the nombre.
-		/// </summary>
-		/// <value>Nombre segun el proveedor.</value>
-		public string Nombre {
+		public Proveedor Proveedor {
 			get;
 			set;
 		}
@@ -56,14 +38,32 @@ namespace Hamekoz.Negocio
 			set;
 		} = DateTime.Now.Date;
 
-		public Articulo Articulo {
+		public int Demora {
 			get;
 			set;
 		}
 
-		public Proveedor Proveedor {
+		public bool Inactivo {
 			get;
 			set;
 		}
+
+		/// <summary>
+		/// Gets or sets the codigo.
+		/// </summary>
+		/// <value>Codigo segun el proveedor.</value>
+		public string Codigo {
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Gets or sets the nombre.
+		/// </summary>
+		/// <value>Nombre segun el proveedor.</value>
+		public string Nombre {
+			get;
+			set;
+		} = string.Empty;
 	}
 }
