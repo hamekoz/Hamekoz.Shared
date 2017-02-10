@@ -19,7 +19,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,32 +46,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public NumeracionDeComprobante Tipo {
-			get;
-			set;
-		}
-
-		public string Numero {
-			get;
-			set;
-		}
-
-		public Asiento Asiento {
-			get;
-			set;
-		}
-
 		public Proveedor Proveedor {
-			get;
-			set;
-		}
-
-		public DateTime Emision {
-			get;
-			set;
-		}
-
-		public DateTime Vencimiento {
 			get;
 			set;
 		}
@@ -108,21 +82,7 @@ namespace Hamekoz.Negocio
 			set { iva = value; }
 		}
 
-		public decimal NoGravado {
-			get;
-			set;
-		}
-
-		public decimal Restante {
-			get;
-			set;
-		}
 		//   public MonedaEntity Moneda { get; set; }
-
-		public string Observaciones {
-			get;
-			set;
-		}
 
 		public string CAE {
 			get;
