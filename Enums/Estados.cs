@@ -23,10 +23,10 @@ namespace Hamekoz.Negocio
 {
 	public enum Estados
 	{
-		Gestion,
 		Activo,
+		Gestion,
 		Inactivo,
-		Eliminado
+		Baja
 	}
 }
 

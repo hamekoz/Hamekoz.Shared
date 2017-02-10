@@ -43,9 +43,15 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		bool inactivo;
+
 		public bool Inactivo {
-			get;
-			set;
+			get {
+				return inactivo || Proveedor?.Estado == Estados.Baja || Articulo?.Estado == Estados.Baja;
+			}
+			set {
+				inactivo = value;
+			}
 		}
 
 		/// <summary>
