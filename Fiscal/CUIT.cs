@@ -19,7 +19,10 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 
 namespace Hamekoz.Argentina
 {
@@ -75,6 +78,19 @@ namespace Hamekoz.Argentina
 			}
 			var resto = total % 11;
 			return resto == 0 ? 0 : resto == 1 ? 9 : 11 - resto;
+		}
+
+		public static void ObtenerConstancia (this string cuit)
+		{
+			if (!cuit.Validar ())
+				throw new FormatException ("El CUIT no es válido.");
+			const string urlBase = "https://soa.afip.gob.ar/sr-padron/v1/constancia/";
+			string fileName = string.Format ("{0}/Constancia-de-CUIT-{1}-{2:yyyyMMdd}.pdf", Path.GetTempPath (), cuit.Limpiar (), DateTime.Now);
+			string url = string.Format ("{0}{1}", urlBase, cuit.Limpiar ());
+			using (var webClient = new WebClient ()) {
+				webClient.DownloadFile (url, fileName);
+			}
+			Process.Start (fileName);
 		}
 	}
 }
