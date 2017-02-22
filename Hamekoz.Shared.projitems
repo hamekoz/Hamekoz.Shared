@@ -107,5 +107,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ImpuestoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Imputacion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorDeArticulo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fiscal\SituacionesIngresosBrutos.cs" />
   </ItemGroup>
 </Project>
