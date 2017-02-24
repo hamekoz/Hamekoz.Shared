@@ -34,7 +34,7 @@ namespace Hamekoz.Argentina
 		/// <param name="cuit">Cuit.</param>
 		public static string Formato (this string cuit)
 		{
-			return cuit.Validar () ? cuit.Limpiar ().Insert (2, "-").Insert (11, "-") : "{cuit} no es un CUIT no válido";
+			return cuit.Validar () ? cuit.Limpiar ().Insert (2, "-").Insert (11, "-") : cuit;
 		}
 
 		/// <summary>
