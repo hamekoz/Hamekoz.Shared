@@ -28,15 +28,15 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
-	public class Recibo : IPersistible, IIdentifiable, IComprobante
+	public class Recibo : IPersistible, IIdentifiable, IComprobante, ISearchable
 	{
-		public Recibo()
+		public Recibo ()
 		{
 			//FIX aca no se deben iniciar los objetos
-			Cliente = new Cliente();
-			TipoComprobante = new NumeracionDeComprobante();
-			Renglones = new List<ReciboItem>();
-			Asiento = new Asiento();
+			Cliente = new Cliente ();
+			TipoComprobante = new NumeracionDeComprobante ();
+			Renglones = new List<ReciboItem> ();
+			Asiento = new Asiento ();
 		}
 
 		public int Id {
@@ -72,21 +72,21 @@ namespace Hamekoz.Negocio
 		decimal total;
 
 		public decimal Total {
-			get { return Math.Round(total, 2); }
+			get { return Math.Round (total, 2); }
 			set { total = value; }
 		}
 
 		decimal subTotal;
 
 		public decimal SubTotal {
-			get { return Math.Round(subTotal, 2); }
+			get { return Math.Round (subTotal, 2); }
 			set { subTotal = value; }
 		}
 
 		decimal ivaInscripto;
 
 		public decimal IVA {
-			get { return Math.Round(ivaInscripto, 2); }
+			get { return Math.Round (ivaInscripto, 2); }
 			set { ivaInscripto = value; }
 		}
 
@@ -146,7 +146,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Renglones.Cast<IItem>().ToList();
+				return Renglones.Cast<IItem> ().ToList ();
 			}
 		}
 
@@ -160,6 +160,19 @@ namespace Hamekoz.Negocio
 			get {
 				return string.Empty;
 			}
+		}
+
+		#endregion
+
+		#region ISearchable implementation
+
+		public string ToSearchString ()
+		{
+			return string.Format ("[Recibo: Id={0}, Asiento={1}, Cliente={2}, Numero={3}]"
+				, Id
+				, Asiento
+				, Cliente
+				, Numero);
 		}
 
 		#endregion
