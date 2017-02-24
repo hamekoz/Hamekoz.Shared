@@ -21,6 +21,7 @@
 
 using System;
 using System.Collections.Generic;
+using Hamekoz.Argentina;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
@@ -107,7 +108,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Cliente()
+		public Cliente ()
 		{
 			CUIT = string.Empty;
 			RazonSocial = string.Empty;
@@ -115,9 +116,9 @@ namespace Hamekoz.Negocio
 			Estado = Estados.Gestion;
 		}
 
-		public override string ToString()
+		public override string ToString ()
 		{
-			return RazonSocial;
+			return string.Format ("{0} ({1})", RazonSocial, CUIT.Formato ());
 		}
 
 		string IDescriptible.Descripcion {
@@ -128,7 +129,7 @@ namespace Hamekoz.Negocio
 
 		string IResponsable.Domicilio {
 			get {
-				return Domicilio.ToString();
+				return Domicilio.ToString ();
 			}
 		}
 	}
