@@ -1,5 +1,5 @@
 //
-//  Comprobante.cs
+//  Imputacion.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -19,25 +19,30 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using Hamekoz.Fiscal;
+using Hamekoz.Core;
 using Hamekoz.Negocio;
-using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class Imputacion
+	public class Imputacion : IPersistible, IIdentifiable
 	{
+		
+		#region IIdentifiable implementation
+
+		//HACK
+		public int Id {
+			get;
+			set;
+		}
+
+		#endregion
+
 		public DateTime Fecha {
 			get;
 			set;
 		}
 
-		public Comprobante ComprobanteDebe {
-			get;
-			set;
-		}
-
-		public Comprobante ComprobanteHaber {
+		public Comprobante Comprobante {
 			get;
 			set;
 		}
@@ -46,8 +51,6 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
-
 	}
-
 }
 

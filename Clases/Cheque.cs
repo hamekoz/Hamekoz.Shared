@@ -18,15 +18,54 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE completar la clase cheque
 	public class Cheque : IPersistible, IIdentifiable
 	{
+		public enum Estados
+		{
+			EnCartera = 1,
+			Rechazado,
+			Depositado,
+			Endosado,
+			Emitido,
+			Anulado
+		}
+
 		public int Id { get; set; }
+
+		public Banco Banco {
+			get;
+			set;
+		}
+
+		public Estados Estado {
+			get;
+			set;
+		}
+
+		public DateTime Emision {
+			get;
+			set;
+		}
+
+		public DateTime Cobro {
+			get;
+			set;
+		}
+
+		public int Numero {
+			get;
+			set;
+		}
+
+		public decimal Importe {
+			get;
+			set;
+		}
 	}
 }
 

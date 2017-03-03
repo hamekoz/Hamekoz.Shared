@@ -56,6 +56,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO verificar que tenga sentido el Remito en la clase base Comprobante, es mas bien un dato de una Factura derivada de Comprobante
 		public IRemito Remito {
 			get;
 			set;

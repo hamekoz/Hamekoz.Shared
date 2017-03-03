@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
@@ -27,6 +26,7 @@ namespace Hamekoz.Negocio
 	public class ReciboItem : IPersistible, IItem
 	{
 		internal int ReciboId;
+
 		public Recibo Recibo {
 			get;
 			set;
@@ -42,7 +42,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal ImporteTotal {
+		public decimal Importe {
 			get;
 			set;
 		}
@@ -53,8 +53,8 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
-		//UNDONE no implementado / pasar a objeto
-		public int IdRetencion {
+
+		public int Lote {
 			get;
 			set;
 		}
@@ -69,7 +69,7 @@ namespace Hamekoz.Negocio
 
 		string IItem.DescripcionCorta {
 			get {
-				return CuentaContable.Cuenta.Substring(0, 40);
+				return CuentaContable.Cuenta.Substring (0, 40);
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace Hamekoz.Negocio
 
 		decimal IItem.Precio {
 			get {
-				return ImporteTotal;
+				return Importe;
 			}
 		}
 
@@ -105,7 +105,7 @@ namespace Hamekoz.Negocio
 
 		decimal IItem.Total {
 			get {
-				return ImporteTotal;
+				return Importe;
 			}
 		}
 

@@ -18,16 +18,20 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+using System.Collections.Generic;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
-using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
 	public class Proveedor : IDescriptible, IResponsable
 	{
 		public int Id {
+			get;
+			set;
+		}
+
+		public string NombreFantasia {
 			get;
 			set;
 		}
@@ -82,7 +86,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public override string ToString()
+		public override string ToString ()
 		{
 			return RazonSocial;
 		}
@@ -95,7 +99,7 @@ namespace Hamekoz.Negocio
 
 		string IResponsable.Domicilio {
 			get {
-				return Domicilio.ToString();
+				return Domicilio.ToString ();
 			}
 		}
 	}
