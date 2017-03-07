@@ -24,7 +24,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase sucursal
-	public class Sucursal: IPersistible
+	public class Sucursal: CentroDeCosto
 	{
 		#region IPersistible implementation
 
