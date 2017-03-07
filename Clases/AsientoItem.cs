@@ -20,6 +20,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -29,7 +30,7 @@ namespace Hamekoz.Negocio
 		//HACK no deberia tener constructor
 		public AsientoItem ()
 		{
-			Asiento = new Asiento();
+			Asiento = new Asiento ();
 			CuentaContable = new CuentaContable ();
 			CentroDeCosto = new CentroDeCosto ();
 		}
@@ -69,6 +70,7 @@ namespace Hamekoz.Negocio
 		public decimal cotizacionDelPeso = 1;
 
 		//HACK
+		[Obsolete]
 		public Asiento Asiento {
 			get;
 			set;
