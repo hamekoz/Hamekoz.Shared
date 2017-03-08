@@ -138,7 +138,7 @@ namespace Hamekoz.Negocio
 
 		#region ISearchable implementation
 
-		public string ToSearchString ()
+		public virtual string ToSearchString ()
 		{
 			return string.Format ("[Articulo: Id={0}, Codigo={1}, Nombre={2}, NombreCorto={3}, Rubro={4}, Estado={5}, Medida={6}, StockMinimo={7}, Precio={8}, TasaDeIVA={9}, Neto={10}, IVA={11}, ImpuestosInternos={12}]", Id, Codigo, Nombre, NombreCorto, Rubro, Estado, Medida, StockMinimo, Precio, TasaDeIVA, Neto, IVA, ImpuestosInternos);
 		}
