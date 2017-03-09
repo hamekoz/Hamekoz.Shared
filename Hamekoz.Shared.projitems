@@ -109,5 +109,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ProveedorDeArticulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fiscal\SituacionesIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Chequera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\IComprobanteImputable.cs" />
   </ItemGroup>
 </Project>

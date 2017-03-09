@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +27,13 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
-	public class Recibo : IPersistible, IIdentifiable, IComprobante, ISearchable
+	public class Recibo : IPersistible, IIdentifiable, IComprobante, ISearchable, IComprobanteImputable
 	{
 		public Recibo ()
 		{
 			//FIX aca no se deben iniciar los objetos
 			Cliente = new Cliente ();
-			TipoComprobante = new NumeracionDeComprobante ();
+			Tipo = new NumeracionDeComprobante ();
 			Renglones = new List<ReciboItem> ();
 			Asiento = new Asiento ();
 		}
@@ -59,12 +58,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public NumeracionDeComprobante TipoComprobante {
+		public NumeracionDeComprobante Tipo {
 			get;
 			set;
 		}
 
 		public DateTime Emision {
+			get;
+			set;
+		}
+
+		public DateTime Vencimiento {
 			get;
 			set;
 		}
@@ -140,7 +144,7 @@ namespace Hamekoz.Negocio
 
 		string IComprobante.PuntoDeVenta {
 			get {
-				return TipoComprobante.Pre;
+				return Tipo.Pre;
 			}
 		}
 

@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class Comprobante
+	public class Comprobante : IComprobanteImputable
 	{
 		public IResponsable Responsable {
 			get;
