@@ -79,8 +79,13 @@ namespace Hamekoz.Negocio
 				if (Pre != null)
 					return Pre.PadLeft (4, '0') + "-" + UltimoNumero.ToString ().PadLeft (8, '0');
 				else
-					return "";
+					return string.Empty;
 			}
+		}
+
+		public override string ToString ()
+		{
+			return string.Format ("{0} {1}", Abreviatura, Letra);
 		}
 	}
 }
