@@ -26,6 +26,11 @@ namespace Hamekoz.Negocio
 {
 	public class Comprobante : IComprobanteImputable
 	{
+		public int Id {
+			get;
+			set;
+		}
+
 		public IResponsable Responsable {
 			get;
 			set;

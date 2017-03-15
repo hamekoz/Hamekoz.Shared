@@ -168,6 +168,11 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
+		public override string ToString ()
+		{
+			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
+		}
+
 		#region ISearchable implementation
 
 		public string ToSearchString ()

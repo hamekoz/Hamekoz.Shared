@@ -26,7 +26,15 @@ namespace Hamekoz.Negocio
 {
 	public class Imputacion : IPersistible, IIdentifiable
 	{
-		
+
+		public enum Estados
+		{
+			Nueva,
+			Modificada,
+			Grabada,
+			Eliminada
+		}
+
 		#region IIdentifiable implementation
 
 		//HACK
@@ -42,17 +50,22 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public IComprobanteImputable ComprobanteHaber {
-			get;
-			set;
-		}
-
 		public DateTime Fecha {
 			get;
 			set;
 		}
 
-		public decimal Importe {
+		public IComprobanteImputable ComprobanteHaber {
+			get;
+			set;
+		}
+
+		public decimal Imputado {
+			get;
+			set;
+		}
+
+		public Estados Estado {
 			get;
 			set;
 		}
