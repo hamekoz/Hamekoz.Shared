@@ -73,6 +73,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool Inactivo {
+			get;
+			set;
+		}
+
 		//FIX esto deberia ser una funcion en lugar de una propiedad
 		public string UltimoNumeroConFormato {
 			get {
