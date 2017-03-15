@@ -19,10 +19,11 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public interface IComprobanteImputable
+	public interface IComprobanteImputable : IIdentifiable
 	{
 		NumeracionDeComprobante Tipo { get; }
 
@@ -32,7 +33,7 @@ namespace Hamekoz.Negocio
 
 		decimal Total { get; }
 
-		decimal Restante { get; }
+		decimal Restante { get; set; }
 	}
 }
 
