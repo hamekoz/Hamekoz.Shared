@@ -26,7 +26,6 @@ namespace Hamekoz.Negocio
 {
 	public class Imputacion : IPersistible, IIdentifiable
 	{
-
 		public enum Estados
 		{
 			Nueva,
