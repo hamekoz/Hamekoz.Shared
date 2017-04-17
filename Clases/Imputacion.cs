@@ -24,7 +24,7 @@ using Hamekoz.Negocio;
 
 namespace Hamekoz.Negocio
 {
-	public class Imputacion : IPersistible, IIdentifiable
+	public class Imputacion : IPersistible
 	{
 		public enum Estados
 		{
@@ -33,16 +33,6 @@ namespace Hamekoz.Negocio
 			Grabada,
 			Eliminada
 		}
-
-		#region IIdentifiable implementation
-
-		//HACK
-		public int Id {
-			get;
-			set;
-		}
-
-		#endregion
 
 		public IComprobanteImputable ComprobanteDebe {
 			get;

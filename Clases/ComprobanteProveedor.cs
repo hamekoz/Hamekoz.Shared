@@ -41,11 +41,6 @@ namespace Hamekoz.Negocio
 			Observaciones = string.Empty;
 		}
 
-		public int Id {
-			get;
-			set;
-		}
-
 		public Proveedor Proveedor {
 			get;
 			set;
