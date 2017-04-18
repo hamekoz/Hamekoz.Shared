@@ -82,7 +82,7 @@ namespace Hamekoz.Negocio
 
 		decimal subTotal;
 
-		public decimal SubTotal {
+		public decimal Gravado {
 			get { return Math.Round (subTotal, 2); }
 			set { subTotal = value; }
 		}
@@ -94,7 +94,7 @@ namespace Hamekoz.Negocio
 			set { ivaInscripto = value; }
 		}
 
-		public decimal NoGravado {
+		public decimal Exento {
 			get;
 			set;
 		}
@@ -154,7 +154,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		decimal IComprobante.Percepciones {
+		decimal IComprobante.Tributos {
 			get {
 				return 0;
 			}
@@ -185,5 +185,23 @@ namespace Hamekoz.Negocio
 		}
 
 		#endregion
+
+		public decimal SubTotal {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		public decimal NoGravado {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		public decimal Percepciones {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
 	}
 }

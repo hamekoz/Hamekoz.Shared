@@ -42,8 +42,12 @@ namespace Hamekoz.Negocio
 		}
 
 		public Proveedor Proveedor {
-			get;
-			set;
+			get {
+				return (Proveedor)Responsable;
+			}
+			set {
+				Responsable = value;
+			}
 		}
 
 		public RemitoProveedor Remito {
@@ -76,8 +80,6 @@ namespace Hamekoz.Negocio
 			get { return Math.Round (iva, 2); }
 			set { iva = value; }
 		}
-
-		//   public MonedaEntity Moneda { get; set; }
 
 		public string CAE {
 			get;

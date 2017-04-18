@@ -93,7 +93,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal SubTotal {
+		public decimal Gravado {
 			get;
 			set;
 		}
@@ -103,7 +103,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal NoGravado {
+		public decimal Exento {
 			get;
 			set;
 		}
@@ -113,7 +113,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal Percepciones {
+		public decimal Tributos {
 			get;
 			set;
 		}
@@ -178,6 +178,24 @@ namespace Hamekoz.Negocio
 		public override string ToString ()
 		{
 			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
+		}
+
+		public decimal SubTotal {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		public decimal NoGravado {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		public decimal Percepciones {
+			get {
+				throw new NotImplementedException ();
+			}
 		}
 	}
 }

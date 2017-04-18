@@ -136,6 +136,23 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		decimal IComprobante.Gravado {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		decimal IComprobante.Exento {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		decimal IComprobante.Tributos {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
 		#endregion
 
 		#region IRemito

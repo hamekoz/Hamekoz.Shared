@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class Comprobante : IComprobanteImputable
+	public class Comprobante : IComprobante, IComprobanteImputable
 	{
 		public int Id {
 			get;
@@ -87,10 +87,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal NoGravado {
+		public decimal Exento {
 			get;
 			set;
 		}
+
 
 		public decimal IVA {
 			get;
@@ -132,6 +133,41 @@ namespace Hamekoz.Negocio
 			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
 		}
 
+		public string PuntoDeVenta {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		[Obsolete ("Usar Gravado")]
+		public decimal SubTotal {
+			get {
+				return Gravado;
+			}
+			set {
+				Gravado = value;
+			}
+		}
+
+		[Obsolete ("Usar Exento")]
+		public decimal NoGravado {
+			get {
+				return Exento;
+			}
+			set {
+				Exento = value;
+			}
+		}
+
+		[Obsolete ("Usar Tributos")]
+		public decimal Percepciones {
+			get {
+				return Tributos;
+			}
+			set {
+				Tributos = value;
+			}
+		}
 	}
 }
 

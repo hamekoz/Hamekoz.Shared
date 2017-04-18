@@ -95,7 +95,7 @@ namespace Hamekoz.Negocio
 
 		IList<IRemitoItem> IRemito.Items {
 			get {
-				return Renglones.Cast<IRemitoItem>().ToList();
+				return Renglones.Cast<IRemitoItem> ().ToList ();
 			}
 		}
 
@@ -118,37 +118,55 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Renglones.Cast<IItem>().ToList();
+				return Renglones.Cast<IItem> ().ToList ();
 			}
 		}
 
 		decimal IComprobante.Total {
 			get {
-				return Renglones.Sum(r => r.Total);
+				return Renglones.Sum (r => r.Total);
 			}
 		}
 
 		decimal IComprobante.SubTotal {
 			get {
-				return Renglones.Sum(r => r.Neto);
+				return Renglones.Sum (r => r.Neto);
 			}
 		}
 
 		decimal IComprobante.IVA {
 			get {
-				return Renglones.Sum(r => r.IVA);
+				return Renglones.Sum (r => r.IVA);
 			}
 		}
 
 		decimal IComprobante.NoGravado {
 			get {
-				return Renglones.Sum(r => r.TotalImpuestos);
+				return Renglones.Sum (r => r.TotalImpuestos);
 			}
 		}
 
 		decimal IComprobante.Percepciones {
 			get {
-				throw new NotImplementedException();
+				throw new NotImplementedException ();
+			}
+		}
+
+		decimal IComprobante.Gravado {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		decimal IComprobante.Exento {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
+		decimal IComprobante.Tributos {
+			get {
+				throw new NotImplementedException ();
 			}
 		}
 
