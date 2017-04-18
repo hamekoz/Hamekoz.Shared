@@ -18,9 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
-using System.Collections.Generic;
 using Hamekoz.Argentina;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
@@ -81,13 +79,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		//TODO deberia ser un unico telefono y tener una lista de contactos
-		public IList<Telefono> Telefonos {
+		public string Telefono {
 			get;
 			set;
 		}
 
-		//UNDONE aca podria ser una lista de correos electronicos
 		public string Email {
 			get;
 			set;
