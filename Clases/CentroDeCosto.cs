@@ -25,7 +25,11 @@ namespace Hamekoz.Negocio
 {
 	public class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
 	{
+		#region IPersistible implementation
+
 		public int Id { get; set; }
+
+		#endregion
 
 		public string Descripcion { get; set; } = string.Empty;
 
