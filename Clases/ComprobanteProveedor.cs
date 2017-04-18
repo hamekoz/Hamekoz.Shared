@@ -60,27 +60,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		decimal total;
-
-		public decimal Total {
-			get { return Math.Round (total, 2); }
-			set { total = value; }
-		}
-
-		decimal subTotal;
-
-		public decimal SubTotal {
-			get { return Math.Round (subTotal, 2); }
-			set { subTotal = value; }
-		}
-
-		decimal iva;
-
-		public decimal IVA {
-			get { return Math.Round (iva, 2); }
-			set { iva = value; }
-		}
-
 		public string CAE {
 			get;
 			set;
@@ -102,11 +81,6 @@ namespace Hamekoz.Negocio
 		}
 
 		public bool Eliminado {
-			get;
-			set;
-		}
-
-		public decimal Percepciones {
 			get;
 			set;
 		}

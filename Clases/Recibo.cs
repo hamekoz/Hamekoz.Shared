@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hamekoz.Core;
@@ -27,7 +26,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
-	public class Recibo : IPersistible, IIdentifiable, IComprobante, ISearchable, IComprobanteImputable
+	public class Recibo : Comprobante, IPersistible , IComprobante, ISearchable
 	{
 		public Recibo ()
 		{
@@ -38,70 +37,13 @@ namespace Hamekoz.Negocio
 			Asiento = new Asiento ();
 		}
 
-		public int Id {
-			get;
-			set;
-		}
-
-		public Asiento Asiento {
-			get;
-			set;
-		}
-
 		public Cliente Cliente {
-			get;
-			set;
-		}
-
-		public string Numero {
-			get;
-			set;
-		}
-
-		public NumeracionDeComprobante Tipo {
-			get;
-			set;
-		}
-
-		public DateTime Emision {
-			get;
-			set;
-		}
-
-		public DateTime Vencimiento {
-			get;
-			set;
-		}
-
-		decimal total;
-
-		public decimal Total {
-			get { return Math.Round (total, 2); }
-			set { total = value; }
-		}
-
-		decimal subTotal;
-
-		public decimal Gravado {
-			get { return Math.Round (subTotal, 2); }
-			set { subTotal = value; }
-		}
-
-		decimal ivaInscripto;
-
-		public decimal IVA {
-			get { return Math.Round (ivaInscripto, 2); }
-			set { ivaInscripto = value; }
-		}
-
-		public decimal Exento {
-			get;
-			set;
-		}
-
-		public decimal Restante {
-			get;
-			set;
+			get {
+				return (Cliente)Responsable;
+			}
+			set {
+				Responsable = value;
+			}
 		}
 
 		public List<ReciboItem> Renglones {
@@ -185,23 +127,5 @@ namespace Hamekoz.Negocio
 		}
 
 		#endregion
-
-		public decimal SubTotal {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
-
-		public decimal NoGravado {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
-
-		public decimal Percepciones {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
 	}
 }

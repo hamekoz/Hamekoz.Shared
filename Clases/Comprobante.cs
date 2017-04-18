@@ -24,6 +24,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
+	//TODO evaluar si convertir en abstracta
 	public class Comprobante : IComprobante, IComprobanteImputable
 	{
 		public int Id {
@@ -136,36 +137,6 @@ namespace Hamekoz.Negocio
 		public string PuntoDeVenta {
 			get {
 				throw new NotImplementedException ();
-			}
-		}
-
-		[Obsolete ("Usar Gravado")]
-		public decimal SubTotal {
-			get {
-				return Gravado;
-			}
-			set {
-				Gravado = value;
-			}
-		}
-
-		[Obsolete ("Usar Exento")]
-		public decimal NoGravado {
-			get {
-				return Exento;
-			}
-			set {
-				Exento = value;
-			}
-		}
-
-		[Obsolete ("Usar Tributos")]
-		public decimal Percepciones {
-			get {
-				return Tributos;
-			}
-			set {
-				Tributos = value;
 			}
 		}
 	}

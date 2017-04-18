@@ -128,33 +128,15 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		decimal IComprobante.SubTotal {
-			get {
-				return Renglones.Sum (r => r.Neto);
-			}
-		}
-
 		decimal IComprobante.IVA {
 			get {
 				return Renglones.Sum (r => r.IVA);
 			}
 		}
 
-		decimal IComprobante.NoGravado {
-			get {
-				return Renglones.Sum (r => r.TotalImpuestos);
-			}
-		}
-
-		decimal IComprobante.Percepciones {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
-
 		decimal IComprobante.Gravado {
 			get {
-				throw new NotImplementedException ();
+				return Renglones.Sum (r => r.Neto);
 			}
 		}
 
@@ -166,7 +148,7 @@ namespace Hamekoz.Negocio
 
 		decimal IComprobante.Tributos {
 			get {
-				throw new NotImplementedException ();
+				return Renglones.Sum (r => r.TotalImpuestos);
 			}
 		}
 

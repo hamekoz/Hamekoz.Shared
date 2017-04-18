@@ -19,18 +19,14 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE unificar logica comun en clase abstracta Comprobante
-	//UNDONE separar datos de implementacion de comprobante electronico
 	//UNDONE separar datos de implementacion de comprobante por controlador fiscal
-	public class ComprobanteCliente : IComprobante, IIdentifiable, IComprobanteImputable
+	public class ComprobanteCliente : Comprobante, IComprobante, IComprobanteElectronico
 	{
 		public ComprobanteCliente ()
 		{
@@ -43,82 +39,25 @@ namespace Hamekoz.Negocio
 			Zeta = new Zeta ();
 		}
 
-		public int Id {
-			get;
-			set;
-		}
-
-		public NumeracionDeComprobante Tipo {
-			get;
-			set;
-		}
-
-		public string Numero {
-			get;
-			set;
-		}
-
-		public Asiento Asiento {
-			get;
-			set;
-		}
-
 		public Cliente Cliente {
-			get;
-			set;
-		}
-
-		public DateTime Emision {
-			get;
-			set;
-		}
-
-		public DateTime Vencimiento {
-			get;
-			set;
+			get {
+				return (Cliente)Responsable;
+			}
+			set {
+				Responsable = value;
+			}
 		}
 
 		public RemitoCliente Remito {
-			get;
-			set;
+			get {
+				return (RemitoCliente)base.Remito;
+			}
+			set {
+				base.Remito = value;
+			}
 		}
 
 		public CondicionDePago CondicionDePago {
-			get;
-			set;
-		}
-
-		public decimal Total {
-			get;
-			set;
-		}
-
-		public decimal Gravado {
-			get;
-			set;
-		}
-
-		public decimal IVA {
-			get;
-			set;
-		}
-
-		public decimal Exento {
-			get;
-			set;
-		}
-
-		public decimal Restante {
-			get;
-			set;
-		}
-
-		public decimal Tributos {
-			get;
-			set;
-		}
-
-		public string Observaciones {
 			get;
 			set;
 		}
@@ -178,24 +117,6 @@ namespace Hamekoz.Negocio
 		public override string ToString ()
 		{
 			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
-		}
-
-		public decimal SubTotal {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
-
-		public decimal NoGravado {
-			get {
-				throw new NotImplementedException ();
-			}
-		}
-
-		public decimal Percepciones {
-			get {
-				throw new NotImplementedException ();
-			}
 		}
 	}
 }

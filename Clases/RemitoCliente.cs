@@ -112,25 +112,7 @@ namespace Hamekoz.Negocio
 
 		public IList<IItem> Items => Renglones.Cast<IItem>().ToList();
 
-		decimal IComprobante.SubTotal {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
 		decimal IComprobante.IVA {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
-		decimal IComprobante.NoGravado {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
-		decimal IComprobante.Percepciones {
 			get {
 				throw new NotImplementedException();
 			}

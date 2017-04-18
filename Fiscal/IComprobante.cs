@@ -48,20 +48,11 @@ namespace Hamekoz.Fiscal
 
 		decimal Total { get; }
 
-		[Obsolete ("Usar Gravado")]
-		decimal SubTotal { get; }
-
 		decimal Gravado { get; }
 
 		decimal IVA { get; }
 
-		[Obsolete ("Usar Exento")]
-		decimal NoGravado { get; }
-
 		decimal Exento { get; }
-
-		[Obsolete ("Usar Tributos")]
-		decimal Percepciones { get; }
 
 		decimal Tributos { get; }
 
