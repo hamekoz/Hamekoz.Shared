@@ -9,8 +9,17 @@ namespace Hamekoz.Negocio
 
 	}
 
-	public class ProveedorDeArticulo : IPersistible
+	public class ProveedorDeArticulo : IPersistible, IIdentifiable
 	{
+		#region IIdentifiable implementation
+
+		public int Id {
+			get;
+			set;
+		}
+
+		#endregion
+
 		public ProveedorDeArticulo ()
 		{
 			//HACK no deberia inicializarse el objeto en el constructor
