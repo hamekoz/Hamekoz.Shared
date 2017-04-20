@@ -25,6 +25,7 @@ namespace Hamekoz.Fiscal
 	{
 		string Descripcion { get; }
 
+		//TODO separar la descripcion corta en otra iterfaz que implemente IItem
 		string DescripcionCorta { get; }
 
 		decimal Cantidad { get; }
