@@ -35,7 +35,11 @@ namespace Hamekoz.Negocio
 			Anulado
 		}
 
+		#region IIdentifiable implementation
+
 		public int Id { get; set; }
+
+		#endregion
 
 		public Banco Banco {
 			get;
