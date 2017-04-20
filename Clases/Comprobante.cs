@@ -27,6 +27,14 @@ namespace Hamekoz.Negocio
 	//TODO evaluar si convertir en abstracta
 	public class Comprobante : IComprobante, IComprobanteImputable
 	{
+		//HACK no se deberia iniciarlizar aca
+		public Comprobante ()
+		{
+			Items = new List<IItem> ();
+			Impuestos = new List<ImpuestoItem> ();
+			Imputaciones = new List<Imputacion> ();
+		}
+
 		public int Id {
 			get;
 			set;
