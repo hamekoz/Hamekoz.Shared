@@ -70,6 +70,11 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		public override string ToString ()
+		{
+			return string.Format ("Cheque: Banco {0} Emision {1:d} Cobro{2:d} Numero {3} Importe {4:C}", Banco, Emision, Cobro, Numero, Importe);
+		}
 	}
 }
 
