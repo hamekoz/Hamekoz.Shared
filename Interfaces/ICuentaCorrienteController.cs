@@ -31,6 +31,10 @@ namespace Hamekoz.Negocio
 		IList<IComprobanteVencimiento> ComprobantesVencidos (IIdentifiable responsable);
 
 		IList<IComprobanteVencimiento> ComprobantesPorVencer (IIdentifiable responsable);
+
+		Comprobante Comprobante (CuentaCorriente item);
+
+		Asiento Asiento (CuentaCorriente item);
 	}
 }
 
