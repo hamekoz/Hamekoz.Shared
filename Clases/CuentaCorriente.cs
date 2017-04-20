@@ -26,6 +26,7 @@ namespace Hamekoz.Negocio
 {
 	public class CuentaCorriente : IPersistible, IComprobanteVencimiento
 	{
+		public Type comprobanteType;
 		public int comprobanteId;
 		public int asientoId;
 
@@ -34,7 +35,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public string Comprobante {
+		public Comprobante Comprobante {
+			get;
+			set;
+		}
+
+		public string Numero {
 			get;
 			set;
 		}
