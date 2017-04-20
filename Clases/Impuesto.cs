@@ -48,6 +48,11 @@ namespace Hamekoz.Negocio
 		}
 
 		#endregion
+
+		public override string ToString ()
+		{
+			return Descripcion;
+		}
 	}
 }
 
