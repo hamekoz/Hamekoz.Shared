@@ -26,7 +26,7 @@ namespace Hamekoz.Negocio
 	{
 		DateTime Emision { get; }
 
-		string Comprobante { get; }
+		string Numero { get; }
 
 		DateTime Vencimiento { get; }
 
