@@ -18,6 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 
 namespace Hamekoz.Fiscal
 {
@@ -26,6 +27,7 @@ namespace Hamekoz.Fiscal
 		string Descripcion { get; }
 
 		//TODO separar la descripcion corta en otra iterfaz que implemente IItem
+		[Obsolete ("Usar interfaz IItemControladorFiscal")]
 		string DescripcionCorta { get; }
 
 		decimal Cantidad { get; }
@@ -39,5 +41,10 @@ namespace Hamekoz.Fiscal
 		decimal Impuestos { get; }
 
 		decimal Total { get; }
+	}
+
+	interface IItemControladorFiscal : IItem
+	{
+		string DescripcionCorta { get; }
 	}
 }
