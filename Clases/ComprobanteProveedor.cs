@@ -51,8 +51,12 @@ namespace Hamekoz.Negocio
 		}
 
 		public RemitoProveedor Remito {
-			get;
-			set;
+			get {
+				return (RemitoProveedor)base.Remito;
+			}
+			set {
+				base.Remito = value;
+			}
 		}
 
 		public CondicionDePago CondicionDePago {
