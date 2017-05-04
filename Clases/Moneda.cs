@@ -25,6 +25,34 @@ namespace Hamekoz.Negocio
 {
 	public class Moneda : IPersistible, IIdentifiable
 	{
+		#region Singleton
+
+		//HACK para manejar la moneda por defecto, deberia utilizar un controlador y un parametro global de la aplicacion
+
+		/// <summary>
+		/// Instancia unica del patron sigleton
+		/// </summary>
+		static Moneda moneda;
+
+		/// <summary>
+		/// Obtiene una instancia unica de Moneda
+		/// </summary>
+		public static Moneda Default {
+			get {
+				if (moneda == null) {
+					moneda = new Moneda {
+						Id = 1,
+						Codigo = "ARS",
+						Nombre = "PESO",
+						Simbolo = "$"
+					};
+				}
+				return moneda;
+			}
+		}
+
+		#endregion
+
 		public int Id {
 			get;
 			set;

@@ -25,6 +25,34 @@ namespace Hamekoz.Negocio
 {
 	public class Cotizacion : IPersistible, IIdentifiable
 	{
+		#region Singleton
+
+		//HACK para manejar la moneda por defecto, deberia utilizar un controlador y un parametro global de la aplicacion
+
+		/// <summary>
+		/// Instancia unica del patron sigleton
+		/// </summary>
+		static Cotizacion cotizacion;
+
+		/// <summary>
+		/// Obtiene una instancia unica de Moneda
+		/// </summary>
+		public static Cotizacion Default {
+			get {
+				if (cotizacion == null) {
+					cotizacion = new Cotizacion {
+						Id = 0,
+						Fecha = new DateTime (1992, 1, 1),
+						Moneda = Moneda.Default,
+						Valor = 1,
+					};
+				}
+				return cotizacion;
+			}
+		}
+
+		#endregion
+
 		public int Id {
 			get;
 			set;
