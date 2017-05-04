@@ -102,6 +102,18 @@ namespace Hamekoz.Negocio
 
 		#region IItem
 
+		string IItem.Codigo {
+			get {
+				return Articulo.Codigo;
+			}
+		}
+
+		int IItem.Lote {
+			get {
+				return Lote.Id;
+			}
+		}
+
 		string IItem.Descripcion {
 			get {
 				return Articulo.Nombre;

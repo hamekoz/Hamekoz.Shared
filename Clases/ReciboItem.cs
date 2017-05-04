@@ -61,6 +61,12 @@ namespace Hamekoz.Negocio
 
 		#region IItem implementation
 
+		string IItem.Codigo {
+			get {
+				return CuentaContable.Codigo.ToString ();
+			}
+		}
+
 		string IItem.Descripcion {
 			get {
 				return CuentaContable.Cuenta;
