@@ -19,6 +19,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using Hamekoz.Core;
+using Hamekoz.Negocio;
 
 namespace Hamekoz.Fiscal
 {
@@ -34,5 +35,7 @@ namespace Hamekoz.Fiscal
 		string Email { get; }
 
 		SituacionIVA CondicionDeIVA { get; }
+
+		CondicionDePago CondicionDePago { get; }
 	}
 }
