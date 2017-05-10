@@ -19,7 +19,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
+using System.Text;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -55,7 +55,18 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
-			return Nombre;
+			//TODO reformular cuando se corrija la logica de pertenencia
+			var builder = new StringBuilder ();
+			if (Provincia != null) {
+				builder.Append (Provincia);
+				builder.Append (" - ");
+			}
+			if (Municipio != null && !string.IsNullOrWhiteSpace (Municipio.Nombre)) {
+				builder.Append (Municipio.Nombre);
+				builder.Append (" - ");
+			}
+			builder.Append (Nombre);
+			return builder.ToString ();
 		}
 
 		string IDescriptible.Descripcion {
