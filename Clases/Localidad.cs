@@ -48,6 +48,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool Inactiva {
+			get;
+			set;
+		}
+
 		public override string ToString ()
 		{
 			return Nombre;

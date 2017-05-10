@@ -41,6 +41,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool Inactiva {
+			get;
+			set;
+		}
+
 		public IList<Municipio> Municipios {
 			get;
 			set;
