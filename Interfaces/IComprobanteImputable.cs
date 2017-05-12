@@ -29,6 +29,8 @@ namespace Hamekoz.Negocio
 
 		string Numero { get; }
 
+		DateTime Emision { get; }
+
 		DateTime Vencimiento { get; }
 
 		decimal Total { get; }
