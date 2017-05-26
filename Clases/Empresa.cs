@@ -40,9 +40,57 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string NumeroDeIngresosBrutos {
+			get;
+			set;
+		}
+
 		public bool AgenteDeRecaudacionARBA {
 			get;
 			set;
 		}
+
+		public string NumeroDeAgenteARBA {
+			get;
+			set;
+		}
+
+		public string TipoDeAgenteARBA {
+			get;
+			set;
+		}
+
+		public string Actividad {
+			get;
+			set;
+		}
+
+		//TODO esto deberia ser una clase de tipo de domicilio pero temporalmente lo defino como string
+		public string Domicilio {
+			get;
+			set;
+		}
+
+		//TODO esto deberia ser una clase de tipo de domicilio pero temporalmente lo defino como string
+		public string DomicilioLegal {
+			get;
+			set;
+		}
+
+		public string Telefonos {
+			get;
+			set;
+		}
+
+		public string Web {
+			get;
+			set;
+		}
+
+		public string DomicilioConTelefonos ()
+		{
+			return string.Format ("{0} - {1}", Domicilio, Telefonos);
+		}
+
 	}
 }
