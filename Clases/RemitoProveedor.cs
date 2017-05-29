@@ -27,7 +27,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//FIX IRemito, deberia implementar IComprobante
-	public class RemitoProveedor : IPersistible, IIdentifiable, IComprobante, IRemito
+	public class RemitoProveedor : IPersistible, IIdentifiable, IComprobante, IComprobanteBase, IRemito
 	{
 		#region IPersistible implementation
 
@@ -94,6 +94,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public override string ToString ()
+		{
+			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
+		}
+
 		#region IRemito
 
 		IList<IRemitoItem> IRemito.Items {
@@ -152,6 +157,34 @@ namespace Hamekoz.Negocio
 		decimal IComprobante.Tributos {
 			get {
 				return Renglones.Sum (r => r.TotalImpuestos);
+			}
+		}
+
+		#endregion
+
+		#region IComprobanteBase
+
+		string IComprobanteBase.Comprobante {
+			get {
+				return ToString ();
+			}
+		}
+
+		DateTime IComprobanteBase.Emision {
+			get { 
+				return Emision.Date;
+			}
+		}
+
+		IResponsable IComprobanteBase.Responsable {
+			get {
+				return Proveedor;
+			}
+		}
+
+		decimal IComprobanteBase.Total {
+			get {
+				return 0;
 			}
 		}
 

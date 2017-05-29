@@ -25,7 +25,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//TODO evaluar si convertir en abstracta
-	public class Comprobante : IComprobante, IComprobanteImputable
+	public class Comprobante : IComprobante, IComprobanteImputable, IComprobanteBase
 	{
 		//HACK no se deberia iniciarlizar aca
 		public Comprobante ()
@@ -145,6 +145,12 @@ namespace Hamekoz.Negocio
 		public string PuntoDeVenta {
 			get {
 				throw new NotImplementedException ();
+			}
+		}
+
+		string IComprobanteBase.Comprobante {
+			get {
+				return ToString ();
 			}
 		}
 	}
