@@ -59,7 +59,7 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
-			return string.Format ("{0} del {1} al {2}", Banco.Nombre, Desde, Hasta);
+			return string.Format ("Chequera {0} {1} del {2} al {3}", Id, Banco.Nombre, Desde, Hasta);
 		}
 	}
 }
