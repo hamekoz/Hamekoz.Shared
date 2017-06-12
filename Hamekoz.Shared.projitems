@@ -111,5 +111,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Chequera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IComprobanteImputable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CuentaBancaria.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Agencia.cs" />
   </ItemGroup>
 </Project>
