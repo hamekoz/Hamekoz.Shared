@@ -18,8 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
-using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -45,36 +43,9 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public IList<AgenciaDeuda> Deudas {
-			get;
-			set;
-		}
-
 		public override string ToString ()
 		{
 			return Nombre;
-		}
-	}
-
-	public class AgenciaDeuda : IPersistible, IIdentifiable
-	{
-		#region IIdentifiable implementation
-
-		public int Id {
-			get;
-			set;
-		}
-
-		#endregion
-
-		public DateTime Fecha {
-			get;
-			set;
-		} = DateTime.Now;
-
-		public decimal Deuda {
-			get;
-			set;
 		}
 	}
 }
