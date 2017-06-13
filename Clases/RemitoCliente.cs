@@ -130,11 +130,24 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		decimal IComprobante.Neto {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
 		decimal IComprobante.Tributos {
 			get {
 				throw new NotImplementedException ();
 			}
 		}
+
+		IList<ImpuestoItem> IComprobante.Impuestos {
+			get {
+				return new List<ImpuestoItem> ();
+			}
+		}
+
 		#endregion
 
 		#region IRemito

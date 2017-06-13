@@ -112,6 +112,10 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public decimal Neto {
+			get { return Total - Tributos; }
+		}
+
 		public decimal Total {
 			get;
 			set;

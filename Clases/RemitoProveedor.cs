@@ -130,9 +130,21 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		IList<ImpuestoItem> IComprobante.Impuestos {
+			get {
+				return new List<ImpuestoItem> ();
+			}
+		}
+
 		decimal IComprobante.Total {
 			get {
 				return Renglones.Sum (r => r.Total);
+			}
+		}
+
+		decimal IComprobante.Neto {
+			get {
+				return Renglones.Sum (r => r.Neto);
 			}
 		}
 
