@@ -1,5 +1,5 @@
 ﻿//
-//  TipoControladorFiscal.cs
+//  TipoDeControladorFiscal.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -21,7 +21,6 @@
 
 namespace Hamekoz.Fiscal
 {
-	//TODO Renombrar a TiposDeControladorFiscal
 	public enum TipoDeControladorFiscal
 	{
 		SIN_DATO = 0,

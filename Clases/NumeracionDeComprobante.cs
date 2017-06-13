@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
@@ -52,6 +51,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO evaluar pasar a que sea un valor int
 		public string Pre {
 			get;
 			set;
