@@ -20,6 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
 using System.Collections.Generic;
+using Hamekoz.Negocio;
 
 namespace Hamekoz.Fiscal
 {
@@ -46,13 +47,17 @@ namespace Hamekoz.Fiscal
 
 		IList<IItem> Items { get; }
 
+		IList<ImpuestoItem> Impuestos { get; }
+
+		decimal Neto { get; }
+
 		decimal Total { get; }
 
 		decimal Gravado { get; }
 
-		decimal IVA { get; }
-
 		decimal Exento { get; }
+
+		decimal IVA { get; }
 
 		decimal Tributos { get; }
 
