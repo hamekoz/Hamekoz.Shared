@@ -91,6 +91,12 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		decimal IItem.Neto {
+			get {
+				return Importe;
+			}
+		}
+
 		decimal IItem.IVA {
 			get {
 				return 0;

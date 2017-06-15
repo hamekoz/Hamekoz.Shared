@@ -38,6 +38,8 @@ namespace Hamekoz.Fiscal
 
 		decimal Precio { get; }
 
+		decimal Neto { get; }
+
 		decimal TasaIVA { get; }
 
 		decimal IVA { get; }
