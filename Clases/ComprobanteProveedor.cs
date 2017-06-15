@@ -36,6 +36,7 @@ namespace Hamekoz.Negocio
 			Proveedor = new Proveedor ();
 			Tipo = new NumeracionDeComprobante ();
 			Remito = new RemitoProveedor ();
+			Remitos = new List<RemitoProveedor> ();
 			CondicionDePago = new CondicionDePago ();
 			Asiento = new Asiento ();
 			Observaciones = string.Empty;
@@ -57,6 +58,11 @@ namespace Hamekoz.Negocio
 			set {
 				base.Remito = value;
 			}
+		}
+
+		public IList<RemitoProveedor> Remitos {
+			get;
+			set;
 		}
 
 		public CondicionDePago CondicionDePago {
