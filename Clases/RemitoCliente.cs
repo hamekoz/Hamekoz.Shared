@@ -142,6 +142,12 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		IList<IVAItem> IComprobante.IVAItems {
+			get {
+				throw new NotImplementedException ();
+			}
+		}
+
 		IList<ImpuestoItem> IComprobante.Impuestos {
 			get {
 				return new List<ImpuestoItem> ();

@@ -47,6 +47,8 @@ namespace Hamekoz.Fiscal
 
 		IList<IItem> Items { get; }
 
+		IList<IVAItem> IVAItems { get; }
+
 		IList<ImpuestoItem> Impuestos { get; }
 
 		decimal Neto { get; }

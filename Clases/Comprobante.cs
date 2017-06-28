@@ -31,6 +31,7 @@ namespace Hamekoz.Negocio
 		public Comprobante ()
 		{
 			Items = new List<IItem> ();
+			IVAItems = new List<IVAItem> ();
 			Impuestos = new List<ImpuestoItem> ();
 			Imputaciones = new List<Imputacion> ();
 		}
@@ -82,6 +83,11 @@ namespace Hamekoz.Negocio
 		}
 
 		public IList<IItem> Items {
+			get;
+			set;
+		}
+
+		public IList<IVAItem> IVAItems {
 			get;
 			set;
 		}
