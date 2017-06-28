@@ -57,7 +57,7 @@ namespace Hamekoz.Fiscal
 
 		decimal Gravado { get; }
 
-		decimal Exento { get; }
+		decimal NoGravado { get; }
 
 		decimal IVA { get; }
 

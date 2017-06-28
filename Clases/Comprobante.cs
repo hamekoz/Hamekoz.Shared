@@ -102,7 +102,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal Exento {
+		public decimal NoGravado {
 			get;
 			set;
 		}
@@ -119,7 +119,7 @@ namespace Hamekoz.Negocio
 		}
 
 		public decimal Neto {
-			get { return Total - Tributos; }
+			get { return Gravado + NoGravado; }
 		}
 
 		public decimal Total {

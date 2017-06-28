@@ -124,7 +124,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		decimal IComprobante.Exento {
+		decimal IComprobante.NoGravado {
 			get {
 				throw new NotImplementedException ();
 			}
