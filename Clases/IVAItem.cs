@@ -46,14 +46,14 @@ namespace Hamekoz.Negocio
 		[DescriptionAttribute ("IVA DIFERENCIAL 27 %")]
 		Diferencial2,
 		/// <summary>
-		/// IVA DIFERENCIAL 5 %
-		/// </summary>
-		[DescriptionAttribute ("IVA DIFERENCIAL 5 %")]
-		Diferencial3,
-		/// <summary>
 		/// IVA DIFERENCIAL 2.5 %
 		/// </summary>
 		[DescriptionAttribute ("IVA DIFERENCIAL 2.5 %")]
+		Diferencial3,
+		/// <summary>
+		/// IVA DIFERENCIAL 5 %
+		/// </summary>
+		[DescriptionAttribute ("IVA DIFERENCIAL 5 %")]
 		Diferencial4,
 	}
 
@@ -69,9 +69,9 @@ namespace Hamekoz.Negocio
 			case IVA.Diferencial2:
 				return 27m;
 			case IVA.Diferencial3:
-				return 5m;
-			case IVA.Diferencial4:
 				return 2.5m;
+			case IVA.Diferencial4:
+				return 5m;
 			case IVA.Exento:
 				return 0m;	
 			default:
