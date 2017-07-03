@@ -74,6 +74,11 @@ namespace Hamekoz.Negocio
 		{
 			var build = new System.Text.StringBuilder ();
 			build.Append (Direccion);
+			if (CodigoPostal != string.Empty) {
+				build.Append (" - ");
+				build.Append (" CP: ");
+				build.Append (CodigoPostal);
+			}
 			if (Localidad?.Nombre != string.Empty) {
 				build.Append (" - ");
 				build.Append (Localidad.Nombre);
