@@ -163,21 +163,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public decimal SaldoDiferido {
-			get;
-			set;
-		}
-
-		public decimal SaldoInforme {
-			get;
-			set;
-		}
-
-		public decimal SaldoDiferidoInforme {
-			get;
-			set;
-		}
-
 		#endregion
 
 		public int Tabulacion {
