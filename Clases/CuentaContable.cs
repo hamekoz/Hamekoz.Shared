@@ -170,16 +170,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar propiedad Inactiva")]
-		public bool Eliminado {
-			get {
-				return Inactiva;
-			}
-			set {
-				Inactiva = value;
-			}
-		}
-
 		public bool Inactiva {
 			get;
 			set;
