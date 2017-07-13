@@ -119,7 +119,7 @@ namespace Hamekoz.Negocio
 		}
 
 		public decimal Neto {
-			get { return Gravado + NoGravado; }
+			get { return Total - IVA - Tributos; }
 		}
 
 		public decimal Total {
