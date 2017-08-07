@@ -35,6 +35,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string CUIT {
+			get;
+			set;
+		}
+
 		public IList<Provincia> Provincias {
 			get;
 			set;
