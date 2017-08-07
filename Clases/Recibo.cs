@@ -18,6 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hamekoz.Core;
@@ -75,6 +76,86 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal NetoGeneral { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.General);
+				return ivaItem == null ? 0 : ivaItem.Neto;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal NetoDiferencial1 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial1);
+				return ivaItem == null ? 0 : ivaItem.Neto;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal NetoDiferencial2 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial2);
+				return ivaItem == null ? 0 : ivaItem.Neto;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal NetoDiferencial3 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial3);
+				return ivaItem == null ? 0 : ivaItem.Neto;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal NoInscripto { get; set; }
+
+		[Obsolete ("Usar IVAs")]
+		public decimal IvaGeneral { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.General);
+				return ivaItem == null ? 0 : ivaItem.Importe;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal IvaDiferencial1 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial1);
+				return ivaItem == null ? 0 : ivaItem.Importe;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal IvaDiferencial2 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial2);
+				return ivaItem == null ? 0 : ivaItem.Importe;
+			}
+		}
+
+		[Obsolete ("Usar IVAs")]
+		public decimal IvaDiferencial3 { 
+			get { 
+				var ivaItem = IVAItems.FirstOrDefault (i => i.IVA == Hamekoz.Negocio.IVA.Diferencial3);
+				return ivaItem == null ? 0 : ivaItem.Importe;
+			}
+		}
+
+		//TODO mapear al impuesto correspondiente
+		[Obsolete ("Usar Impuestos")]
+		public decimal PercepcionIva { get; set; }
+
+		//TODO mapear al impuesto correspondiente
+		[Obsolete ("Usar Impuestos")]
+		public decimal IBCapital { get; set; }
+
+		//TODO mapear al impuesto correspondiente
+		[Obsolete ("Usar Impuestos")]
+		public decimal IBBsAs { get; set; }
+
 
 		#region IComprobante
 

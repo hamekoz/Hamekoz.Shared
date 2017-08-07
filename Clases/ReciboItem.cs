@@ -25,6 +25,10 @@ namespace Hamekoz.Negocio
 {
 	public class ReciboItem : IPersistible, IItem
 	{
+		//TODO ReciboItem no deberia tener referencia la recibo ya que simpre compone al recibo
+
+		#region Recibo
+
 		internal int ReciboId;
 
 		public Recibo Recibo {
@@ -36,6 +40,8 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		#endregion
 
 		public CuentaContable CuentaContable {
 			get;
