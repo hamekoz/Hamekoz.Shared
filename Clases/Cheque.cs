@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Cheque : IPersistible, IIdentifiable
+	public class Cheque : IPersistible, IIdentifiable, ISearchable
 	{
 		public enum Estados
 		{
@@ -75,6 +75,16 @@ namespace Hamekoz.Negocio
 		{
 			return string.Format ("Cheque: Banco {0} Emision {1:d} Cobro {2:d} Numero {3} Importe {4:C}", Banco, Emision, Cobro, Numero, Importe);
 		}
+
+		#region ISearchable implementation
+
+		public virtual string ToSearchString ()
+		{
+			return string.Format ("[Cheque: Id={0}, Banco={1}, Estado={2}, Emision={3}, Cobro={4}, Numero={5}, Importe={6}]", Id, Banco, Estado, Emision, Cobro, Numero, Importe);
+		}
+
+		#endregion
+
 	}
 }
 
