@@ -175,6 +175,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public IList<CuentaContable> Hijas { 
+			get; 
+			set;
+		}
+
 		public override string ToString ()
 		{
 			return Descripcion;
