@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Empleado: IPersistible
+	public class Empleado: IPersistible, ISearchable
 	{
 		#region IPersistible implementation
 
@@ -35,6 +35,14 @@ namespace Hamekoz.Negocio
 
 		public string Dni { get; set; }
 
+		#region ISearchable implementation
+
+		public string ToSearchString ()
+		{
+			return string.Format ("[Empleado: Id={0}, NombresApellidos={1}, Dni={2}]", Id, NombresApellidos, Dni);
+		}
+
+		#endregion
 	}
 }
 
