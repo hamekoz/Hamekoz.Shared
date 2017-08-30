@@ -33,6 +33,8 @@ namespace Hamekoz.Negocio
 
 		DateTime Vencimiento { get; }
 
+		decimal Neto { get; }
+
 		decimal Total { get; }
 
 		decimal Restante { get; set; }
