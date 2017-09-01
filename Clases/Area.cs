@@ -2,7 +2,7 @@
 //  Area.cs
 //
 //  Author:
-//       Ezequiel Taranto <ezequiel89@gmail.com>
+//       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
 //  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
 //
@@ -18,14 +18,39 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Area
+	public class Area : IPersistible, IDescriptible
 	{
-		public Area ()
+		#region IPersistible implementation
+
+		public int Id {
+			get; 
+			set;
+		}
+
+		#endregion
+
+		public string Nombre {
+			get;
+			set;
+		}
+
+		#region IDescriptible implementation
+
+		string IDescriptible.Descripcion {
+			get {
+				return Nombre;
+			}
+		}
+
+		#endregion
+
+		public override string ToString ()
 		{
+			return Nombre;
 		}
 	}
 }
