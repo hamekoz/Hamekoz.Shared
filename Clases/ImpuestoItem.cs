@@ -43,9 +43,20 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public decimal ValorFijo {
+			get;
+			set;
+		}
+
+		//TODO calcular la propiedad Importe = BaseImponible * Alicuota / 100 + ValorFijo
 		public decimal Importe {
 			get;
 			set;
+		}
+
+		public string AlicuotaToString ()
+		{
+			return (Alicuota / 100).ToString ("P");
 		}
 	}
 
