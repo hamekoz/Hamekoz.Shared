@@ -149,7 +149,7 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
-			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Numero);
+			return string.Format ("{0} {1} {2}", Tipo.Abreviatura, Tipo.Letra, Id == 0 ? Tipo.UltimoNumeroConFormato : Numero);
 		}
 
 		public string PuntoDeVenta {
