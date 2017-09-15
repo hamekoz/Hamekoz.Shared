@@ -60,6 +60,21 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public bool AgenteDeRecaudacionAGIP {
+			get;
+			set;
+		}
+
+		public object NumeroDeAgenteAGIP {
+			get;
+			set;
+		}
+
+		public object TipoDeAgenteAGIP {
+			get;
+			set;
+		}
+
 		public string Actividad {
 			get;
 			set;
