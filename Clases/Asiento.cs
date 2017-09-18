@@ -87,6 +87,12 @@ namespace Hamekoz.Negocio
 			get { return Items.Sum (i => i.Haber); }
 		}
 
+		//TODO ver si tiene realmente sentido tener almacenado el centro de costo en la cabecera del asiento ya que tambien se almacena el centro de costo en cada item
+		public CentroDeCosto CentroDeCosto {
+			get;
+			set;
+		}
+
 		public bool Anulado { get; set; }
 
 		public Asiento ()
