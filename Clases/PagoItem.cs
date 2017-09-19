@@ -23,8 +23,6 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	//UNDONE
-
 	public class PagoItem : IItem, IIdentifiable
 	{
 		#region IIdentifiable implementation
@@ -81,7 +79,6 @@ namespace Hamekoz.Negocio
 
 		public int Lote {
 			get {
-				//UNDONE
 				return 0;
 			}
 		}
