@@ -175,7 +175,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public IList<CuentaContable> Hijas { 
+		public IDictionary<int, CuentaContable> Hijas { 
 			get; 
 			set;
 		}
