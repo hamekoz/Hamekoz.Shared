@@ -137,9 +137,15 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal restante;
+
 		public decimal Restante {
-			get;
-			set;
+			get {
+				return Id == 0 ? Total : restante;
+			}
+			set {
+				restante = value;
+			}
 		}
 
 		public string Observaciones {
@@ -162,6 +168,11 @@ namespace Hamekoz.Negocio
 			get {
 				return ToString ();
 			}
+		}
+
+		public void AddItem (IItem item)
+		{
+			Items.Add (item);
 		}
 	}
 }
