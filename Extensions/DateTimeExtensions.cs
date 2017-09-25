@@ -70,9 +70,9 @@ namespace Hamekoz.Extensions
 		}
 
 		/// <summary>
-		/// Firsts the day of month from date.
+		/// The last day of month from date.
 		/// </summary>
-		/// <returns>The first day of month.</returns>
+		/// <returns>The last day of month.</returns>
 		/// <param name="date">Date.</param>
 		public static DateTime LastDayOfMonth (this DateTime date)
 		{
