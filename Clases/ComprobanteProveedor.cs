@@ -38,7 +38,7 @@ namespace Hamekoz.Negocio
 			Remito = new RemitoProveedor ();
 			Remitos = new List<RemitoProveedor> ();
 			CondicionDePago = new CondicionDePago ();
-			Asiento = new Asiento ();
+			//Asiento = new Asiento ();
 			Observaciones = string.Empty;
 		}
 
