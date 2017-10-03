@@ -30,6 +30,8 @@ namespace Hamekoz.Fiscal
 
 		DateTime Emision { get; }
 
+		DateTime Contable { get; }
+
 		IResponsable Responsable { get; }
 
 		decimal Total { get; }
@@ -44,6 +46,8 @@ namespace Hamekoz.Fiscal
 		string PuntoDeVenta { get; }
 
 		DateTime Emision { get; }
+
+		DateTime Contable { get; }
 
 		IList<IItem> Items { get; }
 

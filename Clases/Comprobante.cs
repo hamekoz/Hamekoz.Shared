@@ -56,6 +56,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		DateTime contabilizado = DateTime.Now.Date;
+
+		public DateTime Contable {
+			get {
+				return Asiento != null ? Asiento.FechaContable : contabilizado;
+			}
+			set {
+				contabilizado = value;
+			}
+		}
+
 		public NumeracionDeComprobante Tipo {
 			get;
 			set;
