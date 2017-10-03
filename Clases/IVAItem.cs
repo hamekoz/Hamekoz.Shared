@@ -27,7 +27,7 @@ namespace Hamekoz.Negocio
 		public IVA IVA {
 			get;
 			set;
-		}
+		} = IVA.General;
 
 		public decimal Neto {
 			get;
