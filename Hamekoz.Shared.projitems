@@ -116,5 +116,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICheque.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\PagoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fiscal\IVA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoItem.cs" />
   </ItemGroup>
 </Project>
