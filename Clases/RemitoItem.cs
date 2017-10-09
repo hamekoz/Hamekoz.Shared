@@ -28,7 +28,7 @@ namespace Hamekoz.Negocio
 		public enum Estados
 		{
 			Despachando,
-			Trasitando,
+			Transitando,
 			Recibido,
 			ConFaltante,
 			ConRotura,
