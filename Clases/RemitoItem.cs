@@ -18,6 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
@@ -25,16 +26,6 @@ namespace Hamekoz.Negocio
 {
 	public class RemitoItem : IItem, IPersistible, IIdentifiable
 	{
-		public enum Estados
-		{
-			Despachando,
-			Transitando,
-			Recibido,
-			ConFaltante,
-			ConRotura,
-			Extraviado,
-		}
-
 		#region IIdentifiable implementation
 
 		public int Id {
@@ -121,10 +112,10 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
-		public Estados Estado {
+		public bool Verificado {
 			get;
 			set;
-		} = Estados.Despachando;
+		}
 
 		public decimal CantidadRecibida {
 			get;
