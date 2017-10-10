@@ -121,6 +121,8 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		public bool VerificadoOriginal;
 	}
 }
 
