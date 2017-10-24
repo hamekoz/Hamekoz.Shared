@@ -91,6 +91,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public double PuntajeDeEvaluacion { 
+			get; 
+			set; 
+		}
+
 		public override string ToString ()
 		{
 			return RazonSocial;

@@ -37,6 +37,12 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public double Puntaje {
+			get { 
+				return Proveedor.PuntajeDeEvaluacion;
+			}
+		}
+
 		public decimal Precio {
 			get;
 			set;
