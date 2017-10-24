@@ -58,6 +58,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public DateTime Contable {
+			get;
+			set;
+		}
+
 		//UNDONE esto deberia ser una clase
 		public int IdFlete {
 			get;

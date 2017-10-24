@@ -112,6 +112,12 @@ namespace Hamekoz.Negocio
 
 		public IList<IItem> Items => Renglones.Cast<IItem>().ToList();
 
+		DateTime IComprobante.Contable {
+			get {
+				return Emision;
+			}
+		}
+
 		decimal IComprobante.IVA {
 			get {
 				throw new NotImplementedException();

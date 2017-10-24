@@ -1,7 +1,8 @@
 ﻿//
-//  IComprobante.cs
+//  ICheque.cs
 //
 //  Author:
+//       Juan Angel Dinamarca <juan.angel.dinamarca@gmail.com>
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
 //  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
@@ -19,54 +20,26 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using System.Collections.Generic;
-using Hamekoz.Negocio;
+using Hamekoz.Core;
 
-namespace Hamekoz.Fiscal
+namespace Hamekoz.Negocio
 {
-	public interface IComprobanteBase
+	//TODO referenciar en implementacion de cheques
+	public interface ICheque : IIdentifiable
 	{
-		string Comprobante { get; }
+		Asiento Asiento { get; set; }
 
-		DateTime Emision { get; }
+		CuentaContable.Monedas Moneda { get; set; }
 
-		DateTime Contable { get; }
+		double Importe { get; set; }
 
-		IResponsable Responsable { get; }
+		decimal Numero { get; set; }
 
-		decimal Total { get; }
-	}
+		DateTime Emision { get; set; }
 
-	public interface IComprobante
-	{
-		IResponsable Responsable { get; }
+		DateTime Cobro { get; set; }
 
-		string Numero { get; set; }
-
-		string PuntoDeVenta { get; }
-
-		DateTime Emision { get; }
-
-		DateTime Contable { get; }
-
-		IList<IItem> Items { get; }
-
-		IList<IVAItem> IVAItems { get; }
-
-		IList<ImpuestoItem> Impuestos { get; }
-
-		decimal Neto { get; }
-
-		decimal Total { get; }
-
-		decimal Gravado { get; }
-
-		decimal NoGravado { get; }
-
-		decimal IVA { get; }
-
-		decimal Tributos { get; }
-
-		string Observaciones { get; }
+		int Estado { get; set; }
 	}
 }
+

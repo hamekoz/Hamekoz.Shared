@@ -40,6 +40,7 @@ namespace Hamekoz.Fiscal
 
 		decimal Neto { get; }
 
+		//TODO reemplazar TasaIVA por enumerado IVA
 		decimal TasaIVA { get; }
 
 		decimal IVA { get; }

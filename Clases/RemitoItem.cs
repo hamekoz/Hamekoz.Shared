@@ -1,10 +1,10 @@
 ﻿//
-//  Empresa.cs
+//  RemitoItem.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2017 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,94 +18,111 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+using System;
 using Hamekoz.Core;
+using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class Empresa : IPersistible, IIdentifiable
+	public class RemitoItem : IItem, IPersistible, IIdentifiable
 	{
+		#region IIdentifiable implementation
+
 		public int Id {
 			get;
 			set;
 		}
 
-		public string RazonSocial {
+		#endregion
+
+		public int Renglon {
 			get;
 			set;
 		}
 
-		public string CUIT {
+		public int Codigo {
+			get { return Articulo.Id; }
+		}
+
+		public Articulo Articulo {
 			get;
 			set;
 		}
 
-		public string NumeroDeIngresosBrutos {
+		#region IItem implementation
+
+		string IItem.Codigo {
+			get { return Articulo.Id.ToString (); }
+		}
+
+		string IItem.Descripcion {
+			get { return Articulo.Nombre; }
+		}
+
+		string  IItem.DescripcionCorta {
+			get { return Articulo.NombreCorto; }
+		}
+
+		public int Lote {
 			get;
 			set;
 		}
 
-		public bool AgenteDeRecaudacionARBA {
+		//TODO revisar, el costo deberia salir del Lote
+		public decimal Costo {
 			get;
 			set;
 		}
 
-		public string NumeroDeAgenteARBA {
+		public decimal Cantidad {
 			get;
 			set;
 		}
 
-		public string TipoDeAgenteARBA {
+		public decimal Precio {
 			get;
 			set;
 		}
 
-		public bool AgenteDeRecaudacionAGIP {
+		public decimal Neto {
+			get {
+				return Total - IVA - Impuestos;
+			}
+		}
+
+		public decimal TasaIVA {
 			get;
 			set;
 		}
 
-		public object NumeroDeAgenteAGIP {
+		public decimal IVA {
 			get;
 			set;
 		}
 
-		public object TipoDeAgenteAGIP {
+		public decimal Impuestos {
 			get;
 			set;
 		}
 
-		public string Actividad {
+		public decimal Total {
 			get;
 			set;
 		}
 
-		//TODO esto deberia ser una clase de tipo de domicilio pero temporalmente lo defino como string
-		public string Domicilio {
+		#endregion
+
+		public bool Verificado {
 			get;
 			set;
 		}
 
-		//TODO esto deberia ser una clase de tipo de domicilio pero temporalmente lo defino como string
-		public string DomicilioLegal {
+		public decimal CantidadRecibida {
 			get;
 			set;
 		}
 
-		public string Telefonos {
-			get;
-			set;
-		}
-
-		public string Web {
-			get;
-			set;
-		}
-
-		public string DomicilioConTelefonos ()
-		{
-			return string.Format ("{0} - {1}", Domicilio, Telefonos);
-		}
-
+		public bool VerificadoOriginal;
 	}
 }
+

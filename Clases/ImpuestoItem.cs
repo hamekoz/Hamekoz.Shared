@@ -18,12 +18,21 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using Hamekoz.Negocio;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class ImpuestoItem
+	public class ImpuestoItem : IPersistible, IIdentifiable
 	{
+		#region IIdentifiable implementation
+
+		public int Id {
+			get;
+			set;
+		}
+
+		#endregion
+
 		public Impuesto Impuesto {
 			get;
 			set;
@@ -43,9 +52,29 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public decimal ValorFijo {
+			get;
+			set;
+		}
+
+		//TODO calcular la propiedad Importe = BaseImponible * Alicuota / 100 + ValorFijo
 		public decimal Importe {
 			get;
 			set;
+		}
+
+		/// <summary>
+		/// Utilizado para indicar cuando el impuesto fue declaro ante algun organismo gubertamental de recaudacion
+		/// </summary>
+		/// <value><c>true</c> if declarado; otherwise, <c>false</c>.</value>
+		public bool Declarado {
+			get;
+			set;
+		}
+
+		public string AlicuotaToString ()
+		{
+			return (Alicuota / 100).ToString ("P");
 		}
 	}
 

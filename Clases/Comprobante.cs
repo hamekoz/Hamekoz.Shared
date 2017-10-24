@@ -56,6 +56,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		DateTime contabilizado = DateTime.Now.Date;
+
+		public DateTime Contable {
+			get {
+				return Asiento != null ? Asiento.FechaContable : contabilizado;
+			}
+			set {
+				contabilizado = value;
+			}
+		}
+
 		public NumeracionDeComprobante Tipo {
 			get;
 			set;
@@ -137,9 +148,15 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal restante;
+
 		public decimal Restante {
-			get;
-			set;
+			get {
+				return Id == 0 ? Total : restante;
+			}
+			set {
+				restante = value;
+			}
 		}
 
 		public string Observaciones {
@@ -162,6 +179,11 @@ namespace Hamekoz.Negocio
 			get {
 				return ToString ();
 			}
+		}
+
+		public void AddItem (IItem item)
+		{
+			Items.Add (item);
 		}
 	}
 }

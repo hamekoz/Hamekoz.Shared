@@ -62,8 +62,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		//UNDONE aca el comprobante debe ser una clase base de todos los comprobantes
-		public int comprobanteId;
-		public decimal cotizacionDelPeso = 1;
+		public Cheque Cheque;
 	}
 }

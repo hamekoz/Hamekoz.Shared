@@ -22,69 +22,12 @@ using System.ComponentModel;
 
 namespace Hamekoz.Negocio
 {
-	public enum IVA
-	{
-		/// <summary>
-		/// IVA GENERAL 21 %
-		/// </summary>
-		[DescriptionAttribute ("IVA GENERAL 21 %")]
-		General,
-		/// <summary>
-		/// IVA EXENTO 0 %
-		/// </summary>
-		[DescriptionAttribute ("IVA EXENTO 0 %")]
-		Exento,
-		/// <summary>
-		/// IVA DIFERENCIAL 10.5 %
-		/// </summary>
-		[DescriptionAttribute ("IVA DIFERENCIAL 10.5 %")]
-		Diferencial1,
-		/// <summary>
-		/// IVA DIFERENCIAL 27 %
-		/// </summary>
-		[DescriptionAttribute ("IVA DIFERENCIAL 27 %")]
-		Diferencial2,
-		/// <summary>
-		/// IVA DIFERENCIAL 2.5 %
-		/// </summary>
-		[DescriptionAttribute ("IVA DIFERENCIAL 2.5 %")]
-		Diferencial3,
-		/// <summary>
-		/// IVA DIFERENCIAL 5 %
-		/// </summary>
-		[DescriptionAttribute ("IVA DIFERENCIAL 5 %")]
-		Diferencial4,
-	}
-
-	public static class IVAExtension
-	{
-		public static decimal Alicuota (this IVA iva)
-		{
-			switch (iva) {
-			case IVA.General:
-				return 21m;
-			case IVA.Diferencial1:
-				return 10.5m;
-			case IVA.Diferencial2:
-				return 27m;
-			case IVA.Diferencial3:
-				return 2.5m;
-			case IVA.Diferencial4:
-				return 5m;
-			case IVA.Exento:
-				return 0m;	
-			default:
-				return 21m;
-			}
-		}
-	}
-
 	public class IVAItem
 	{
 		public IVA IVA {
 			get;
 			set;
-		}
+		} = IVA.General;
 
 		public decimal Neto {
 			get;
