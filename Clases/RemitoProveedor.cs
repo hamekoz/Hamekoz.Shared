@@ -63,10 +63,15 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		//UNDONE esto deberia ser una clase
+		[Obsolete ("Usar propiedad Flete")]
 		public int IdFlete {
 			get;
 			set;
+		}
+
+		public Flete Flete { 
+			get; 
+			set; 
 		}
 
 		public Pedido Pedido {
@@ -207,7 +212,7 @@ namespace Hamekoz.Negocio
 
 		decimal IComprobanteBase.Total {
 			get {
-				return 0;
+				return Renglones.Sum (r => r.Total);
 			}
 		}
 
