@@ -80,11 +80,11 @@ namespace Hamekoz.Negocio
 		}
 
 		public decimal Debe {
-			get { return Items.Sum (i => i.Debe); }
+			get { return Math.Round (Items.Sum (i => i.Debe), 2); }
 		}
 
 		public decimal Haber {
-			get { return Items.Sum (i => i.Haber); }
+			get { return Math.Round (Items.Sum (i => i.Haber), 2); }
 		}
 
 		//TODO ver si tiene realmente sentido tener almacenado el centro de costo en la cabecera del asiento ya que tambien se almacena el centro de costo en cada item

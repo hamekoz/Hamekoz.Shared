@@ -19,6 +19,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -47,14 +48,26 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal debe;
+
 		public decimal Debe {
-			get;
-			set;
+			get {
+				return Math.Round (debe, 2);
+			}
+			set {
+				debe = value;
+			}
 		}
 
+		decimal haber;
+
 		public decimal Haber {
-			get;
-			set;
+			get {
+				return Math.Round (haber, 2);
+			}
+			set {
+				haber = value;
+			}
 		}
 
 		public CentroDeCosto CentroDeCosto {
