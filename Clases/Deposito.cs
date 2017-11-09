@@ -18,8 +18,8 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using Hamekoz.Core;
 using System;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
@@ -57,6 +57,11 @@ namespace Hamekoz.Negocio
 		public Tipos Tipo {
 			get;
 			set;
+		}
+
+		public override string ToString ()
+		{
+			return Nombre;
 		}
 	}
 }
