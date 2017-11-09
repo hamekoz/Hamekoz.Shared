@@ -48,6 +48,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO convertir a tipo DateTime?
 		public DateTime UltimaCompra {
 			get;
 			set;
