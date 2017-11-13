@@ -49,6 +49,11 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
+
+		public bool Modificado {
+			get;
+			set;
+		}
 	}
 }
 
