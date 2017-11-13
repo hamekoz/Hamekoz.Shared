@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Precio : IPersistible
+	public class Precio : IPersistible, ISearchable
 	{
 		public int Id {
 			get;
@@ -45,15 +45,34 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public DateTime Vigencia {
+		public DateTime ModificadoEn {
 			get;
 			set;
 		}
 
-		public bool Modificado {
+		public Empleado ModificadoPor {
 			get;
 			set;
 		}
+
+		public bool Modificado;
+
+		#region ISearchable implementation
+
+		public string ToSearchString ()
+		{
+			return string.Format ("[Precio: Id={0}, Lista={1}, Articulo={2}, Importe={3}, ModificadoEn={4}, ModificadoPor={5}, Rubro={6}]"
+				, Id
+				, Lista
+				, Articulo
+				, Importe
+				, ModificadoEn
+				, ModificadoPor
+				, Articulo.Rubro.Descripcion
+			);
+		}
+
+		#endregion
 	}
 }
 
