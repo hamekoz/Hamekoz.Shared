@@ -61,7 +61,7 @@ namespace Hamekoz.Negocio
 
 		public string ToSearchString ()
 		{
-			return string.Format ("[Precio: Id={0}, Lista={1}, Articulo={2}, Importe={3}, ModificadoEn={4}, ModificadoPor={5}, Rubro={6}]"
+			return string.Format ("[Precio: Id={0}, Lista={1}, Articulo={2}, Importe={3}, ModificadoEn={4}, ModificadoPor={5}, Rubro={6}, Codigo={7}]"
 				, Id
 				, Lista
 				, Articulo
@@ -69,6 +69,7 @@ namespace Hamekoz.Negocio
 				, ModificadoEn
 				, ModificadoPor
 				, Articulo.Rubro.Descripcion
+				, Articulo.Id
 			);
 		}
 
