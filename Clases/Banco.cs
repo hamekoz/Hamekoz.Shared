@@ -18,6 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System.Collections.Generic;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
@@ -71,6 +72,48 @@ namespace Hamekoz.Negocio
 		public override string ToString ()
 		{
 			return Nombre;
+		}
+
+		public IList<Sucursal> Sucursales {
+			get;
+			set;
+		}
+
+		public class Sucursal: IIdentifiable
+		{
+			#region IIdentifiable implementation
+
+			public int Id {
+				get;
+				set;
+			}
+
+			#endregion
+
+			public int Codigo {
+				get;
+				set;
+			}
+
+			public string Nombre {
+				get;
+				set;
+			}
+
+			public string Domicilio {
+				get;
+				set;
+			}
+
+			public Localidad Localidad {
+				get;
+				set;
+			}
+
+			public bool Inactiva {
+				get;
+				set;
+			}
 		}
 	}
 }
