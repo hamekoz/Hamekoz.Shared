@@ -121,5 +121,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Permiso.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\IPermisible.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\SucursalDeBanco.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Contacto.cs" />
   </ItemGroup>
 </Project>
