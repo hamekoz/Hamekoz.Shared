@@ -74,51 +74,9 @@ namespace Hamekoz.Negocio
 			return Nombre;
 		}
 
-		public IList<Sucursal> Sucursales {
+		public IList<SucursalDeBanco> Sucursales {
 			get;
 			set;
-		}
-
-		public class Sucursal : IIdentifiable
-		{
-			#region IIdentifiable implementation
-
-			public int Id {
-				get;
-				set;
-			}
-
-			#endregion
-
-			public int Codigo {
-				get;
-				set;
-			}
-
-			public string Nombre {
-				get;
-				set;
-			}
-
-			public string Domicilio {
-				get;
-				set;
-			}
-
-			public Localidad Localidad {
-				get;
-				set;
-			}
-
-			public bool Inactiva {
-				get;
-				set;
-			}
-
-			public override string ToString ()
-			{
-				return Nombre;
-			}
 		}
 	}
 }
