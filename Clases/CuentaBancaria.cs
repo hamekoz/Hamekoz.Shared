@@ -40,6 +40,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO refactorizar para reemplazar Banco y Sucursal por SucursalDeBanco
 		public string Sucursal {
 			get;
 			set;
