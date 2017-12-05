@@ -79,7 +79,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public class Sucursal: IIdentifiable
+		public class Sucursal : IIdentifiable
 		{
 			#region IIdentifiable implementation
 
@@ -113,6 +113,11 @@ namespace Hamekoz.Negocio
 			public bool Inactiva {
 				get;
 				set;
+			}
+
+			public override string ToString ()
+			{
+				return Nombre;
 			}
 		}
 	}
