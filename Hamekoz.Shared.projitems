@@ -123,5 +123,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\SucursalDeBanco.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Contacto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ComprobanteExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Sexos.cs" />
   </ItemGroup>
 </Project>
