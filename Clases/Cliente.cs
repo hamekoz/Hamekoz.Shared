@@ -48,6 +48,10 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public string NombreFantasia {
+			get;
+			set;
+		}
 
 		public Estados Estado {
 			get;
