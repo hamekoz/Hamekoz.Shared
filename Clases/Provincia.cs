@@ -59,6 +59,11 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
+			return Nombre;
+		}
+
+		public string ToFullString ()
+		{
 			return Pais != null ? string.Format ("{0} - {1}", Pais.Nombre, Nombre) : Nombre;
 		}
 

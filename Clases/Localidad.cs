@@ -55,6 +55,11 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
+			return Nombre;
+		}
+
+		public string ToFullString ()
+		{
 			//TODO reformular cuando se corrija la logica de pertenencia
 			var builder = new StringBuilder ();
 			if (Provincia != null) {

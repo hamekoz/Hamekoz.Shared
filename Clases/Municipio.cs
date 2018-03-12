@@ -53,6 +53,11 @@ namespace Hamekoz.Negocio
 
 		public override string ToString ()
 		{
+			return Nombre;
+		}
+
+		public string ToFullString ()
+		{
 			return Provincia != null ? string.Format ("{0} - {1}", Provincia, Nombre) : Nombre;
 		}
 
