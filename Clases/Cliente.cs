@@ -71,7 +71,7 @@ namespace Hamekoz.Negocio
 		public Domicilio Domicilio {
 			get;
 			set;
-		}
+		} = new Domicilio();
 
 		public CondicionDeIngresosBrutos CondicionDeIngresosBrutos {
 			get;
