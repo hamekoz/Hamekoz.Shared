@@ -39,7 +39,7 @@ namespace Hamekoz.Negocio
 		public string CodigoPostal {
 			get;
 			set;
-		}
+		} = string.Empty;
 
 		public Localidad Localidad {
 			get;
