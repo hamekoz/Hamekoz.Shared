@@ -20,11 +20,12 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
 using System.Collections.Generic;
+using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
 	//UNDONE terminar de definir la interfaz
-	public interface IRemito
+	public interface IRemito : IPersistible, ISearchable
 	{
 		int Id { get; }
 
@@ -32,7 +33,7 @@ namespace Hamekoz.Negocio
 
 		DateTime Emision { get; }
 
-		IList<IRemitoItem> Items { get; }
+		IList<RemitoItem> Items { get; }
 
 		string Observaciones { get; }
 	}

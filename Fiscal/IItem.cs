@@ -32,6 +32,7 @@ namespace Hamekoz.Fiscal
 		[Obsolete ("Usar interfaz IItemControladorFiscal")]
 		string DescripcionCorta { get; }
 
+		//TODO deberia ser de clase Lote
 		int Lote { get; }
 
 		decimal Cantidad { get; }

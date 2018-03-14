@@ -18,19 +18,32 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class ReciboItem : IPersistible, IItem
+	//TODO ver si es posible unificar con PagoItem
+	public class ReciboItem : IPersistible, IIdentifiable, IItem
 	{
+		#region IIdentifiable implementation
+
+		public int Id {
+			get;
+			set;
+		}
+
+		#endregion
+
 		//TODO ReciboItem no deberia tener referencia la recibo ya que simpre compone al recibo
 
 		#region Recibo
 
+		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
 		internal int ReciboId;
 
+		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
 		public Recibo Recibo {
 			get;
 			set;
@@ -53,6 +66,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		[Obsolete ("Utilizar propiedad Cheque")]
 		internal int ChequeId;
 		//FIX el cheque no deberia ser un atributo del detalle del recibo.
 		public Cheque Cheque {
@@ -60,29 +74,37 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public int Lote {
-			get;
-			set;
+		string ChequeToString ()
+		{
+			return Cheque == null ? string.Empty : string.Format ("Cheque: {0} Nro {1} al {2:d}", Cheque.Banco, Cheque.Numero, Cheque.Cobro);
 		}
 
 		#region IItem implementation
 
 		string IItem.Codigo {
 			get {
-				return CuentaContable.Codigo.ToString ();
+				return CuentaContable == null ? string.Empty : CuentaContable.Codigo.ToString ();
 			}
 		}
 
-		string IItem.Descripcion {
+		string descripcion;
+
+		public string Descripcion {
 			get {
-				return CuentaContable.Cuenta;
+				return CuentaContable == null ? descripcion : string.Format ("{0} {1}", CuentaContable, ChequeToString ());
 			}
+			set { descripcion = value; }
 		}
 
 		string IItem.DescripcionCorta {
 			get {
-				return CuentaContable.Cuenta.Substring (0, 40);
+				return CuentaContable == null ? descripcion : CuentaContable.Cuenta;
 			}
+		}
+
+		public int Lote {
+			get;
+			set;
 		}
 
 		decimal IItem.Cantidad {
@@ -103,15 +125,15 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		decimal IItem.IVA {
-			get {
-				return 0;
-			}
-		}
-
 		decimal IItem.TasaIVA {
 			get {
 				return 21;
+			}
+		}
+
+		decimal IItem.IVA {
+			get {
+				return 0;
 			}
 		}
 
@@ -125,6 +147,30 @@ namespace Hamekoz.Negocio
 			get {
 				return Importe;
 			}
+		}
+
+		#endregion
+
+		#region Revisar
+
+		public decimal CotizacionDelPeso {
+			get;
+			set;
+		}
+
+		public decimal CotizacionMoneda {
+			get;
+			set;
+		}
+
+		public double Debitar {
+			get;
+			set;
+		}
+
+		public bool Eliminado {
+			get;
+			set;
 		}
 
 		#endregion

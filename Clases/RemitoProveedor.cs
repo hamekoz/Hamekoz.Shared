@@ -29,6 +29,11 @@ namespace Hamekoz.Negocio
 	//FIX IRemito, deberia implementar IComprobante
 	public class RemitoProveedor : IPersistible, IIdentifiable, IComprobante, IComprobanteBase, IRemito
 	{
+		string ISearchable.ToSearchString ()
+		{
+			throw new NotImplementedException ();
+		}
+
 		#region IPersistible implementation
 
 		public int Id {
@@ -111,9 +116,9 @@ namespace Hamekoz.Negocio
 
 		#region IRemito
 
-		IList<IRemitoItem> IRemito.Items {
+		IList<RemitoItem> IRemito.Items {
 			get {
-				return Renglones.Cast<IRemitoItem> ().ToList ();
+				return Renglones.Cast<RemitoItem> ().ToList ();
 			}
 		}
 

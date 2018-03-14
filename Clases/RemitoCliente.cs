@@ -28,6 +28,11 @@ namespace Hamekoz.Negocio
 {
 	public class RemitoCliente : IPersistible, IIdentifiable, IComprobante, IRemito
 	{
+		string ISearchable.ToSearchString ()
+		{
+			throw new NotImplementedException ();
+		}
+
 		public RemitoCliente ()
 		{
 			//HACK aca no se deben iniciar los objetos
@@ -164,9 +169,9 @@ namespace Hamekoz.Negocio
 
 		#region IRemito
 
-		IList<IRemitoItem> IRemito.Items {
+		IList<RemitoItem> IRemito.Items {
 			get {
-				return Renglones.Cast<IRemitoItem>().ToList();
+				return Renglones.Cast<RemitoItem>().ToList();
 			}
 		}
 

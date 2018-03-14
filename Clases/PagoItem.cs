@@ -23,6 +23,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
+	//TODO ver si es posible unificar con ReciboItem
 	public class PagoItem : IItem, IIdentifiable
 	{
 		#region IIdentifiable implementation
