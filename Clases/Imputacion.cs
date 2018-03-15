@@ -34,17 +34,21 @@ namespace Hamekoz.Negocio
 			Eliminada
 		}
 
+		public DateTime Emision {
+			get { return ComprobanteDebe.Emision; }
+		}
+
 		public IComprobanteImputable ComprobanteDebe {
 			get;
 			set;
 		}
 
-		public DateTime Fecha {
+		public IComprobanteImputable ComprobanteHaber {
 			get;
 			set;
 		}
 
-		public IComprobanteImputable ComprobanteHaber {
+		public DateTime Fecha {
 			get;
 			set;
 		}
