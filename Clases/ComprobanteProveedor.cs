@@ -64,11 +64,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public CondicionDePago CondicionDePago {
-			get;
-			set;
-		}
-
 		public string CAE {
 			get;
 			set;
@@ -89,9 +84,14 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		[Obsolete ("Usar propidade Anulado")]
 		public bool Eliminado {
-			get;
-			set;
+			get {
+				return Anulado;
+			}
+			set {
+				Anulado = value;
+			}
 		}
 
 		#region IComprobante

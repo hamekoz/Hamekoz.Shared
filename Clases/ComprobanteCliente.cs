@@ -19,6 +19,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hamekoz.Fiscal;
@@ -57,11 +58,6 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public CondicionDePago CondicionDePago {
-			get;
-			set;
-		}
-
 		public string CAE {
 			get;
 			set;
@@ -87,9 +83,14 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		[Obsolete ("Usar propidade Anulado")]
 		public bool Eliminado {
-			get;
-			set;
+			get {
+				return Anulado;
+			}
+			set {
+				Anulado = value;
+			}
 		}
 
 		#region IComprobante

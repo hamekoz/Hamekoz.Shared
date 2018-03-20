@@ -35,6 +35,8 @@ namespace Hamekoz.Fiscal
 		IResponsable Responsable { get; }
 
 		decimal Total { get; }
+
+		bool Anulado { get; }
 	}
 
 	public interface IComprobante

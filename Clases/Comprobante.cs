@@ -56,6 +56,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		public CondicionDePago CondicionDePago {
+			get;
+			set;
+		}
+
 		DateTime contabilizado = DateTime.Now.Date;
 
 		public DateTime Contable {
@@ -173,6 +178,11 @@ namespace Hamekoz.Negocio
 			get {
 				throw new NotImplementedException ();
 			}
+		}
+
+		public bool Anulado {
+			get;
+			set;
 		}
 
 		string IComprobanteBase.Comprobante {
