@@ -127,7 +127,7 @@ namespace Hamekoz.Negocio
 
 		decimal IItem.TasaIVA {
 			get {
-				return 21;
+				return 0;
 			}
 		}
 

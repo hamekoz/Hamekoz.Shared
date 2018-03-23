@@ -18,6 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hamekoz.Core;
@@ -34,7 +35,6 @@ namespace Hamekoz.Negocio
 			Cliente = new Cliente ();
 			Tipo = new NumeracionDeComprobante ();
 			Renglones = new List<ReciboItem> ();
-			Asiento = new Asiento ();
 		}
 
 		public Cliente Cliente {
@@ -46,7 +46,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public List<ReciboItem> Renglones {
+		public IList<ReciboItem> Renglones {
 			get;
 			set;
 		}

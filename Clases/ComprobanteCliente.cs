@@ -36,7 +36,6 @@ namespace Hamekoz.Negocio
 			Tipo = new NumeracionDeComprobante ();
 			Remito = new RemitoCliente ();
 			CondicionDePago = new CondicionDePago ();
-			Asiento = new Asiento ();
 			Zeta = new Zeta ();
 		}
 
