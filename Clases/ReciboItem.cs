@@ -66,19 +66,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Utilizar propiedad Cheque")]
-		internal int ChequeId;
-		//FIX el cheque no deberia ser un atributo del detalle del recibo.
-		public Cheque Cheque {
-			get;
-			set;
-		}
-
-		string ChequeToString ()
-		{
-			return Cheque == null ? string.Empty : string.Format ("Cheque: {0} Nro {1} al {2:d}", Cheque.Banco, Cheque.Numero, Cheque.Cobro);
-		}
-
 		#region IItem implementation
 
 		string IItem.Codigo {
@@ -150,6 +137,19 @@ namespace Hamekoz.Negocio
 		}
 
 		#endregion
+
+		[Obsolete ("Utilizar propiedad Cheque")]
+		internal int ChequeId;
+		//FIX el cheque no deberia ser un atributo del detalle del recibo.
+		public Cheque Cheque {
+			get;
+			set;
+		}
+
+		string ChequeToString ()
+		{
+			return Cheque == null ? string.Empty : string.Format ("Cheque: {0} Nro {1} al {2:d}", Cheque.Banco, Cheque.Numero, Cheque.Cobro);
+		}
 
 		#region Revisar
 

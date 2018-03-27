@@ -32,7 +32,6 @@ namespace Hamekoz.Negocio
 		public Recibo ()
 		{
 			//FIX aca no se deben iniciar los objetos
-			Cliente = new Cliente ();
 			Tipo = new NumeracionDeComprobante ();
 			Renglones = new List<ReciboItem> ();
 		}
