@@ -167,7 +167,7 @@ namespace Hamekoz.Negocio
 		public string Observaciones {
 			get;
 			set;
-		}
+		} = string.Empty;
 
 		public override string ToString ()
 		{
