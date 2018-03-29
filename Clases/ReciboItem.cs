@@ -156,12 +156,12 @@ namespace Hamekoz.Negocio
 		public decimal CotizacionDelPeso {
 			get;
 			set;
-		}
+		} = 1;
 
 		public decimal CotizacionMoneda {
 			get;
 			set;
-		}
+		} = 1;
 
 		public double Debitar {
 			get;
@@ -169,6 +169,11 @@ namespace Hamekoz.Negocio
 		}
 
 		public bool Eliminado {
+			get;
+			set;
+		}
+
+		public Retencion Retencion {
 			get;
 			set;
 		}

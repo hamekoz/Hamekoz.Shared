@@ -1,10 +1,10 @@
-﻿//
-//  IController.cs
+//
+//  ReciboItem.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2015 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,32 +18,46 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System.Collections.Generic;
+using System;
+using Hamekoz.Core;
 
-namespace Hamekoz.Core
+namespace Hamekoz.Negocio
 {
-	public interface IController<T>
+	public class Retencion : IPersistible, IIdentifiable
 	{
-		T Create ();
+		#region IIdentifiable implementation
 
-		void Load (T instance);
+		public int Id {
+			get;
+			set;
+		}
 
-		void Save (T instance);
+		#endregion
 
-		void Remove (T instance);
+		public DateTime Fecha {
+			get;
+			set;
+		}
 
-		IList<T> List { get; }
+		public decimal Importe {
+			get;
+			set;
+		}
 
-		bool Reload { get; set; }
+		public string Comprobante {
+			get;
+			set;
+		}
 
-		//TODO agregar un metodo para realizar validaciones
-		//bool Validate(T instance);
+		public Asiento Asiento {
+			get;
+			set;
+		}
 
-		//TODO agregar un metodo para realizar acciones o validaciones antes y despues de las acciones que modifican los datos
-		//void BeforeSave(T instance);
-		//void AfterSave(T instance);
-		//void BeforeRemove(T instance);
-		//void AfterRemove(T instance);
+		public Cliente Cliente {
+			get;
+			set;
+		}
 	}
-}
 
+}
