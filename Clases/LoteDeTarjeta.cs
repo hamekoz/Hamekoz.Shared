@@ -1,10 +1,10 @@
 //
-//  ReciboItem.cs
+//  LoteDeTarjeta.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
 //
-//  Copyright (c) 2016 Hamekoz - www.hamekoz.com.ar
+//  Copyright (c) 2018 Hamekoz - www.hamekoz.com.ar
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
@@ -18,12 +18,13 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using Hamekoz.Core;
+using System;
 
 namespace Hamekoz.Negocio
 {
-	public class Retencion : IPersistible, IIdentifiable
+	//TODO ver si es posible unificar con PagoItem
+	public class LoteDeTarjeta : IIdentifiable, IPersistible
 	{
 		#region IIdentifiable implementation
 
@@ -34,17 +35,22 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
-		public DateTime Fecha {
+		public int Numero {
 			get;
 			set;
 		}
+
+		public DateTime Fecha {
+			get;
+			set;
+		} = DateTime.Now.Date;
 
 		public decimal Importe {
 			get;
 			set;
 		}
 
-		public string Comprobante {
+		public bool Acreditado {
 			get;
 			set;
 		}
@@ -54,14 +60,14 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public Cliente Cliente {
+		public CuentaContable CuentaContable {
 			get;
 			set;
 		}
 
 		public override string ToString ()
 		{
-			return Comprobante;
+			return Numero.ToString ();
 		}
 	}
 

@@ -125,5 +125,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ComprobanteExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\Sexos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Retencion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\LoteDeTarjeta.cs" />
   </ItemGroup>
 </Project>

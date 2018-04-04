@@ -36,18 +36,7 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
-		//TODO ReciboItem no deberia tener referencia la recibo ya que simpre compone al recibo
-
 		#region Recibo
-
-		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
-		internal int ReciboId;
-
-		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
-		public Recibo Recibo {
-			get;
-			set;
-		}
 
 		public int Renglon {
 			get;
@@ -89,9 +78,10 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public int Lote {
-			get;
-			set;
+		int IItem.Lote {
+			get {
+				return 0;
+			}
 		}
 
 		decimal IItem.Cantidad {
@@ -138,6 +128,23 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
+		#region Revisar
+
+		public double Debitar {
+			get;
+			set;
+		}
+
+		public Retencion Retencion {
+			get;
+			set;
+		}
+
+		public LoteDeTarjeta LoteDeTarjeta {
+			get;
+			set;
+		}
+
 		[Obsolete ("Utilizar propiedad Cheque")]
 		internal int ChequeId;
 		//FIX el cheque no deberia ser un atributo del detalle del recibo.
@@ -151,7 +158,7 @@ namespace Hamekoz.Negocio
 			return Cheque == null ? string.Empty : string.Format ("Cheque: {0} Nro {1} al {2:d}", Cheque.Banco, Cheque.Numero, Cheque.Cobro);
 		}
 
-		#region Revisar
+		#endregion
 
 		public decimal CotizacionDelPeso {
 			get;
@@ -163,7 +170,12 @@ namespace Hamekoz.Negocio
 			set;
 		} = 1;
 
-		public double Debitar {
+		//TODO ReciboItem no deberia tener referencia la recibo ya que simpre compone al recibo
+		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
+		internal int ReciboId;
+
+		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
+		public Recibo Recibo {
 			get;
 			set;
 		}
@@ -172,12 +184,5 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
-
-		public Retencion Retencion {
-			get;
-			set;
-		}
-
-		#endregion
 	}
 }
