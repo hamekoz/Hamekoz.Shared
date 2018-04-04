@@ -68,7 +68,7 @@ namespace Hamekoz.Negocio
 		public string ComentariosAFIP {
 			get;
 			set;
-		}
+		} = string.Empty;
 
 		[System.Obsolete ("Usar propidade Anulado")]
 		public bool Eliminado {
