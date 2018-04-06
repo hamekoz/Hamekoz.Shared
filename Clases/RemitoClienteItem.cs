@@ -18,9 +18,7 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 using System;
-using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
@@ -40,64 +38,50 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public int Renglon {
-			get;
-			set;
-		}
-
-		public Articulo Articulo {
-			get;
-			set;
-		}
-
-		public decimal Cantidad {
-			get;
-			set;
-		}
-
-		public decimal Precio {
-			get;
-			set;
-		}
-
-		public decimal Total {
+		public new decimal Total {
 			get {
-				return Math.Round (Precio * Cantidad, 2);
+				base.Total = Math.Round (Precio * Cantidad, 2);
+				return base.Total;
 			}
 		}
 
-		public decimal Neto {
+		public new decimal Neto {
 			get {
 				return Math.Round (Articulo.Neto * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 			}
 		}
 
-		public decimal Impuestos {
+		public new decimal Impuestos {
 			get {
-				return Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				base.Impuestos = Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				return base.Impuestos;
 			}
 		}
 
-		public decimal IVA {
+		public new decimal IVA {
 			get {
-				return Math.Round (Articulo.IVA * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				base.IVA = Math.Round (Articulo.IVA * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				return base.IVA;
 			}
 		}
 
-		public decimal TasaIVA {
+		public new decimal TasaIVA {
 			get {
 				return Articulo.TasaDeIVA;
 			}
 		}
 
-		public Lote Lote {
-			get;
-			set;
-		}
+		Lote lote;
 
-		public decimal Costo {
-			get;
-			set;
+		public new Lote Lote {
+			get {
+				return lote;
+			}
+			set {
+				lote = value;
+				//HACK para pasar el Id del lote a la propiedad de la clase base. Si no lo parseo por algun motivo pasa siempre 0
+				base.Lote = int.Parse (lote.ToString ());
+			}
 		}
 
 		#region IItem
