@@ -74,7 +74,7 @@ namespace Hamekoz.Negocio
 		public double CantidadPorBulto {
 			get;
 			set;
-		}
+		} = 1;
 
 		public decimal Precio {
 			get;
