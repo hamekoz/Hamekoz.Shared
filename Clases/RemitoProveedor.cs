@@ -121,6 +121,12 @@ namespace Hamekoz.Negocio
 
 		#region IRemito
 
+		IDescriptible IRemito.Destinatario {
+			get {
+				return Proveedor;
+			}
+		}
+
 		IList<RemitoItem> IRemito.Items {
 			get {
 				return Renglones.Cast<RemitoItem> ().ToList ();

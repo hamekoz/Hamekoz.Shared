@@ -33,6 +33,8 @@ namespace Hamekoz.Negocio
 
 		DateTime Emision { get; }
 
+		IDescriptible Destinatario { get; }
+
 		IList<RemitoItem> Items { get; }
 
 		string Observaciones { get; }
