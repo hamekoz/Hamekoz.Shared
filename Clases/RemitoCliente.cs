@@ -65,11 +65,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		//FIX esto deberia ser una clase y no un atributo
-		public int IdFlete {
-			get;
-			set;
-		}
 		//FIX ver si realmente debe estar aca esta propiedad
 		public Pedido Pedido {
 			get;
@@ -87,6 +82,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO deberia ser de tipo Domicilio de expedicion conteniendo el horario de la entrega
 		public Domicilio DomicilioDeEntrega {
 			get;
 			set;
@@ -97,6 +93,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO deberia ser de tipo RemitoItem generalizado y simplificado
 		public List<RemitoClienteItem> Renglones {
 			get;
 			set;
@@ -106,6 +103,11 @@ namespace Hamekoz.Negocio
 			get {
 				return Renglones.Sum(r => r.Total);
 			}
+		}
+
+		public override string ToString ()
+		{
+			return Numero;
 		}
 
 		#region IComprobante
