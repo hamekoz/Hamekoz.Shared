@@ -112,6 +112,8 @@ namespace Hamekoz.Negocio
 
 		#endregion
 
+		public bool VerificadoOriginal;
+
 		public bool Verificado {
 			get;
 			set;
@@ -121,8 +123,6 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		}
-
-		public bool VerificadoOriginal;
 	}
 }
 
