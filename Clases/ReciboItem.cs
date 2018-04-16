@@ -78,12 +78,6 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		int IItem.Lote {
-			get {
-				return 0;
-			}
-		}
-
 		decimal IItem.Cantidad {
 			get {
 				return 1;

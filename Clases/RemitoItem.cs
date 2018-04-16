@@ -63,10 +63,32 @@ namespace Hamekoz.Negocio
 			get { return Articulo.NombreCorto; }
 		}
 
-		public int Lote {
+		#region Revisar implementacion de lote
+
+		//TODO el lote deberia ser una clase
+		public int LoteId {
 			get;
 			set;
 		}
+
+		Lote lote;
+
+		public Lote Lote {
+			get {
+				if (lote == null)
+					lote = new Lote { Id = LoteId };
+				return lote;
+			}
+			set {
+				lote = value;
+				if (lote != null) {
+					LoteId = int.Parse (lote.Id.ToString ());	
+				}
+				//HACK para pasar el Id del lote a la propiedad de la clase base. Si no lo parseo por algun motivo pasa siempre 0
+			}
+		}
+
+		#endregion
 
 		//TODO revisar, el costo deberia salir del Lote
 		public decimal Costo {

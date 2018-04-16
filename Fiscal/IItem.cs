@@ -31,10 +31,6 @@ namespace Hamekoz.Fiscal
 		//TODO separar la descripcion corta en otra iterfaz que implemente IItem
 		[Obsolete ("Usar interfaz IItemControladorFiscal")]
 		string DescripcionCorta { get; }
-
-		//TODO deberia ser de clase Lote
-		int Lote { get; }
-
 		decimal Cantidad { get; }
 
 		decimal Precio { get; }

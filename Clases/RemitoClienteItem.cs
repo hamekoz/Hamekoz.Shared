@@ -71,30 +71,11 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		Lote lote;
-
-		public new Lote Lote {
-			get {
-				return lote;
-			}
-			set {
-				lote = value;
-				//HACK para pasar el Id del lote a la propiedad de la clase base. Si no lo parseo por algun motivo pasa siempre 0
-				base.Lote = int.Parse (lote.ToString ());
-			}
-		}
-
 		#region IItem
 
 		string IItem.Codigo {
 			get {
 				return Articulo.Codigo;
-			}
-		}
-
-		int IItem.Lote {
-			get {
-				return Lote.Id;
 			}
 		}
 
