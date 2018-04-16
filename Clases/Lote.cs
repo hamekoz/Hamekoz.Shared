@@ -28,5 +28,10 @@ namespace Hamekoz.Negocio
 	public class Lote : IPersistible, IIdentifiable
 	{
 		public int Id { get; set; }
+
+		public override string ToString ()
+		{
+			return Id.ToString ();
+		}
 	}
 }
