@@ -48,15 +48,6 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public RemitoCliente Remito {
-			get {
-				return (RemitoCliente)base.Remito;
-			}
-			set {
-				base.Remito = value;
-			}
-		}
-
 		public string CAE {
 			get;
 			set;
@@ -108,7 +99,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Remito.Renglones.Cast<IItem> ().ToList ();
+				return Remito.Items.Cast<IItem> ().ToList ();
 			}
 		}
 
