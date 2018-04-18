@@ -23,11 +23,13 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
+	[Obsolete ("Reemplazar su uso por RemitoItem")]
 	public class RemitoClienteItem : RemitoItem, IItem, IRemitoItem
 	{
 		//UNDONE Los valores deben calcularse solo si no esta grabado el remito, en caso contrario son lectura directa
 		double porcentaje;
 
+		[Obsolete ("Definir el precio con la variacion del porcentaje para que se realicen los demas calculos")]
 		public void SetPorcentaje (double porcentaje)
 		{
 			this.porcentaje = porcentaje;
@@ -40,7 +42,8 @@ namespace Hamekoz.Negocio
 
 		public new decimal Total {
 			get {
-				base.Total = Math.Round (Precio * Cantidad, 2);
+				if (Id == 0)
+					base.Total = Math.Round (Precio * Cantidad, 2);	
 				return base.Total;
 			}
 		}
@@ -53,14 +56,16 @@ namespace Hamekoz.Negocio
 
 		public new decimal Impuestos {
 			get {
-				base.Impuestos = Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				if (Id == 0)
+					base.Impuestos = Math.Round (Articulo.ImpuestosInternos * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 				return base.Impuestos;
 			}
 		}
 
 		public new decimal IVA {
 			get {
-				base.IVA = Math.Round (Articulo.IVA * Cantidad * (1 + (decimal)porcentaje / 100), 2);
+				if (Id == 0)
+					base.IVA = Math.Round (Articulo.IVA * Cantidad * (1 + (decimal)porcentaje / 100), 2);
 				return base.IVA;
 			}
 		}
