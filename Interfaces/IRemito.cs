@@ -29,7 +29,7 @@ namespace Hamekoz.Negocio
 	{
 		int Id { get; }
 
-		string Numero { get; }
+		string Numero { get; set; }
 
 		DateTime Emision { get; }
 
@@ -38,6 +38,8 @@ namespace Hamekoz.Negocio
 		IList<RemitoItem> Items { get; set; }
 
 		string Observaciones { get; set; }
+
+		NumeracionDeComprobante Tipo { get; set; }
 	}
 }
 
