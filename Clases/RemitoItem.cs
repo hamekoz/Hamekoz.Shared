@@ -63,32 +63,10 @@ namespace Hamekoz.Negocio
 			get { return Articulo.NombreCorto; }
 		}
 
-		#region Revisar implementacion de lote
-
-		//TODO el lote deberia ser una clase
-		public int LoteId {
+		public Lote Lote {
 			get;
 			set;
 		}
-
-		Lote lote;
-
-		public Lote Lote {
-			get {
-				if (lote == null)
-					lote = new Lote { Id = LoteId };
-				return lote;
-			}
-			set {
-				lote = value;
-				if (lote != null) {
-					LoteId = int.Parse (lote.Id.ToString ());	
-				}
-				//HACK para pasar el Id del lote a la propiedad de la clase base. Si no lo parseo por algun motivo pasa siempre 0
-			}
-		}
-
-		#endregion
 
 		//TODO revisar, el costo deberia salir del Lote
 		public decimal Costo {
@@ -101,6 +79,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		//TODO deberia tener una propiedad booleana que me identifique si el precio incluye o no IVA para realizar los calculos
 		public decimal Precio {
 			get;
 			set;
@@ -127,9 +106,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal total;
+
 		public decimal Total {
-			get;
-			set;
+			get {
+				if (Id == 0)
+					total = Math.Round (Cantidad * Precio + IVA + Impuestos, 2);
+				return total;
+			}
+			set {
+				total = value;
+			}
 		}
 
 		#endregion

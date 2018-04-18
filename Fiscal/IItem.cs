@@ -31,6 +31,7 @@ namespace Hamekoz.Fiscal
 		//TODO separar la descripcion corta en otra iterfaz que implemente IItem
 		[Obsolete ("Usar interfaz IItemControladorFiscal")]
 		string DescripcionCorta { get; }
+
 		decimal Cantidad { get; }
 
 		decimal Precio { get; }
@@ -47,6 +48,7 @@ namespace Hamekoz.Fiscal
 		decimal Total { get; }
 	}
 
+	//TODO revisar si corresponde heredar de IItem o que sea una implementacion independiente para los casos de controladores fiscales
 	interface IItemControladorFiscal : IItem
 	{
 		string DescripcionCorta { get; }

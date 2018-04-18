@@ -125,11 +125,17 @@ namespace Hamekoz.Negocio
 			get {
 				return Proveedor;
 			}
+			set { 
+				Proveedor = (Proveedor)value;
+			}
 		}
 
 		IList<RemitoItem> IRemito.Items {
 			get {
 				return Renglones.Cast<RemitoItem> ().ToList ();
+			}
+			set { 
+				Renglones = value.Cast<RemitoProveedorItem> ().ToList ();
 			}
 		}
 

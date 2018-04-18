@@ -37,7 +37,7 @@ namespace Hamekoz.Negocio
 		{
 			//HACK aca no se deben iniciar los objetos
 			Tipo = new NumeracionDeComprobante ();
-			Renglones = new List<RemitoClienteItem> ();
+			Items = new List<RemitoItem> ();
 		}
 
 		public int Id {
@@ -94,14 +94,19 @@ namespace Hamekoz.Negocio
 		}
 
 		//TODO deberia ser de tipo RemitoItem generalizado y simplificado
-		public List<RemitoClienteItem> Renglones {
-			get;
-			set;
+		[Obsolete("Usar propiedad Items")]
+		public List<RemitoItem> Renglones {
+			get {
+				return Items.ToList();
+			}
+			set { 
+				Items = value;
+			}
 		}
 
 		public decimal Total {
 			get {
-				return Renglones.Sum(r => r.Total);
+				return Items.Sum(r => r.Total);
 			}
 		}
 
@@ -116,7 +121,11 @@ namespace Hamekoz.Negocio
 
 		public string PuntoDeVenta => Tipo.Pre;
 
-		public IList<IItem> Items => Renglones.Cast<IItem>().ToList();
+		IList<IItem> IComprobante.Items { 
+			get { 
+				return Items.Cast<IItem>().ToList(); 
+			} 
+		}
 
 		DateTime IComprobante.Contable {
 			get {
@@ -174,12 +183,14 @@ namespace Hamekoz.Negocio
 			get {
 				return Cliente;
 			}
+			set { 
+				Cliente = (Cliente)value;
+			}
 		}
 
-		IList<RemitoItem> IRemito.Items {
-			get {
-				return Renglones.Cast<RemitoItem>().ToList();
-			}
+		public IList<RemitoItem> Items {
+			get;
+			set;
 		}
 
 		#endregion
