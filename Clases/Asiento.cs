@@ -113,5 +113,20 @@ namespace Hamekoz.Negocio
 		}
 
 		#endregion
+
+		public Empleado CreadoPor {
+			get;
+			set;
+		}
+
+		public Empleado ModificadoPor {
+			get;
+			set;
+		}
+
+		public DateTime ModificadoEn {
+			get;
+			set;
+		}
 	}
 }
