@@ -24,7 +24,7 @@ using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaPregunta: IPersistible
+	public partial class EncuestaPregunta: IPersistible
 	{
 		#region IPersistible implementation
 

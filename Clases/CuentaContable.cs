@@ -69,7 +69,7 @@ namespace Hamekoz.Negocio
 		}
 	}
 
-	public class CuentaContable : IPersistible, IIdentifiable, IDescriptible
+	public partial class CuentaContable : IPersistible, IIdentifiable, IDescriptible
 	{
 		#region Enums
 

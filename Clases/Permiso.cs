@@ -20,7 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 namespace Hamekoz.Core
 {
-	public class Permiso
+	public partial class Permiso
 	{
 		public int Guid {
 			get;

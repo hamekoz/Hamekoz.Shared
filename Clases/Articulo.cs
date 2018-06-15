@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Articulo : IPersistible, IIdentifiable, IDescriptible, ISearchable
+	public partial class Articulo : IPersistible, IIdentifiable, IDescriptible, ISearchable
 	{
 		public int Id {
 			get;

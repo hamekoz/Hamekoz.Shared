@@ -26,7 +26,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoCliente : IPersistible, IIdentifiable, IComprobante, IRemito
+	public partial class RemitoCliente : IPersistible, IIdentifiable, IComprobante, IRemito
 	{
 		string ISearchable.ToSearchString ()
 		{

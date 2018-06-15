@@ -22,7 +22,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaDeEmpleado: Encuesta
+	public partial class EncuestaDeEmpleado: Encuesta
 	{
 		public string Descripcion {
 			get {

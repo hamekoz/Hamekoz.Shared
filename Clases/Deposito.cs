@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Deposito : IPersistible, IIdentifiable, IDescriptible
+	public partial class Deposito : IPersistible, IIdentifiable, IDescriptible
 	{
 		//TODO Revisar porque un deposito puede llegar a tener mas de un Rol
 		public enum Tipos

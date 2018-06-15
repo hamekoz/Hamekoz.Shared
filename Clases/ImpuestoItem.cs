@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class ImpuestoItem : IPersistible, IIdentifiable
+	public partial class ImpuestoItem : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 

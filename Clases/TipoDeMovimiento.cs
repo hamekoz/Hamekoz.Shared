@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class TipoDeMovimiento : IPersistible, IIdentifiable, IDescriptible
+	public partial  class TipoDeMovimiento : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;
@@ -46,9 +46,9 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-        public override string ToString()
-        {
-            return Descripcion;
-        }
-    }
+		public override string ToString ()
+		{
+			return Descripcion;
+		}
+	}
 }

@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Moneda : IPersistible, IIdentifiable
+	public partial class Moneda : IPersistible, IIdentifiable
 	{
 		#region Singleton
 

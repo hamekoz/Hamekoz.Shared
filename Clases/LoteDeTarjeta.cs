@@ -24,7 +24,7 @@ using System;
 namespace Hamekoz.Negocio
 {
 	//TODO ver si es posible unificar con PagoItem
-	public class LoteDeTarjeta : IIdentifiable, IPersistible
+	public partial class LoteDeTarjeta : IIdentifiable, IPersistible
 	{
 		#region IIdentifiable implementation
 

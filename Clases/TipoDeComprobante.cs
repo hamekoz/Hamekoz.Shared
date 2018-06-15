@@ -27,7 +27,7 @@ namespace Hamekoz.Negocio
 {
 	//UNDONE refactorizar para separar el tipo del comprobante de los puntos de venta
 
-	public class TipoDeComprobante : IPersistible, IIdentifiable, IDescriptible
+	public partial  class TipoDeComprobante : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

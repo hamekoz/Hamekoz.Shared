@@ -22,7 +22,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Contacto : IPersistible
+	public partial class Contacto : IPersistible
 	{
 		#region IPersistible implementation
 

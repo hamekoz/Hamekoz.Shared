@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Cheque : IPersistible, IIdentifiable, ISearchable
+	public partial class Cheque : IPersistible, IIdentifiable, ISearchable
 	{
 		public enum Estados
 		{

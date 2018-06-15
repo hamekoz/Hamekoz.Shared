@@ -22,7 +22,7 @@
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase sucursal
-	public class Sucursal: CentroDeCosto
+	public partial  class Sucursal: CentroDeCosto
 	{
 	}
 }

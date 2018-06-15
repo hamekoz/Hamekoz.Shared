@@ -25,7 +25,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class Cliente : IPersistible, IIdentifiable, IDescriptible, IResponsable
+	public partial class Cliente : IPersistible, IIdentifiable, IDescriptible, IResponsable
 	{
 		public int Id {
 			get;

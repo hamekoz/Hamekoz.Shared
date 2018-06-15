@@ -22,7 +22,7 @@ using System.ComponentModel;
 
 namespace Hamekoz.Negocio
 {
-	public class IVAItem
+	public partial class IVAItem
 	{
 		public IVA IVA {
 			get;

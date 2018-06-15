@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoItem : IItem, IPersistible, IIdentifiable
+	public partial class RemitoItem : IItem, IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 

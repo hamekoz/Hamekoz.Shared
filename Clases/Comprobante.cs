@@ -25,7 +25,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//TODO evaluar si convertir en abstracta
-	public class Comprobante : IComprobante, IComprobanteImputable, IComprobanteBase
+	public partial class Comprobante : IComprobante, IComprobanteImputable, IComprobanteBase
 	{
 		//HACK no se deberia iniciarlizar aca
 		public Comprobante ()

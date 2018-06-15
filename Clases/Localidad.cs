@@ -25,7 +25,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase Localidad
-	public class Localidad : IPersistible, IIdentifiable, IDescriptible
+	public partial class Localidad : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

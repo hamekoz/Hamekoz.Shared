@@ -23,7 +23,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//UNDONE completar clase pedido
-	public class Pedido : IPersistible, IIdentifiable
+	public partial class Pedido : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 

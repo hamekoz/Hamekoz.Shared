@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE terminar de completar la clase
-	public class PuntoDeVenta : IPersistible
+	public partial class PuntoDeVenta : IPersistible
 	{
 		public Sucursal Sucursal {
 			get;

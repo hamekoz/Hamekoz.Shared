@@ -22,7 +22,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Telefono : IPersistible, IIdentifiable
+	public partial  class Telefono : IPersistible, IIdentifiable
 	{
 		public enum Tipos
 		{

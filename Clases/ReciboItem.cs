@@ -25,7 +25,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//TODO ver si es posible unificar con PagoItem
-	public class ReciboItem : IPersistible, IIdentifiable, IItem
+	public partial class ReciboItem : IPersistible, IIdentifiable, IItem
 	{
 		#region IIdentifiable implementation
 

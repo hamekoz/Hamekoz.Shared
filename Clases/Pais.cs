@@ -23,7 +23,7 @@ using System.Collections.Generic;
 
 namespace Hamekoz.Negocio
 {
-	public class Pais : IPersistible, IIdentifiable, IDescriptible
+	public partial class Pais : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

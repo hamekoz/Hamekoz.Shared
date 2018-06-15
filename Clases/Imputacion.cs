@@ -24,7 +24,7 @@ using Hamekoz.Negocio;
 
 namespace Hamekoz.Negocio
 {
-	public class Imputacion : IPersistible
+	public partial class Imputacion : IPersistible
 	{
 		public enum Estados
 		{

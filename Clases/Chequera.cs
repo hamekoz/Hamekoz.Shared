@@ -22,7 +22,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Chequera : IPersistible, IIdentifiable
+	public partial class Chequera : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 

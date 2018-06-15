@@ -22,7 +22,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class SucursalDeBanco : IIdentifiable, IPersistible
+	public partial  class SucursalDeBanco : IIdentifiable, IPersistible
 	{
 		#region IIdentifiable implementation
 

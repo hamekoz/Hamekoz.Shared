@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class CuentaBancaria : IIdentifiable, IPersistible
+	public partial class CuentaBancaria : IIdentifiable, IPersistible
 	{
 		#region IIdentifiable implementation
 

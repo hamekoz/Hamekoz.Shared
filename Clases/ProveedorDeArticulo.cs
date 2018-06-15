@@ -9,7 +9,7 @@ namespace Hamekoz.Negocio
 
 	}
 
-	public class ProveedorDeArticulo : IPersistible, IIdentifiable
+	public partial class ProveedorDeArticulo : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 
