@@ -27,7 +27,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE separar datos de implementacion de comprobante por controlador fiscal
-	public class ComprobanteCliente : Comprobante, IComprobante, IComprobanteElectronico
+	public partial class ComprobanteCliente : Comprobante, IComprobante, IComprobanteElectronico
 	{
 		public ComprobanteCliente ()
 		{

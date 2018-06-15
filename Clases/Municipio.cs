@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Municipio : IPersistible, IIdentifiable, IDescriptible
+	public partial class Municipio : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

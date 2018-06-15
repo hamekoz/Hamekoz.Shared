@@ -26,7 +26,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Asiento : IPersistible, IIdentifiable, ISearchable
+	public partial class Asiento : IPersistible, IIdentifiable, ISearchable
 	{
 		public int Id {
 			get;

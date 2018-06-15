@@ -23,7 +23,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//UNDONE revisar el sentido de esta clase
-	public class Stock : ISearchable
+	public partial  class Stock : ISearchable
 	{
 		public string Rubro {
 			get {

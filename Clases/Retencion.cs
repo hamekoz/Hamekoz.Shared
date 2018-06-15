@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Retencion : IPersistible, IIdentifiable
+	public partial class Retencion : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
 

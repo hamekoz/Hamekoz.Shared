@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Cobranza : IPersistible, IIdentifiable
+	public partial class Cobranza : IPersistible, IIdentifiable
 	{
 		public int Id {
 			get;

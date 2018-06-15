@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaRespuesta: IPersistible
+	public partial class EncuestaRespuesta: IPersistible
 	{
 		#region IPersistible implementation
 

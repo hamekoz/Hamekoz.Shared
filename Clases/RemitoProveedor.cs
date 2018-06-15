@@ -27,7 +27,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//FIX IRemito, deberia implementar IComprobante
-	public class RemitoProveedor : IPersistible, IIdentifiable, IComprobante, IComprobanteBase, IRemito
+	public partial class RemitoProveedor : IPersistible, IIdentifiable, IComprobante, IComprobanteBase, IRemito
 	{
 		string ISearchable.ToSearchString ()
 		{

@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class ListaDePrecios : IPersistible, IIdentifiable, IDescriptible
+	public partial class ListaDePrecios : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

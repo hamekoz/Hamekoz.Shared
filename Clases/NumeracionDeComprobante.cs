@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE refactorizar para separar el tipo del comprobante de los puntos de venta
-	public class NumeracionDeComprobante : IPersistible, IIdentifiable, IDescriptible
+	public partial class NumeracionDeComprobante : IPersistible, IIdentifiable, IDescriptible
 	{
 		public int Id {
 			get;

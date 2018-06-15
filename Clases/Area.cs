@@ -22,7 +22,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Area : IPersistible, IDescriptible
+	public partial class Area : IPersistible, IDescriptible
 	{
 		#region IPersistible implementation
 

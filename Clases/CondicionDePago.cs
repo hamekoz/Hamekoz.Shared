@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class CondicionDePago : IPersistible, IIdentifiable, IDescriptible
+	public partial class CondicionDePago : IPersistible, IIdentifiable, IDescriptible
 	{
 		#region IIdentifiable implementation
 
@@ -49,7 +49,7 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public override string ToString()
+		public override string ToString ()
 		{
 			return Descripcion;
 		}

@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Empleado: IPersistible, ISearchable
+	public partial class Empleado: IPersistible, ISearchable
 	{
 		#region IPersistible implementation
 

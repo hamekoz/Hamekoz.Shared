@@ -22,7 +22,7 @@
 
 namespace Hamekoz.Negocio
 {
-	public class EncuestaControlDeSucursal:Encuesta
+	public partial class EncuestaControlDeSucursal:Encuesta
 	{
 		public Sucursal Sucursal { get; set; }
 

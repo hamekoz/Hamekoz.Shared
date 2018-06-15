@@ -23,7 +23,7 @@ using Hamekoz.Negocio;
 
 namespace Hamekoz
 {
-	public class EncuestaDeProveedor: Encuesta
+	public partial class EncuestaDeProveedor: Encuesta
 	{
 		public string Descripcion {
 			get {

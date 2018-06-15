@@ -27,7 +27,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE unificar logica comun en clase abstracta Comprobante
-	public class Recibo : Comprobante, IPersistible , IComprobante, ISearchable
+	public partial class Recibo : Comprobante, IPersistible , IComprobante, ISearchable
 	{
 		public Recibo ()
 		{

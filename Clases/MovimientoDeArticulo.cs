@@ -24,7 +24,7 @@ using Hamekoz.Core;
 namespace Hamekoz.Negocio
 {
 	//FIX renombrar en singular
-	public class MovimientoDeArticulo : IPersistible, IIdentifiable
+	public partial class MovimientoDeArticulo : IPersistible, IIdentifiable
 	{
 		public MovimientoDeArticulo ()
 		{

@@ -22,7 +22,7 @@ using Hamekoz.Negocio;
 
 namespace Hamekoz.Negocio
 {
-	public class RemitoProveedorItem : RemitoItem, IRemitoItem
+	public partial class RemitoProveedorItem : RemitoItem, IRemitoItem
 	{
 		//HACK no deberia tener constructor aca
 		public RemitoProveedorItem ()

@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class CuentaCorriente : IPersistible, IComprobanteVencimiento
+	public partial class CuentaCorriente : IPersistible, IComprobanteVencimiento
 	{
 		public Type comprobanteType;
 		public int comprobanteId;

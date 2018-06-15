@@ -24,7 +24,7 @@ using Hamekoz.Fiscal;
 namespace Hamekoz.Negocio
 {
 	//UNDONE refactorizar
-	public class Zeta : IZeta
+	public partial class Zeta : IZeta
 	{
 		public int NumeroReporte { get; set; }
 

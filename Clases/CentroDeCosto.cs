@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
+	public partial class CentroDeCosto : IPersistible, IIdentifiable, IDescriptible
 	{
 		#region IPersistible implementation
 

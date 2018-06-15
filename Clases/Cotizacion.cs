@@ -23,7 +23,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class Cotizacion : IPersistible, IIdentifiable
+	public partial class Cotizacion : IPersistible, IIdentifiable
 	{
 		#region Singleton
 

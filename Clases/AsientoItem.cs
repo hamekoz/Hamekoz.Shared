@@ -24,7 +24,7 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public class AsientoItem : IPersistible, IIdentifiable
+	public partial class AsientoItem : IPersistible, IIdentifiable
 	{
 		//HACK no deberia tener constructor
 		public AsientoItem ()
