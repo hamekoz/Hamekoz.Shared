@@ -129,5 +129,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\ICallBack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Reportes\ValidacionException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Reportes\ParametrosInsuficientesException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroAnioMes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroApaisado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroBoolean.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroCombo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroFecha.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroGroupBy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroNumero.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroOrderBy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroPeriodo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Reportes\IParametroTexto.cs" />
   </ItemGroup>
 </Project>
