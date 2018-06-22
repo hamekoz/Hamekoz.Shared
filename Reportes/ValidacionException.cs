@@ -22,7 +22,6 @@ using System;
 
 namespace Hamekoz.Reportes
 {
-	//TODO mover a Hamekoz.Exeptions
 	[Serializable]
 	public class ValidacionException : Exception
 	{

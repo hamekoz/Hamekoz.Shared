@@ -1,5 +1,5 @@
 //
-//  DatosInsuficientesException.cs
+//  ParametrosInsuficientesException.cs
 //
 //  Author:
 //       Claudio Rodrigo Pereyra Diaz <claudiorodrigo@pereyradiaz.com.ar>
@@ -23,12 +23,12 @@ using System;
 namespace Hamekoz.Reportes
 {
 	[Serializable]
-	public class DatosInsuficientesException : Exception
+	public class ParametrosInsuficientesException : Exception
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:DatosInsuficientesException"/> class
 		/// </summary>
-		public DatosInsuficientesException ()
+		public ParametrosInsuficientesException ()
 		{
 		}
 
@@ -36,7 +36,7 @@ namespace Hamekoz.Reportes
 		/// Initializes a new instance of the <see cref="T:DatosInsuficientesException"/> class
 		/// </summary>
 		/// <param name="message">A <see cref="T:System.String"/> that describes the exception. </param>
-		public DatosInsuficientesException (string message) : base (message)
+		public ParametrosInsuficientesException (string message) : base (message)
 		{
 		}
 
@@ -45,7 +45,7 @@ namespace Hamekoz.Reportes
 		/// </summary>
 		/// <param name="message">A <see cref="T:System.String"/> that describes the exception. </param>
 		/// <param name="inner">The exception that is the cause of the current exception. </param>
-		public DatosInsuficientesException (string message, Exception inner) : base (message, inner)
+		public ParametrosInsuficientesException (string message, Exception inner) : base (message, inner)
 		{
 		}
 
@@ -54,7 +54,7 @@ namespace Hamekoz.Reportes
 		/// </summary>
 		/// <param name="context">The contextual information about the source or destination.</param>
 		/// <param name="info">The object that holds the serialized object data.</param>
-		protected DatosInsuficientesException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : base (info, context)
+		protected ParametrosInsuficientesException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : base (info, context)
 		{
 		}
 	}
