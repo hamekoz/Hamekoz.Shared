@@ -38,6 +38,7 @@ namespace Hamekoz.Negocio
 			//HACK aca no se deben iniciar los objetos
 			Tipo = new NumeracionDeComprobante ();
 			Items = new List<RemitoItem> ();
+            Cliente = new Cliente();
 		}
 
 		public int Id {

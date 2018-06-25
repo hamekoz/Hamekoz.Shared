@@ -114,6 +114,7 @@ namespace Hamekoz.Negocio
 			RazonSocial = string.Empty;
 			CondicionDeIVA = SituacionIVA.CONSUMIDOR_FINAL;
 			Estado = Estados.Gestion;
+            ListaDePrecios = new ListaDePrecios();
 		}
 
 		public override string ToString ()

@@ -33,6 +33,7 @@ namespace Hamekoz.Negocio
 		{
 			//HACK aca no deberia inicializarse los atributos complejos
 			Cliente = new Cliente ();
+            Cliente.CondicionDePago = new CondicionDePago();
 			Tipo = new NumeracionDeComprobante ();
 			Remito = new RemitoCliente ();
 			CondicionDePago = new CondicionDePago ();

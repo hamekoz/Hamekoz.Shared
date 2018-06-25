@@ -176,7 +176,7 @@ namespace Hamekoz.Negocio
 
 		public string PuntoDeVenta {
 			get {
-				throw new NotImplementedException ();
+				return string.Empty;
 			}
 		}
 

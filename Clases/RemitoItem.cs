@@ -26,6 +26,11 @@ namespace Hamekoz.Negocio
 {
 	public partial class RemitoItem : IItem, IPersistible, IIdentifiable
 	{
+        public RemitoItem() {
+            //HACK no deberia inicializar nada aca
+            Articulo = new Articulo();
+        }
+
 		#region IIdentifiable implementation
 
 		public int Id {
