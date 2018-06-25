@@ -42,7 +42,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeMovimiento.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Zeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeContribuyenteDeIngresosBrutos.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\JurisdiccionDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteItem.cs" />
