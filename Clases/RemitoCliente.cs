@@ -93,17 +93,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		//TODO deberia ser de tipo RemitoItem generalizado y simplificado
-		[Obsolete("Usar propiedad Items")]
-		public List<RemitoItem> Renglones {
-			get {
-				return Items.ToList();
-			}
-			set { 
-				Items = value;
-			}
-		}
-
 		public decimal Total {
 			get {
 				return Items.Sum(r => r.Total);

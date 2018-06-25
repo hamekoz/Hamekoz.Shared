@@ -41,7 +41,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Rubro.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeMovimiento.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Zeta.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeCuentaContable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeContribuyenteDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\TipoDeComprobante.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\JurisdiccionDeIngresosBrutos.cs" />

@@ -84,16 +84,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar propidade Anulado")]
-		public bool Eliminado {
-			get {
-				return Anulado;
-			}
-			set {
-				Anulado = value;
-			}
-		}
-
 		#region IComprobante
 
 		IResponsable IComprobante.Responsable {

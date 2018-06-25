@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using Hamekoz.Core;
 using Hamekoz.Fiscal;
 
@@ -139,8 +138,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Utilizar propiedad Cheque")]
-		internal int ChequeId;
 		//FIX el cheque no deberia ser un atributo del detalle del recibo.
 		public Cheque Cheque {
 			get;
@@ -163,16 +160,6 @@ namespace Hamekoz.Negocio
 			get;
 			set;
 		} = 1;
-
-		//TODO ReciboItem no deberia tener referencia la recibo ya que simpre compone al recibo
-		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
-		internal int ReciboId;
-
-		[Obsolete ("Siempre tiene que ser un componente de Recibo")]
-		public Recibo Recibo {
-			get;
-			set;
-		}
 
 		public bool Eliminado {
 			get;

@@ -18,12 +18,11 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	public partial class Deposito : IPersistible, IIdentifiable, IDescriptible
+	public partial class Deposito : IPersistible, IIdentifiable
 	{
 		//TODO Revisar porque un deposito puede llegar a tener mas de un Rol
 		public enum Tipos
@@ -42,16 +41,6 @@ namespace Hamekoz.Negocio
 		public string Nombre {
 			get;
 			set;
-		}
-
-		[Obsolete ("Usar el campo Nombre")]
-		public string Descripcion {
-			get {
-				return Nombre;
-			}
-			set {
-				Nombre = value;
-			}
 		}
 
 		public Tipos Tipo {

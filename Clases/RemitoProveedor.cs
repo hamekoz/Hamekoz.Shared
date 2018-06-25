@@ -68,12 +68,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar propiedad Flete")]
-		public int IdFlete {
-			get;
-			set;
-		}
-
 		public Flete Flete { 
 			get; 
 			set; 

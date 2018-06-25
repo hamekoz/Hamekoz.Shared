@@ -3,12 +3,6 @@ using Hamekoz.Core;
 
 namespace Hamekoz.Negocio
 {
-	[Obsolete ("Usar clase ProveedorDeArticulo")]
-	public class ProveedorArticulo : ProveedorDeArticulo
-	{
-
-	}
-
 	public partial class ProveedorDeArticulo : IPersistible, IIdentifiable
 	{
 		#region IIdentifiable implementation
