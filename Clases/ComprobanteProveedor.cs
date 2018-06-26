@@ -100,7 +100,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Remito.Renglones.Cast<IItem> ().ToList ();
+				return Remito.Items.Cast<IItem> ().ToList ();
 			}
 		}
 

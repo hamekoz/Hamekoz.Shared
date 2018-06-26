@@ -19,9 +19,11 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using Hamekoz.Negocio;
+using System;
 
 namespace Hamekoz.Negocio
 {
+	[Obsolete ("Usar RemitoItem")]
 	public partial class RemitoProveedorItem : RemitoItem, IRemitoItem
 	{
 		//HACK no deberia tener constructor aca
@@ -36,58 +38,11 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public int Renglon {
-			get;
-			set;
-		}
-
-		public Articulo Articulo {
-			get;
-			set;
-		}
-
-		public decimal Cantidad {
-			get;
-			set;
-		}
-
-		public decimal Precio {
-			get;
-			set;
-		}
-
-		public decimal Total {
-			get {
-				return Precio * Cantidad;
-			}
-		}
-
-		public decimal Neto {
-			get {
-				return Total - (Articulo.ImpuestosInternos * Cantidad) - IVA;
-			}
-		}
-
+		[Obsolete ("Utilizar la propiedad Impuestos")]
 		public decimal TotalImpuestos {
 			get {
-				return Articulo.ImpuestosInternos * Cantidad;
+				return Impuestos;
 			}
-		}
-
-		public decimal IVA {
-			get {
-				return Articulo.Precio - Articulo.Neto;
-			}
-		}
-
-		public Lote Lote {
-			get;
-			set;
-		}
-
-		public decimal Costo {
-			get;
-			set;
 		}
 	}
 }

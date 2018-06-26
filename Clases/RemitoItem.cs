@@ -26,10 +26,12 @@ namespace Hamekoz.Negocio
 {
 	public partial class RemitoItem : IItem, IPersistible, IIdentifiable
 	{
-        public RemitoItem() {
-            //HACK no deberia inicializar nada aca
-            Articulo = new Articulo();
-        }
+		public RemitoItem ()
+		{
+			//HACK no deberia inicializar nada aca
+			Articulo = new Articulo ();
+			Cantidad = 1;
+		}
 
 		#region IIdentifiable implementation
 
@@ -106,9 +108,17 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
+		decimal impuestos;
+
 		public decimal Impuestos {
-			get;
-			set;
+			get {
+				if (Id == 0)
+					impuestos = Math.Round (Articulo.ImpuestosInternos * Cantidad, 2);
+				return impuestos;
+			}	
+			set {
+				impuestos = value;
+			}
 		}
 
 		decimal total;

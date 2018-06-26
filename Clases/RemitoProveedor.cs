@@ -98,7 +98,13 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		public List<RemitoProveedorItem> Renglones {
+		public IList<RemitoItem> Items {
+			get;
+			set;
+		}
+
+		[Obsolete ("Usar propiedad Items")]
+		public IList<RemitoItem> Renglones {
 			get;
 			set;
 		}
@@ -124,15 +130,6 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		IList<RemitoItem> IRemito.Items {
-			get {
-				return Renglones.Cast<RemitoItem> ().ToList ();
-			}
-			set { 
-				Renglones = value.Cast<RemitoProveedorItem> ().ToList ();
-			}
-		}
-
 		#endregion
 
 
@@ -152,7 +149,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Renglones.Cast<IItem> ().ToList ();
+				return Items.Cast<IItem> ().ToList ();
 			}
 		}
 
@@ -170,25 +167,25 @@ namespace Hamekoz.Negocio
 
 		decimal IComprobante.Total {
 			get {
-				return Renglones.Sum (r => r.Total);
+				return Items.Sum (r => r.Total);
 			}
 		}
 
 		decimal IComprobante.Neto {
 			get {
-				return Renglones.Sum (r => r.Neto);
+				return Items.Sum (r => r.Neto);
 			}
 		}
 
 		decimal IComprobante.IVA {
 			get {
-				return Renglones.Sum (r => r.IVA);
+				return Items.Sum (r => r.IVA);
 			}
 		}
 
 		decimal IComprobante.Gravado {
 			get {
-				return Renglones.Sum (r => r.Neto);
+				return Items.Sum (r => r.Neto);
 			}
 		}
 
@@ -200,7 +197,7 @@ namespace Hamekoz.Negocio
 
 		decimal IComprobante.Tributos {
 			get {
-				return Renglones.Sum (r => r.TotalImpuestos);
+				return Items.Sum (r => r.Impuestos);
 			}
 		}
 
@@ -228,7 +225,7 @@ namespace Hamekoz.Negocio
 
 		decimal IComprobanteBase.Total {
 			get {
-				return Renglones.Sum (r => r.Total);
+				return Items.Sum (r => r.Total);
 			}
 		}
 
