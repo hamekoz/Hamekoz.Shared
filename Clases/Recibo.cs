@@ -18,7 +18,6 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hamekoz.Core;
@@ -31,11 +30,11 @@ namespace Hamekoz.Negocio
 	{
 		public Recibo ()
 		{
-            //FIX aca no se deben iniciar los objetos
-            Asiento = new Asiento();
-            Cliente = new Cliente ();
+			//FIX aca no se deben iniciar los objetos
+			Asiento = new Asiento ();
+			Cliente = new Cliente ();
 			Tipo = new NumeracionDeComprobante ();
-			Renglones = new List<ReciboItem> ();
+			Items = new List<ReciboItem> ();
 		}
 
 		public Cliente Cliente {
@@ -47,9 +46,13 @@ namespace Hamekoz.Negocio
 			}
 		}
 
-		public IList<ReciboItem> Renglones {
-			get;
-			set;
+		public IList<ReciboItem> Items {
+			get {
+				return base.Items.Cast<ReciboItem> ().ToList ();
+			}
+			set {
+				base.Items = value.Cast<IItem> ().ToList ();
+			}
 		}
 
 		public string CAE {
@@ -72,16 +75,6 @@ namespace Hamekoz.Negocio
 			set;
 		} = string.Empty;
 
-		[System.Obsolete ("Usar propidade Anulado")]
-		public bool Eliminado {
-			get {
-				return Anulado;
-			}
-			set {
-				Anulado = value;
-			}
-		}
-
 		#region IComprobante
 
 		IResponsable IComprobante.Responsable {
@@ -98,7 +91,7 @@ namespace Hamekoz.Negocio
 
 		IList<IItem> IComprobante.Items {
 			get {
-				return Renglones.Cast<IItem> ().ToList ();
+				return Items.Cast<IItem> ().ToList ();
 			}
 		}
 

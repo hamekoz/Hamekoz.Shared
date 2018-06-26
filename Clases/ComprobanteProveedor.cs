@@ -50,6 +50,7 @@ namespace Hamekoz.Negocio
 			}
 		}
 
+		//TODO revisar porque no deberia estar esta propiedad ya que esta en la clase base
 		public RemitoProveedor Remito {
 			get {
 				return (RemitoProveedor)base.Remito;
