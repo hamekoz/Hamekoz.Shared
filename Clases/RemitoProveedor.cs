@@ -103,12 +103,6 @@ namespace Hamekoz.Negocio
 			set;
 		}
 
-		[Obsolete ("Usar propiedad Items")]
-		public IList<RemitoItem> Renglones {
-			get;
-			set;
-		}
-
 		public bool Anulado {
 			get;
 			set;

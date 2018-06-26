@@ -45,7 +45,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\JurisdiccionDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\CondicionDeIngresosBrutos.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoClienteItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Clases\RemitoProveedorItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\ReciboItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRemitoItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Empresa.cs" />
